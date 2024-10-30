@@ -203,6 +203,7 @@ namespace WPF_ManageCourt.ViewModel
 
         private void BackToLogin()
         {
+            Application.Current.Windows[0].Close();
             var loginWindow = new LoginWindow();
             loginWindow.Show();
         }

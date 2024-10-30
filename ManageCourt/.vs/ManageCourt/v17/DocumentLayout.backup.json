@@ -3,10 +3,13 @@
   "WorkspaceRootPath": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\forgetpasswordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\forgetpasswordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
@@ -43,9 +46,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{588B8F75-E1A5-45C6-A599-99BA2F784B36}|..\\Repository\\Repositories.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\repository\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -209,7 +209,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -245,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ForgetPasswordWindow.xaml",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ForgetPasswordWindow.xaml",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ForgetPasswordWindow.xaml",
@@ -257,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\LoginWindow.xaml",
@@ -269,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UserView.xaml",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\UserView.xaml",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\UserView.xaml",
@@ -281,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\MainWindow.xaml",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\MainWindow.xaml",
@@ -299,14 +299,27 @@
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
               "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
               "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAQwIkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T04:07:01.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "UserDAO.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserDAO.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\UserDAO.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserDAO.cs",
+              "RelativeToolTip": "..\\DataAccess\\DAO\\UserDAO.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:18:01.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\LoginWindow.xaml.cs",
@@ -319,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ForgetPasswordWindow.xaml.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ForgetPasswordWindow.xaml.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ForgetPasswordWindow.xaml.cs",
@@ -332,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\AssemblyInfo.cs",
@@ -345,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
@@ -358,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\BusinessLogic\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLogic\\Service\\UserService.cs",
@@ -371,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IUserService.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\BusinessLogic\\Interface\\IUserService.cs",
               "RelativeDocumentMoniker": "..\\BusinessLogic\\Interface\\IUserService.cs",
@@ -384,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BooleanToVisibilityConverter.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\Utils\\BooleanToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\Utils\\BooleanToVisibilityConverter.cs",
@@ -397,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "..\\Repository\\UserRepository.cs",
@@ -410,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\Repository\\Interface\\IUserRepository.cs",
               "RelativeDocumentMoniker": "..\\Repository\\Interface\\IUserRepository.cs",
@@ -419,19 +432,6 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAgwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T03:02:16.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\UserDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\UserDAO.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAgwGAAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:18:01.482Z",
               "EditorCaption": ""
             },
             {
