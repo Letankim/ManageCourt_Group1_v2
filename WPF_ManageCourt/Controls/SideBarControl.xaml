@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WPF_ManageCourt.Controls.SidebarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource BackgroundMainSidebar}"
+              Height="auto"
+             >
+    <StackPanel>
+        <Button Content="Main" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenMainManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="User" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenUserManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lý Extensions" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lý thành viên" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+        <Button Content="2FA" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+        <Button Content="Đọc mail IMAP" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+        <Button Content="Quy trình tự động" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+        <Button Content="Logs" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+    </StackPanel>
+</UserControl>

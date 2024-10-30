@@ -1,0 +1,321 @@
+﻿<Window x:Class="WPF_ManageCourt.UserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:WPF_ManageCourt.Controls"
+        xmlns:helper="clr-namespace:WPF_ManageCourt.Utils"
+        Title="OmniLogin App" Height="600" Width="800" Background="{StaticResource BackgroundMainContent}">
+    <Window.Resources>
+        <helper:BoolToStatusConverter x:Key="BoolToStatusConverter" />
+        <helper:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <helper:IndexConverter x:Key="IndexNoConverter" />
+        <helper:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="30"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <local:Header Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
+
+        <local:SidebarControl Grid.Row="1" Grid.Column="0" Height="auto" VerticalAlignment="Stretch"/>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Grid.Column="0" 
+             Margin="-486,0,10,0" 
+             Padding="5,2"
+             Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
+             x:Name="txtSearch" 
+             Height="35"  
+             materialDesign:HintAssist.Hint="Search users..."/>
+                    <Button Grid.Column="1" 
+            Content="Search" 
+            Style="{StaticResource MaterialDesignFlatButton}"  
+            Background="{StaticResource ButtonInfo}"
+            Height="35" Margin="0,0,10,0"
+            Command="{Binding SearchCommand}"
+        />
+                </Grid>
+
+                <Grid Grid.Row="1" HorizontalAlignment="Right">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="1" 
+        Content="Add New" 
+        Style="{StaticResource MaterialDesignFlatButton}" 
+        Background="{StaticResource ButtonWarning}" 
+        Height="35" 
+        Margin="-192,20,179,0" 
+        Visibility="Visible"
+        Command="{Binding OpenAddUserDialogCommand}" />
+
+                    <Button Grid.Column="0" 
+            Content="Import" 
+            Style="{StaticResource MaterialDesignFlatButton}" 
+            Background="{StaticResource ButtonPrimary}"
+            Height="35"
+            Click="ImportButton_Click" Margin="-56,10,57,-10" Grid.RowSpan="2">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Import JSON" Command="{Binding ImportCommand}" CommandParameter="json" />
+                                <MenuItem Header="Import Excel" Command="{Binding ImportCommand}" CommandParameter="excel" />
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+
+                    <Button 
+    Content="Export" 
+    Style="{StaticResource MaterialDesignFlatButton}" 
+    Background="{StaticResource ButtonPrimary}"
+    Height="35"
+    Grid.ColumnSpan="2" 
+    Margin="66,20,10,0"
+    Click="ExportButton_Click" Grid.RowSpan="2">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Export JSON" 
+                      Command="{Binding ExportCommand}" 
+                      CommandParameter="json" 
+                      />
+                                <MenuItem Header="Export Excel" 
+                      Command="{Binding ExportCommand}" 
+                      CommandParameter="excel" 
+                      />
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+
+                </Grid>
+            </Grid>
+
+            <Border Grid.Row="1" Grid.Column="0" Margin="5">
+                <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                    <TextBlock Text="Danh sách người dùng" FontSize="16" Foreground="White" Margin="0,0,0,10"/>
+                    <TextBlock Text="No users found." FontSize="16" Foreground="Red" Visibility="{Binding IsUsersEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <DataGrid Background="{StaticResource BackgroundMainTable}"
+          ItemsSource="{Binding Users}" 
+          SelectedItem="{Binding SelectedUser}" 
+          AutoGenerateColumns="False" 
+          IsReadOnly="True"
+          Margin="0,10,0,0"
+          BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+          BorderThickness="1"
+          MouseDoubleClick="DataGrid_MouseDoubleClick"
+          Visibility="{Binding IsUsersEmpty, Converter={StaticResource InverseBoolToVisibilityConverter}}"
+          Style="{StaticResource MaterialDesignDataGrid}">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header=".No" Width="50">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}, 
+            Converter={StaticResource IndexNoConverter}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+
+                                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="200"/>
+                                <DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="200"/>
+                                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
+                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="150"/>
+                                <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="150"/>
+                                <DataGridTextColumn Header="Active" Binding="{Binding IsEnabled}" Width="150"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <local:Footer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
+        <materialDesign:DialogHost IsOpen="{Binding IsAddUserDialogOpen}" CloseOnClickAway="True" x:Name="AddUserDialog">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Margin="20" Width="300">
+                        <TextBlock Text="Add New User" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+
+                        <TextBox 
+Margin="0,10" 
+materialDesign:HintAssist.Hint="Fullname" 
+Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
+                        <!-- Username Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Username" 
+                    Text="{Binding SelectedUser.Username, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Email Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Email Address" 
+                    Text="{Binding SelectedUser.Email, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Phone Number Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Phone Number" 
+                    Text="{Binding SelectedUser.Phone, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Role Selection ComboBox -->
+                        <ComboBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Select Role" 
+                    ItemsSource="{Binding UserRoles}" 
+                    SelectedItem="{Binding SelectedUser.Role, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Password Field -->
+                        <PasswordBox 
+            x:Name="PasswordBoxControl" 
+            Margin="0,10" 
+            materialDesign:HintAssist.Hint="Password" 
+            PasswordChanged="PasswordBoxControl_PasswordChanged" />
+
+
+                        <!-- Status Selection ComboBox -->
+                        <ComboBox 
+    Margin="0,10" 
+    materialDesign:HintAssist.Hint="Select Status" 
+    ItemsSource="{Binding StatusOptions}" 
+    SelectedItem="{Binding SelectedUser.IsEnabled, Converter={StaticResource BoolToStatusConverter}, UpdateSourceTrigger=PropertyChanged}">
+                        </ComboBox>
+
+
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                            <Button 
+                        Content="Cancel" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Margin="0,0,10,0" 
+                        Command="materialDesign:DialogHost.CloseDialogCommand" 
+                        Background="{StaticResource ButtonDanger}" />
+
+                            <Button 
+                        Content="Add" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Command="{Binding AddUserCommand}" 
+                        Background="{StaticResource ButtonSuccess}" 
+                        />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <materialDesign:DialogHost IsOpen="{Binding IsUpdateUserDialogOpen}" CloseOnClickAway="True" x:Name="UpdateUserDialog">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Margin="20" Width="300">
+                        <TextBlock Text="Update User" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+
+                        <TextBox 
+Margin="0,10" 
+                            IsEnabled="false"
+materialDesign:HintAssist.Hint="ID" 
+Text="{Binding SelectedUser.UserId, UpdateSourceTrigger=PropertyChanged}" />
+                        <!-- Full Name Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Fullname" 
+                    Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Username Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Username" 
+                    Text="{Binding SelectedUser.Username, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Email Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Email Address" 
+                    Text="{Binding SelectedUser.Email, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Phone Number Field -->
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Phone Number" 
+                    Text="{Binding SelectedUser.Phone, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <!-- Role Selection ComboBox -->
+                        <ComboBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Select Role" 
+                    ItemsSource="{Binding UserRoles}" 
+                    SelectedItem="{Binding SelectedUser.Role, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <ComboBox 
+    Margin="0,10" 
+    materialDesign:HintAssist.Hint="Select Status" 
+    ItemsSource="{Binding StatusOptions}" 
+    SelectedItem="{Binding SelectedUser.IsEnabled, Converter={StaticResource BoolToStatusConverter}, UpdateSourceTrigger=PropertyChanged}"
+    SelectionChanged="ComboBox_SelectionChanged">
+
+                        </ComboBox>
+
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                            <Button 
+                        Content="Cancel" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Margin="0,0,10,0" 
+                        Command="materialDesign:DialogHost.CloseDialogCommand" 
+                        Background="{StaticResource ButtonDanger}" />
+
+                            <Button 
+                        Content="Update" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Command="{Binding EditCommand}" 
+                        Background="{StaticResource ButtonSuccess}" />
+
+                            <Button 
+                        Content="Delete" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Command="{Binding DeleteCommand}" 
+                        Background="{StaticResource ButtonDanger}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <materialDesign:DialogHost x:Name="AlertDialogHost" IsOpen="{Binding IsShowMessageDialog}">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel>
+                    <TextBlock Text="{Binding Message}" FontSize="16" FontWeight="Bold" Margin="0,10,0,10"/>
+                    <Button Content="OK"  Command="materialDesign:DialogHost.CloseDialogCommand" />
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WPF_ManageCourt.Controls.Navbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="50" Width="Auto"
+             Background="{DynamicResource BackgroundMainHeader}" 
+             >
+    <UniformGrid Columns="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" >
+        <Button Content="Home" 
+                Style="{StaticResource MaterialDesignFlatButton}"  
+                Background="{DynamicResource PrimaryHueLightBrush}" 
+                Foreground="Black" 
+                Margin="10,0"/>
+        <Button Content="Settings" 
+                Style="{StaticResource MaterialDesignFlatButton}"  
+                Background="{DynamicResource PrimaryHueLightBrush}" 
+                Foreground="White" 
+                Margin="10,0"/>
+                
+        <Button Content="Logout" 
+                Style="{StaticResource MaterialDesignFlatButton}" 
+                Background="{DynamicResource SecondaryHueLightBrush}" 
+                Foreground="White" 
+                Margin="10,0"/>
+    </UniformGrid>
+</UserControl>

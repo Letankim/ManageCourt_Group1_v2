@@ -1,0 +1,34 @@
+﻿<Application x:Class="WPF_ManageCourt.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Nhúng các tài nguyên từ MaterialDesign -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Định nghĩa các màu sắc tùy chỉnh -->
+            <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#FF6200EE"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#FF3700B3"/>
+            <SolidColorBrush x:Key="SecondaryHueLightBrush" Color="#FF03DAC6"/>
+            <SolidColorBrush x:Key="SecondaryHueDarkBrush" Color="#FF018786"/>
+            <SolidColorBrush x:Key="BackgroundMainHeader" Color="#006d38"/>
+            <SolidColorBrush x:Key="BackgroundMainContent" Color="#3c962b"/>
+            <SolidColorBrush x:Key="BackgroundMainTable" Color="#FFC9E9D9"/>
+            <SolidColorBrush x:Key="BackgroundMainButton" Color="#FF79AF94"/>
+            <SolidColorBrush x:Key="BackgroundMainSidebar" Color="#006d38"/>
+            <SolidColorBrush x:Key="ButtonPrimary" Color="#007bff"/>
+            <SolidColorBrush x:Key="ButtonSecondary" Color="#6c757d"/>
+            <SolidColorBrush x:Key="ButtonSuccess" Color="#28a745"/>
+            <SolidColorBrush x:Key="ButtonDanger" Color="#dc3545"/>
+            <SolidColorBrush x:Key="ButtonWarning" Color="#ffc107"/>
+            <SolidColorBrush x:Key="ButtonInfo" Color="#17a2b8"/>
+            <SolidColorBrush x:Key="ButtonLight" Color="#f8f9fa"/>
+            <SolidColorBrush x:Key="ButtonDark" Color="#343a40"/>
+            <SolidColorBrush x:Key="ButtonLink" Color="#007bff"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

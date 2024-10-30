@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="WPF_ManageCourt.Controls.Footer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="70">
+    <Border Background="{StaticResource BackgroundMainHeader}" Padding="10">
+        <TextBlock Text="© 2024 1DO Court. All rights reserved." FontSize="12" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Border>
+</UserControl>

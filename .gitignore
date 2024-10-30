@@ -1,0 +1,46 @@
+# Bỏ qua các thư mục build cho toàn bộ project
+**/bin/
+**/obj/
+
+# Các file cấu hình build của Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# File tạm và hệ thống
+*.cache
+*.pdb
+*.exe
+*.dll
+*.apphost
+
+# File nhật ký và backup
+*.log
+*.bak
+
+
+# Cấu hình cho các thư mục dự án cụ thể
+BusinessLogic/bin/
+BusinessLogic/obj/
+
+DataAccess/bin/
+DataAccess/obj/
+
+Model/bin/
+Model/obj/
+
+Repositories/bin/
+Repositories/obj/
+
+WEB_ManageCourt/bin/
+WEB_ManageCourt/obj/
+
+WPF_ManageCourt/bin/
+WPF_ManageCourt/obj/
+
+# Thư mục tạm của hệ điều hành
+[Tt]humbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.DS_Store
