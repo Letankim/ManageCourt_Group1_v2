@@ -49,6 +49,7 @@ namespace WPF_ManageCourt
             services.AddTransient<SidebarViewModel>();
             services.AddTransient<LoginViewModel>();
             services.AddTransient<ForgotPasswordViewModel>();
+            services.AddTransient<ProfileViewModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();
@@ -60,6 +61,7 @@ namespace WPF_ManageCourt
             services.AddTransient<CourtManageWindow>();
             services.AddTransient<ScheduleWindow>();
             services.AddTransient<AccessoryWindow>();
+            services.AddTransient<ProfileWindow>();
         }
 
     }

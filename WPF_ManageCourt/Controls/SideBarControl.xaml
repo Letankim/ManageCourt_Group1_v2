@@ -2,14 +2,35 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Background="{StaticResource BackgroundMainSidebar}"
-              Height="auto"
-             >
-    <StackPanel>
-        <Button Content="Dashboard" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenDashboardManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lí user" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenUserManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lý booking" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenBookingManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lý court" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenCourtManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lý accessory" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenAccessoryManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lí schedule" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenScheduleManagementCommand}" Foreground="White" Margin="5"/>
-    </StackPanel>
+             Height="auto"
+             Width="250"
+             Padding="10">
+    <Border Background="{StaticResource BackgroundMainSidebar}" CornerRadius="10" Padding="15">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,20">
+                <Ellipse Width="50" Height="50" StrokeThickness="2" Stroke="White">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding UserProfileImage}" Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding LoggedInUserName}" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                    <TextBlock Text="Quản lý hệ thống" Foreground="LightGray" FontSize="12"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Separator Margin="0,0,0,20" Background="Gray" Height="1"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🏠  Dashboard" Command="{Binding OpenDashboardManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="👤  Quản lí user" Command="{Binding OpenUserManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="📅  Quản lý booking" Command="{Binding OpenBookingManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🏟️  Quản lý court" Command="{Binding OpenCourtManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🧳  Quản lý accessory" Command="{Binding OpenAccessoryManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="📆  Quản lí schedule" Command="{Binding OpenScheduleManagementCommand}"/>
+
+            <Separator Margin="0,20,0,20" Background="Gray" Height="1"/>
+
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="⚙️  Profile" Command="{Binding OpenProfileCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🚪  Logout" Command="{Binding LogoutCommand}"/>
+        </StackPanel>
+    </Border>
 </UserControl>
