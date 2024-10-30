@@ -15,6 +15,10 @@ namespace Repositories
             _bookingDAO = bookingDAO;
         }
 
+        public async Task<List<Booking>> GetAllBookingByOwnersAsync(int ownerId)
+        {
+            return await _bookingDAO.GetAllBookingByOwnersAsync(ownerId);
+        }
         public async Task<List<Booking>> GetAllBookingsAsync()
         {
             return await _bookingDAO.GetAllBookingsAsync();
@@ -42,6 +46,15 @@ namespace Repositories
             {
                 await _bookingDAO.DeleteBookingAsync(bookingId);
             }
+        }
+        public async Task<Booking> GetUserByBookingAsync(string contactName)
+        {
+            return await _bookingDAO.GetUserByBookingAsync(contactName);
+        }
+        // Update specific fields of booking status, payment status, and payment method
+        public async Task UpdateBookingPartialAsync(Booking selectedBooking)
+        {
+            await _bookingDAO.UpdateBookingPartialAsync(selectedBooking);
         }
     }
 }

@@ -11,5 +11,14 @@ namespace BusinessLogic.Interface
         Task AddBookingAsync(Booking item);
         Task UpdateBookingAsync(Booking item);
         Task DeleteBookingAsync(int id);
+        Task<List<Booking>> ImportFromJsonAsync(string filePath);
+        Task<List<Booking>> ImportFromExcelAsync(string filePath);
+        Task ExportToJsonAsync(List<Booking> bookings, string filePath);
+        Task ExportToExcelAsync(List<Booking> bookings, string filePath);
+        Task<Booking> GetUserByBookingAsync(string contractName);
+        Task<List<Booking>> GetAllBookingByOwnersAsync(int ownerId);
+        //update status booking 
+        Task UpdateBookingPartialAsync(Booking selectedBooking);
+
     }
 }
