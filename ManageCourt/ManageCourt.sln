@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "..\Busines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ManageCourt", "..\WPF_ManageCourt\WPF_ManageCourt.csproj", "{51112959-FC39-4036-AD46-24C5CA4D691D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_ManageCourt", "..\WEB_ManageCourt\WEB_ManageCourt.csproj", "{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEB_ManageCourt", "..\WEB_ManageCourt\WEB_ManageCourt.csproj", "{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

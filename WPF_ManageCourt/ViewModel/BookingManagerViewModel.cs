@@ -302,6 +302,7 @@ namespace WPF_ManageCourt.ViewModel
             {
                 ShowErrorMessage($"Error loading bookings: {ex.Message}");
             }
+            ShowErrorMessage($"Error loading bookings:");
         }
 
 

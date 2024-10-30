@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Repository\Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Courts\" />
+  </ItemGroup>
+
 </Project>

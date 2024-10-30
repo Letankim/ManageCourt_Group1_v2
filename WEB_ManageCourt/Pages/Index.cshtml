@@ -1,10 +1,46 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
-}
+    ViewData["Title"] = "Trang chủ";
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+<section class="banner text-white text-center" style="background-image: url('https://datsan247.com/images/22.jpg'); height: 500px; background-size: cover; background-position: center;">
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        <h2 class="font-weight-bold">Hệ Thống Hỗ Trợ Tìm Kiếm Sân Bãi Nhanh</h2>
+        <p>Dữ liệu được Datsan247 cập nhật thường xuyên giúp cho người dùng tìm được sân một cách nhanh nhất</p>
+        <div class="input-group mt-3 justify-content-center">
+            <select class="custom-select" style="max-width: 150px">
+                <option selected>Bóng đá</option>
+                <option value="1">Tennis</option>
+                <option value="2">Cầu lông</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Nhập tên sân hoặc địa chỉ..." />
+            <input type="text" class="form-control" placeholder="Nhập khu vực" />
+            <div class="input-group-append">
+                <button class="btn btn-warning" type="button">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+</section>
+<main class="my-5">
+    <div class="container">
+<div class="row text-center">
+    <div class="col-md-4">
+        <img src="https://datsan247.com/images/image_3.png" alt="Icon" class="mb-3" />
+        <h4>Tìm kiếm vị trí sân</h4>
+        <p>Dữ liệu sân đấu dồi dào, liên tục cập nhật, giúp bạn dễ dàng tìm kiếm theo khu vực mong muốn.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="https://datsan247.com/images/image_4.png" alt="Icon" class="mb-3" />
+        <h4>Đặt lịch online</h4>
+        <p>Không cần đến trực tiếp, không cần gọi điện đặt lịch, bạn hoàn toàn có thể đặt sân ở bất kì đâu có internet.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="https://datsan247.com/images/image_5.png" alt="Icon" class="mb-3" />
+        <h4>Tìm đối, bắt cặp đấu</h4>
+        <p>Tìm kiếm, giao lưu các đội thi đấu thể thao, kết nối, xây dựng cộng đồng thể thao sôi nổi, mạnh mẽ.</p>
+    </div>
 </div>
+    </div>
+</main>
