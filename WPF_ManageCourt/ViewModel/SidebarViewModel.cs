@@ -16,6 +16,7 @@ namespace WPF_ManageCourt.ViewModel
 
         private void OpenWindow(Window window)
         {
+            window.Show();
             foreach (Window openWindow in Application.Current.Windows)
             {
                 if (openWindow != window && openWindow != Application.Current.MainWindow)
@@ -23,8 +24,6 @@ namespace WPF_ManageCourt.ViewModel
                     openWindow.Close();
                 }
             }
-
-            window.Show();
         }
     }
 }
