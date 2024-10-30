@@ -5,13 +5,11 @@
               Height="auto"
              >
     <StackPanel>
-        <Button Content="Main" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenMainManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="User" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenUserManagementCommand}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lý Extensions" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
-        <Button Content="Quản lý thành viên" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
-        <Button Content="2FA" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
-        <Button Content="Đọc mail IMAP" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
-        <Button Content="Quy trình tự động" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
-        <Button Content="Logs" Background="{StaticResource BackgroundMainButton}" Foreground="White" Margin="5"/>
+        <Button Content="Dashboard" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenDashboardManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lí user" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenUserManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lý booking" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenBookingManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lý court" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenCourtManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lý accessory" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenAccessoryManagementCommand}" Foreground="White" Margin="5"/>
+        <Button Content="Quản lí schedule" Background="{StaticResource BackgroundMainButton}" Command="{Binding OpenScheduleManagementCommand}" Foreground="White" Margin="5"/>
     </StackPanel>
 </UserControl>

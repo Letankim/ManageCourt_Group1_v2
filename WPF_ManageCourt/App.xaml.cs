@@ -55,6 +55,11 @@ namespace WPF_ManageCourt
             services.AddTransient<UserView>();
             services.AddTransient<LoginWindow>();
             services.AddTransient<ForgetPasswordWindow>();
+            services.AddTransient<DashboardWindow>();
+            services.AddTransient<BookingManageWindow>();
+            services.AddTransient<CourtManageWindow>();
+            services.AddTransient<ScheduleWindow>();
+            services.AddTransient<AccessoryWindow>();
         }
 
     }
