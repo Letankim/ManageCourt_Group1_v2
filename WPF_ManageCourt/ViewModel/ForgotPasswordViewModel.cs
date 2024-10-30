@@ -204,7 +204,17 @@ namespace WPF_ManageCourt.ViewModel
         private void BackToLogin()
         {
             var loginWindow = new LoginWindow();
+            Application.Current.MainWindow = loginWindow;
             loginWindow.Show();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window is ForgetPasswordWindow)
+                {
+                    window.Close();
+                    break;
+                }
+            }
         }
+
     }
 }

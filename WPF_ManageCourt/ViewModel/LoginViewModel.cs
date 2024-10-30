@@ -75,8 +75,10 @@ namespace WPF_ManageCourt.ViewModel
 
         private void ShowForgotPasswordWindow()
         {
+            
             var forgotPasswordWindow = new ForgetPasswordWindow();
-            forgotPasswordWindow.ShowDialog();
+            forgotPasswordWindow.Show();
+            Application.Current.Windows[0].Close();
         }
     }
 

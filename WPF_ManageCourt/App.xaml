@@ -29,6 +29,45 @@
             <SolidColorBrush x:Key="ButtonLight" Color="#f8f9fa"/>
             <SolidColorBrush x:Key="ButtonDark" Color="#343a40"/>
             <SolidColorBrush x:Key="ButtonLink" Color="#007bff"/>
+            <SolidColorBrush x:Key="CardBackgroundLight" Color="#ffffff"/>
+            <SolidColorBrush x:Key="CardBackgroundDark" Color="#343a40"/>
+            <SolidColorBrush x:Key="CardBackgroundPrimary" Color="#007bff"/>
+            <SolidColorBrush x:Key="CardBackgroundSecondary" Color="#6c757d"/>
+            <SolidColorBrush x:Key="CardBackgroundSuccess" Color="#28a745"/>
+            <SolidColorBrush x:Key="CardBackgroundDanger" Color="#dc3545"/>
+            <SolidColorBrush x:Key="CardBackgroundWarning" Color="#ffc107"/>
+            <SolidColorBrush x:Key="CardBackgroundInfo" Color="#17a2b8"/>
+            <SolidColorBrush x:Key="CardBackgroundLightGray" Color="#f8f9fa"/>
+            <SolidColorBrush x:Key="CardBackgroundDarkGray" Color="#343a40"/>
+
+            <Style x:Key="ModernSidebarButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource BackgroundMainButton}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="Margin" Value="0,5,0,0"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                                    CornerRadius="8"
+                                    Padding="{TemplateBinding Padding}">
+                                <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource ButtonSuccess}"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource ButtonPrimary}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

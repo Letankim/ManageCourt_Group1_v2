@@ -1,12 +1,17 @@
-# Bỏ qua các thư mục build cho toàn bộ project
-**/bin/
-**/obj/
+# Thư mục tạm của Visual Studio
+.vs/
+.vscode/
 
-# Các file cấu hình build của Visual Studio
+# Các tệp build và cache của Visual Studio
+*.dbcache
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+*.vscode
+# Bỏ qua các thư mục build cho toàn bộ project
+**/bin/
+**/obj/
 
 # File tạm và hệ thống
 *.cache
