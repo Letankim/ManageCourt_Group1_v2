@@ -1,90 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\",
+  "WorkspaceRootPath": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\ManageCourt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\bookingdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\wpf_managecourt\\accessorywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\bookingmanagerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\wpf_managecourt\\viewmodel\\accessoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\bookingmanagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\wpf_managecourt\\accessorywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\managecourtcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\wpf_managecourt\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\wpf_managecourt\\viewmodel\\basemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\managecourt\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\wpf_managecourt\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\managecourt\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\managecourt\\bookingaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:bookingaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|d:\\hoctap\\fa24\\prn221\\finalproject\\managecourt_group1_v2\\managecourt\\accessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:accessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,8 +32,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 34,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:20:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:28:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
@@ -110,10 +124,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -123,14 +133,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -149,292 +151,101 @@
               "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\App.xaml.cs",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\App.xaml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwEoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T01:04:46.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookingDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BookingDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\BookingDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "BaseModel.cs",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BaseModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\BaseModel.cs",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BaseModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\BaseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:23:08.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T00:38:41.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T00:37:54.585Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BookingManagerViewModel.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAADgvygBAABMAAAAAAAAAA==",
+              "Title": "AccessoryViewModel.cs",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAwwBUBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:10:22.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManageCourtContext.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\ManageCourtContext.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\ManageCourtContext.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\ManageCourtContext.cs",
-              "RelativeToolTip": "..\\DataAccess\\ManageCourtContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwCYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:09:01.386Z",
+              "WhenOpened": "2024-10-31T00:37:40.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BookingManageWindow.xaml",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T18:08:47.371Z",
+              "Title": "AccessoryWindow.xaml.cs",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\AccessoryWindow.xaml.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\AccessoryWindow.xaml.cs",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\AccessoryWindow.xaml.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\AccessoryWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T00:35:21.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BookingManagerViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:32:49.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BookingManageWindow.xaml",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml",
+              "DocumentIndex": 0,
+              "Title": "AccessoryWindow.xaml",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\AccessoryWindow.xaml",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\AccessoryWindow.xaml",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\WPF_ManageCourt\\AccessoryWindow.xaml",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\AccessoryWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T15:34:32.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserView.xaml",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T15:35:38.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BookingManageWindow.xaml.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBwAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:36:49.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ProfileViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAA/wGwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:52:32.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:37:23.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:52:11.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\User.cs",
-              "RelativeDocumentMoniker": "User.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\User.cs",
-              "RelativeToolTip": "User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:53:38.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAwwMIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:53:45.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserView.xaml.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:52:02.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BookingDAO.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwFUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:38:55.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAwD4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:28:58.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAADwv9gAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:40:46.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BookingAccessory.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\BookingAccessory.cs",
-              "RelativeDocumentMoniker": "BookingAccessory.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\BookingAccessory.cs",
-              "RelativeToolTip": "BookingAccessory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:42:45.036Z"
+              "WhenOpened": "2024-10-31T00:25:35.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\Booking.cs",
-              "RelativeDocumentMoniker": "Booking.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\Booking.cs",
-              "RelativeToolTip": "Booking.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwCYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:42:47.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "BookingAccessoryDAO.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
+              "Title": "Accessory.cs",
+              "DocumentMoniker": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\ManageCourt\\Accessory.cs",
+              "RelativeDocumentMoniker": "Accessory.cs",
+              "ToolTip": "D:\\hoctap\\FA24\\PRN221\\FinalProject\\ManageCourt_Group1_v2\\ManageCourt\\Accessory.cs",
+              "RelativeToolTip": "Accessory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:38:57.608Z"
-            },
+              "WhenOpened": "2024-10-31T00:25:11.218Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 323,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IBookingRepository.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:39:53.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "BookingRepository.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:40:10.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IBookingService.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:40:34.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ForgotPasswordViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:32:51.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwEcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:30:26.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "WPF_ManageCourt.csproj",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-30T15:28:00.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ManageCourtContext.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:27:39.39Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }
