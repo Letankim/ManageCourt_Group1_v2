@@ -241,8 +241,7 @@ namespace WPF_ManageCourt.ViewModel
             {
                 var courts = await _courtService.GetCourtByIdAsync(3);
                 var courtSchedules = await _scheduleService.GetScheduleByCourtIdAsync(courts.CourtId);
-                AllTimers = GetTimeSlots();
-                OnPropertyChanged(nameof(AllTimers));
+                courtSchedules.ForEach(schedule => schedule.Court = courts);
                 Schedules = new ObservableCollection<CourtSchedule>(courtSchedules);
                 SelectedSchedule = new CourtSchedule();
             }

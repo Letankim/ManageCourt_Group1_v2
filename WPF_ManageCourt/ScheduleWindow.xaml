@@ -103,7 +103,7 @@
                             <DataGrid.Columns>
 
                                 <DataGridTextColumn Header="ID" Binding="{Binding ScheduleId}" Width="80"/>
-                                <DataGridTextColumn Header="Court ID" Binding="{Binding CourtId}" Width="80"/>
+                                <DataGridTextColumn Header="Court Name" Binding="{Binding Court.CourtName}" Width="100"/>
                                 <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="100"/>
                                 <DataGridTextColumn Header="TimeSlot" Binding="{Binding TimeSlot}" Width="160"/>
                                 <DataGridTextColumn Header="Available" Binding="{Binding IsAvailable}" Width="85"/>
@@ -120,11 +120,10 @@
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="20" Width="300">
                         <TextBlock Text="Add New Schedule" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
-
                         <TextBox 
 Margin="0,10" 
-materialDesign:HintAssist.Hint="Court ID" 
-Text="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}" />
+materialDesign:HintAssist.Hint="Court Id" 
+Text="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}"/>
 
                         <DatePicker 
                     Margin="0,10" 
@@ -178,8 +177,8 @@ Text="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}" /
 
                         <TextBox 
 Margin="0,10" 
-materialDesign:HintAssist.Hint="Court ID" 
-Text="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}" />
+materialDesign:HintAssist.Hint="Court Name" 
+Text="{Binding SelectedSchedule.Court.CourtName, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
 
                         <DatePicker 
                     Margin="0,10" 
