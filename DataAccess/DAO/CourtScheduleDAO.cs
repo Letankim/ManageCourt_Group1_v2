@@ -16,6 +16,11 @@ namespace DataAccess.DAO
         {
             return await _context.CourtSchedules.FindAsync(scheduleId);
         }
+        
+        public async Task<List<CourtSchedule>> GetScheduleByCourtIdAsync(int courtId)
+        {
+            return await _context.CourtSchedules.Where(s => s.CourtId == courtId).ToListAsync();
+        }
 
         public async Task AddScheduleAsync(CourtSchedule schedule)
         {

@@ -24,7 +24,12 @@ namespace Repositories
         {
             return await _courtScheduleDAO.GetScheduleByIdAsync(scheduleId);
         }
-
+        
+        public async Task<List<CourtSchedule>> GetScheduleByCourtIdAsync(int courtId)
+        {
+            return await _courtScheduleDAO.GetScheduleByCourtIdAsync(courtId);
+        }
+        
         public async Task AddScheduleAsync(CourtSchedule schedule)
         {
             await _courtScheduleDAO.AddScheduleAsync(schedule);

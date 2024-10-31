@@ -8,6 +8,7 @@ namespace BusinessLogic.Interface
     {
         Task<IEnumerable<CourtSchedule>> GetListAllSchedulesAsync();
         Task<CourtSchedule> GetScheduleByIdAsync(int id);
+        Task<List<CourtSchedule>> GetScheduleByCourtIdAsync(int courtId);
         Task AddScheduleAsync(CourtSchedule item);
         Task UpdateScheduleAsync(CourtSchedule item);
         Task DeleteScheduleAsync(int id);

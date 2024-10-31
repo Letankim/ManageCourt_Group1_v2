@@ -40,6 +40,8 @@ namespace WPF_ManageCourt
             services.AddTransient<UserDAO, UserDAO>();
             services.AddTransient<UserOtpDAO, UserOtpDAO>();
             services.AddTransient<BookingDAO, BookingDAO>();
+            services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
+            services.AddTransient<CourtScheduleDAO, CourtScheduleDAO>();
 
             // Register UserRepository and UserService
             services.AddTransient<IUserRepository, UserRepository>();
@@ -47,6 +49,10 @@ namespace WPF_ManageCourt
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IBookingRepository, BookingRepository>();
             services.AddTransient<IBookingService, BookingService>();
+            services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
+            services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
+            services.AddTransient<ICourtScheduleService, CourtScheduleService>();
+            services.AddTransient<ICourtScheduleRepository, CourtScheduleRepository>();
 
             // Register ViewModels
             services.AddTransient<UserViewModel>();
@@ -55,6 +61,7 @@ namespace WPF_ManageCourt
             services.AddTransient<ForgotPasswordViewModel>();
             services.AddTransient<ProfileViewModel>();
             services.AddTransient<BookingManagerViewModel>();
+            services.AddTransient<ScheduleCourtModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();
