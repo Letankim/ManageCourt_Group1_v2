@@ -36,20 +36,23 @@ namespace WPF_ManageCourt
             services.AddTransient<IAccessoryService, AccessoryService>();
             services.AddTransient<IUserOtpService, UserOtpService>();
             services.AddTransient<EmailService, EmailService>();
+            services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
 
             services.AddTransient<UserDAO, UserDAO>();
             services.AddTransient<UserOtpDAO, UserOtpDAO>();
+            services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
             // Register UserRepository and UserService
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserOtpRepository, UserOtpRepository>();
             services.AddTransient<IUserService, UserService>();
-
+            services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
             // Register ViewModels
             services.AddTransient<UserViewModel>();
             services.AddTransient<SidebarViewModel>();
             services.AddTransient<LoginViewModel>();
             services.AddTransient<ForgotPasswordViewModel>();
             services.AddTransient<ProfileViewModel>();
+            services.AddTransient<CourtViewModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();
