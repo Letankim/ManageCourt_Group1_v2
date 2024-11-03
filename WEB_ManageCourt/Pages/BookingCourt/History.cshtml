@@ -1,0 +1,96 @@
+﻿@page
+@model WEB_ManageCourt.Pages.BookingCourt.HistoryModel
+@{
+    ViewData["Title"] = "Lịch sử đặt sân cầu lông";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4"><i class="fas fa-history"></i> Lịch sử đặt sân cầu lông</h2>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    @if (Model.BookingHistory != null && Model.BookingHistory.Count > 0)
+    {
+        <div class="card shadow-lg border-0 rounded-lg">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="bookingHistoryTable" class="table table-bordered table-hover text-center">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Tên sân</th>
+                                <th>Ngày đặt</th>
+                                <th>Khung giờ</th>
+                                <th>Trạng thái</th>
+                                <th>Thanh toán</th>
+                                <th>Tổng tiền</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.BookingHistory.Count; i++)
+                            {
+                                var booking = Model.BookingHistory[i];
+                                DateTime playDateTime = DateTime.Parse(booking.BookingDate.ToString("yyyy-MM-dd") + " " + booking.TimeSlot.Split('-')[0].Trim());
+                                bool isWithinFiveHours = (playDateTime - DateTime.Now).TotalHours > 5;
+                                bool hasPastPlayTime = DateTime.Now > playDateTime && booking.BookingStatus == "NoShow";
+
+                                <tr>
+                                    <td>@(i + 1)</td>
+                                    <td>@booking.Court.CourtName</td>
+                                    <td>@booking.BookingDate.ToString("yyyy-MM-dd")</td>
+                                    <td>@booking.TimeSlot</td>
+                                    <td>
+                                        <span class="badge @(booking.BookingStatus == "Completed" ? "badge-success" : "badge-warning")">
+                                            @booking.BookingStatus @(hasPastPlayTime ? "  - (Không đến sân)" : "")
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge @(booking.PaymentStatus == "Completed" ? "badge-info" : "badge-warning")">
+                                            @booking.PaymentStatus
+                                        </span>
+                                    </td>
+                                    <td>@booking.TotalPrice.ToString("N0") VNĐ</td>
+                                    <td>
+                                        <a href="/BookingCourt/Details?bookingId=@booking.BookingId" class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-eye"></i> Xem chi tiết
+                                        </a>
+                                        @if (isWithinFiveHours && !hasPastPlayTime)
+                                        {
+                                            <button class="btn btn-outline-danger btn-sm">
+                                                <i class="fas fa-times-circle"></i> Hủy
+                                            </button>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">Chưa có lịch sử đặt sân.</div>
+    }
+</div>
+
+@section Scripts {
+<script>
+    $(document).ready(function () {
+        $('#bookingHistoryTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.11.3/i18n/vi.json"
+            },
+            "ordering": true,
+            "paging": true,
+            "searching": true
+        });
+    });
+</script>
+}

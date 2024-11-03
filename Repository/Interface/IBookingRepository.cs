@@ -13,8 +13,10 @@ namespace Repositories.Interface
         Task DeleteBookingAsync(int bookingId);
         Task<Booking> GetUserByBookingAsync(string contractName);
         Task<List<Booking>> GetAllBookingByOwnersAsync(int ownerId);
-        // update status booking
         Task UpdateBookingPartialAsync(Booking selectedBooking);
-
+        Task AddBookingOrderAsync(Booking booking);
+        Task<List<Booking>> GetBookingsByUserIdAsync(int userId);
+        Task<Booking> GetBookingDetailByUserIdAndBookingIdAsync(int userId, int bookingId);
+        Task ChangeBookingStatusAsync(int bookingId, string status);
     }
 }

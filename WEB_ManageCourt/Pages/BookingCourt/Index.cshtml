@@ -1,0 +1,224 @@
+﻿@page
+@model WEB_ManageCourt.Pages.BookingCourt.IndexModel
+@{
+    ViewData["Title"] = "Đặt lịch sân cầu lông";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center">
+        <i class="fas fa-calendar-alt"></i> Đặt lịch sân cầu lông
+    </h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    @if (TempData["ModelErrors"] != null)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var error in (List<string>)TempData["ModelErrors"])
+                {
+                        <li>@error</li>
+                }
+            </ul>
+        </div>
+    }
+    <!-- Date Picker for Booking Date -->
+    <div class="row mt-4">
+        <div class="col-lg-6 mb-4">
+            <label for="BookingDate">Chọn ngày đặt lịch:</label>
+            <input type="date" id="BookingDate" class="form-control"
+                   value="@Model.BookingDate.ToString("yyyy-MM-dd")"
+                   min="@DateTime.Now.ToString("yyyy-MM-dd")"
+                   onchange="loadTimeSlots()" />
+        </div>
+    </div>
+
+    <!-- Available Time Slots -->
+    <div class="row mt-4">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg p-3 h-100 border-0 rounded-lg">
+                <h4 class="card-title"><i class="fas fa-clock"></i> Chọn khung giờ</h4>
+                <hr />
+                <div class="d-flex flex-wrap" id="timeSlotsContainer">
+                    @await Html.PartialAsync("BookingCourt/_TimeSlotsPartial", Model.AvailableTimeSlots)
+                </div>
+            </div>
+        </div>
+
+        <!-- Accessories Selection -->
+        <!-- Accessories Selection -->
+<div class="col-lg-6 mb-4">
+    <div class="card shadow-lg p-3 h-100 border-0 rounded-lg">
+        <h4 class="card-title"><i class="fas fa-box"></i> Chọn phụ kiện kèm theo</h4>
+        <hr />
+        <div class="row">
+                    @foreach (var accessory in Model.Accessories)
+{
+    <div class="col-6 col-md-4 mb-3">
+        <div class="card accessory-card shadow-sm border-0">
+            <div class="card-body text-center p-2">
+                <h6 class="card-title mb-1">
+                    <i class="fas fa-box"></i> @accessory.Name
+                </h6>
+                <p class="card-text mb-2">@accessory.Price.ToString("N0") VNĐ</p>
+                <input type="checkbox" class="accessory-checkbox"
+                                           id="accessory-@accessory.AccessoryId"
+                       data-id="@accessory.AccessoryId"
+                       data-price="@accessory.Price"
+                       onchange="toggleAccessory(@accessory.AccessoryId, '@accessory.Name', @accessory.Price)" />
+                <label for="accessory-@accessory.AccessoryId" class="d-block mb-1">Chọn</label>
+                <input type="number" class="form-control quantity-input"
+                       data-id="@accessory.AccessoryId"
+                       placeholder="Số lượng"
+                       min="1" value="1"
+                       style="display: none;"
+                       onchange="updateAccessoryQuantity(@accessory.AccessoryId, this.value)" />
+            </div>
+        </div>
+    </div>
+}
+
+
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <form method="post">
+        <input type="hidden" id="SelectedTimeSlots" name="SelectedTimeSlots" />
+        <input type="hidden" id="SelectedAccessories" name="SelectedAccessories" />
+        <input type="hidden" id="TotalPrice" name="TotalPrice" />
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <label asp-for="ContactName">Tên liên hệ</label>
+                <input asp-for="ContactName" class="form-control"/>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="ContactEmail">Email</label>
+                <input asp-for="ContactEmail" type="email" class="form-control" />
+            </div>
+            <div class="col-md-6 mt-3">
+                <label asp-for="ContactPhone">Số điện thoại</label>
+                <input asp-for="ContactPhone" type="tel" class="form-control" />
+            </div>
+            <div class="col-md-6 mt-3">
+                <label asp-for="PaymentMethod">Phương thức thanh toán</label>
+                <select asp-for="PaymentMethod" class="form-control">
+                    <option value="AfterPlay">Tiền mặt tại sân</option>
+                    <option value="Online">Thanh toán trực tuyến</option>
+                </select>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <label for="totalPrice">Tổng số tiền</label>
+                <input type="text" id="totalPrice" class="form-control" readonly />
+            </div>
+             <div class="col-lg-6 mb-4">
+                 <label asp-for="Note">Ghi chú</label>
+                <input asp-for="Note" type="text" class="form-control"/>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-4">Xác nhận đặt lịch</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        const pricePerHour = parseFloat("@Model.CourtPricePerHour");
+        let selectedAccessories = [];
+
+    function toggleAccessory(accessoryId, accessoryName, price) {
+        const accessoryCheckbox = document.querySelector(`.accessory-checkbox[data-id="${accessoryId}"]`);
+        const quantityInput = document.querySelector(`.quantity-input[data-id="${accessoryId}"]`);
+
+        if (accessoryCheckbox.checked) {
+            selectedAccessories.push({ accessoryId: accessoryId, accessoryName: accessoryName, price: price, quantity: parseInt(quantityInput.value) || 1 });
+            quantityInput.style.display = "block";
+        } else {
+            selectedAccessories = selectedAccessories.filter(accessory => accessory.accessoryId !== accessoryId);
+            quantityInput.style.display = "none";
+        }
+
+        document.getElementById("SelectedAccessories").value = JSON.stringify(selectedAccessories);
+        updateTotalPrice();
+    }
+
+    function updateAccessoryQuantity(accessoryId, quantity) {
+        selectedAccessories = selectedAccessories.map(accessory => {
+            if (accessory.accessoryId === accessoryId) {
+                accessory.quantity = parseInt(quantity) || 1;
+            }
+            return accessory;
+        });
+
+        document.getElementById("SelectedAccessories").value = JSON.stringify(selectedAccessories);
+        updateTotalPrice();
+    }
+
+
+        let selectedSlots = [];
+        function toggleTimeSlot(slotId, slotTime) {
+            const slotButton = document.querySelector(`.time-slot[data-id="${slotId}"]`);
+
+            if (slotButton.classList.contains("btn-primary")) {
+                slotButton.classList.remove("btn-primary");
+                slotButton.classList.add("btn-outline-primary");
+                selectedSlots = selectedSlots.filter(slot => slot.slotId !== slotId);
+            } else {
+                slotButton.classList.remove("btn-outline-primary");
+                slotButton.classList.add("btn-primary");
+                selectedSlots.push({ slotId: slotId, slotTime: slotTime });
+            }
+            document.getElementById("SelectedTimeSlots").value = JSON.stringify(selectedSlots);
+            updateTotalPrice();
+        }
+
+            function updateTotalPrice() {
+        let totalPrice = 0;
+        const slotCount = selectedSlots.length;
+        totalPrice += slotCount * pricePerHour;
+
+        document.querySelectorAll(".accessory-checkbox:checked").forEach((checkbox) => {
+            const accessoryPrice = parseFloat(checkbox.getAttribute("data-price"));
+            const quantityInput = checkbox.closest('.card-body').querySelector(".quantity-input"); // Use closest() to find the nearest container if needed
+            const quantity = parseInt(quantityInput.value) || 1;
+
+            totalPrice += accessoryPrice * quantity;
+        });
+
+        document.getElementById("totalPrice").value = totalPrice.toLocaleString("en-US") + " VNĐ";
+        document.getElementById("TotalPrice").value = totalPrice;
+    }
+
+
+        function toggleQuantityInput(checkbox) {
+            const quantityInput = checkbox.parentNode.querySelector(".quantity-input");
+            quantityInput.style.display = checkbox.checked ? "block" : "none";
+            quantityInput.value = checkbox.checked ? 1 : '';
+            updateTotalPrice();
+        }
+
+        function loadTimeSlots() {
+            const bookingDate = document.getElementById('BookingDate').value;
+            const courtId = "@Model.CourtId";
+
+            fetch(`/BookingCourt/Index?handler=LoadTimeSlots&courtId=${courtId}&bookingDate=${bookingDate}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('timeSlotsContainer').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading time slots:', error));
+        }
+
+        document.addEventListener("DOMContentLoaded", loadTimeSlots);
+        document.getElementById("BookingDate").addEventListener("change", loadTimeSlots);
+    </script>
+}
+

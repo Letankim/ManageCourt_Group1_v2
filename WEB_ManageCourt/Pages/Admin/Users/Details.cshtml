@@ -1,0 +1,118 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Users.DetailsModel
+
+@{
+    ViewData["Title"] = "Chi tiết Người Dùng";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0" style="color:aliceblue"><i class="fas fa-user"></i> Thông tin chi tiết người dùng</h3>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-sm-4 font-weight-bold">Tên đăng nhập:</div>
+                <div class="col-sm-8">@Model.User.Username</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4 font-weight-bold">Vai trò:</div>
+                <div class="col-sm-8">@Model.User.Role</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4 font-weight-bold">Họ và tên:</div>
+                <div class="col-sm-8">@Model.User.FullName</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4 font-weight-bold">Email:</div>
+                <div class="col-sm-8">@Model.User.Email</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4 font-weight-bold">Số điện thoại:</div>
+                <div class="col-sm-8">@Model.User.Phone</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4 font-weight-bold">Trạng thái:</div>
+                <div class="col-sm-8">
+                    @if (Model.User.IsEnabled == true)
+                    {
+                        <span class="badge badge-success">Enabled</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-secondary">Disabled</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.User.Role == "Owner" && Model.UserCourts.Any())
+    {
+        <div class="card shadow-lg border-0 rounded-lg mb-4">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0" style="color:aliceblue"><i class="fas fa-basketball-court"></i> Danh sách sân do @Model.User.FullName quản lý</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tên sân</th>
+                            <th>Vị trí</th>
+                            <th>Giá thuê theo giờ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var court in Model.UserCourts)
+                        {
+                            <tr>
+                                <td>@court.CourtName</td>
+                                <td>@court.Location</td>
+                                <td>@court.PricePerHour.ToString("C")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else if (Model.User.Role == "User" && Model.UserBookings.Any())
+    {
+        <div class="card shadow-lg border-0 rounded-lg mb-4">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0" style="color:aliceblue"><i class="fas fa-calendar-alt"></i> Lịch sử đặt sân của @Model.User.FullName</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tên sân</th>
+                            <th>Ngày đặt</th>
+                            <th>Tổng tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var booking in Model.UserBookings)
+                        {
+                            <tr>
+                                <td>@booking.Court.CourtName</td>
+                                <td>@booking.BookingDate.ToShortDateString()</td>
+                                <td>@booking.TotalPrice.ToString("C")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="text-muted">Không có dữ liệu liên quan cho người dùng này.</p>
+    }
+
+    <div class="mt-4">
+        <a asp-page="./Edit" asp-route-id="@Model.User.UserId" class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</a>
+        <a asp-page="./Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Quay lại danh sách</a>
+    </div>
+</div>

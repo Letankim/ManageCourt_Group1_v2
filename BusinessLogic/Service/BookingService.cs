@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Repositories.Interface;
 using Newtonsoft.Json;
 using OfficeOpenXml;
+using DataAccess.DAO;
 
 namespace BusinessLogic.Service
 {
@@ -214,6 +215,34 @@ namespace BusinessLogic.Service
         public async Task UpdateBookingPartialAsync(Booking selectedBooking)
         {
             await bookingRepository.UpdateBookingPartialAsync(selectedBooking);
+        }
+
+        public async Task AddBookingOrderAsync(Booking booking)
+        {
+            try
+            {
+                await bookingRepository.AddBookingOrderAsync(booking);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
+        }
+
+        public async Task<List<Booking>> GetBookingsByUserIdAsync(int userId)
+        {
+            return await bookingRepository.GetBookingsByUserIdAsync(userId);
+        }
+
+        public async Task<Booking> GetBookingDetailByUserIdAndBookingIdAsync(int userId, int bookingId)
+        {
+            return await bookingRepository.GetBookingDetailByUserIdAndBookingIdAsync(userId, bookingId);
+        }
+
+        public async Task ChangeBookingStatusAsync(int bookingId, string status)
+        {
+            await bookingRepository.ChangeBookingStatusAsync(bookingId, status);
         }
     }
 }

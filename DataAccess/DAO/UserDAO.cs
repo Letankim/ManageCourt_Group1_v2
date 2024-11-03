@@ -2,7 +2,6 @@
 using Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,17 +12,17 @@ namespace DataAccess.DAO
     {
         public async Task<List<User>> GetAllUsersAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users.AsNoTracking().ToListAsync();
         }
 
         public async Task<User> GetUserByIdAsync(int userId)
         {
-            return await _context.Users.FindAsync(userId);
+            return await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.UserId == userId);
         }
 
         public async Task<User> GetUserByUsernameAsync(string username)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Username == username);
         }
 
         public async Task AddUserAsync(User user)
@@ -31,12 +30,15 @@ namespace DataAccess.DAO
             user.Password = EncryptPassword(user.Password);
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
+
+            _context.Entry(user).State = EntityState.Detached;
         }
 
         public async Task UpdateUserAsync(User user)
         {
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
+            _context.Entry(user).State = EntityState.Detached;
         }
 
         public async Task DeleteUserAsync(int userId)
@@ -62,7 +64,7 @@ namespace DataAccess.DAO
             catch (Exception ex)
             {
                 await transaction.RollbackAsync();
-                _context.ChangeTracker.Clear();
+                _context.ChangeTracker.Clear(); 
                 throw new Exception($"An error occurred while deleting the user with ID {userId}: {ex.Message}", ex);
             }
         }
@@ -70,14 +72,9 @@ namespace DataAccess.DAO
         public async Task<User> AuthenticateUserAsync(string username, string password)
         {
             string encryptedPassword = EncryptPassword(password);
-            var user = await _context.Users
-                                 .SingleOrDefaultAsync(c => c.Username == username && c.Password == encryptedPassword);
-
-            if (user != null)
-            {
-                return user;
-            }
-            return null;
+            return await _context.Users
+                                 .AsNoTracking()
+                                 .SingleOrDefaultAsync(u => u.Username == username && u.Password == encryptedPassword);
         }
 
         private string EncryptPassword(string password)
@@ -107,6 +104,23 @@ namespace DataAccess.DAO
 
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
+
+            _context.Entry(user).State = EntityState.Detached;
+        }
+
+        public async Task<User?> AuthenticateUserLoginAsync(string username, string password)
+        {
+            string encryptedPassword = EncryptPassword(password);
+            return await _context.Users
+                                 .AsNoTracking()
+                                 .SingleOrDefaultAsync(u => u.Username == username && u.Password == encryptedPassword);
+        }
+
+        public async Task<List<User>> GetAllCourtOwnerAsync()
+        {
+            return await _context.Users.AsNoTracking()
+                                       .Where(u => u.Role == "CourtOwner")
+                                       .ToListAsync();
         }
     }
 }

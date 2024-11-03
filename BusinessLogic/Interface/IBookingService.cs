@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using DataAccess.DAO;
+using Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -20,5 +21,12 @@ namespace BusinessLogic.Interface
         //update status booking 
         Task UpdateBookingPartialAsync(Booking selectedBooking);
 
+        Task AddBookingOrderAsync(Booking booking);
+
+        Task<List<Booking>> GetBookingsByUserIdAsync(int userId);
+
+        Task<Booking> GetBookingDetailByUserIdAndBookingIdAsync(int userId, int bookingId);
+
+        Task ChangeBookingStatusAsync(int bookingId, string status);
     }
 }

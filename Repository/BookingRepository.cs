@@ -56,5 +56,32 @@ namespace Repositories
         {
             await _bookingDAO.UpdateBookingPartialAsync(selectedBooking);
         }
+
+        public async Task AddBookingOrderAsync(Booking booking)
+        {
+            try
+            {
+                await _bookingDAO.AddBookingOrderAsync(booking);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
+        }
+
+        public async Task<List<Booking>> GetBookingsByUserIdAsync(int userId)
+        {
+            return await _bookingDAO.GetBookingsByUserIdAsync(userId);
+        }
+
+        public async Task<Booking> GetBookingDetailByUserIdAndBookingIdAsync(int userId, int bookingId)
+        {
+            return await _bookingDAO.GetBookingDetailByUserIdAndBookingIdAsync(userId, bookingId);
+        }
+        public async Task ChangeBookingStatusAsync(int bookingId, string status)
+        {
+            await _bookingDAO.ChangeBookingStatusAsync(bookingId, status);
+        }
     }
 }

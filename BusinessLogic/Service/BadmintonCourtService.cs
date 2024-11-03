@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Interface;
+using DataAccess.DAO;
 using Model;
 using Repositories.Interface;
 using System.Collections.Generic;
@@ -38,6 +39,31 @@ namespace BusinessLogic.Service
         public async Task<List<BadmintonCourt>> GetListAllCourtsAsync()
         {
             return await _badmintonCourtRepository.GetAllCourtsAsync();
+        }
+
+        public async Task<List<BadmintonCourt>> GetAllEnabledCourtsAsync(int page, int pageSize)
+        {
+            return await _badmintonCourtRepository.GetAllEnabledCourtsAsync(page, pageSize);
+        }
+
+        public async Task<int> GetCourtsCountAsync()
+        {
+            return await _badmintonCourtRepository.GetCourtsCountAsync();
+        }
+
+        public async Task<(List<BadmintonCourt>, int)> GetFilteredCourtsAsync(
+    int page, int pageSize, decimal? minPrice, decimal? maxPrice, TimeOnly? openTime, TimeOnly? closeTime, string search)
+        {
+            return await _badmintonCourtRepository.GetFilteredCourtsAsync(page, pageSize, minPrice, maxPrice, openTime, closeTime, search);
+        }
+        public async Task<BadmintonCourt> GetCourtByIdActiveAsync(int courtId)
+        {
+            return await _badmintonCourtRepository.GetCourtByIdAsync(courtId);
+        }
+
+        public async Task<List<BadmintonCourt>> GetCourtsByOwnerIdAsync(int ownerId)
+        {
+            return await _badmintonCourtRepository.GetCourtsByOwnerIdAsync((int)ownerId);
         }
     }
 }

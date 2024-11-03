@@ -38,5 +38,33 @@ namespace DataAccess.DAO
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task MarkScheduleAsUnavailableAsync(int scheduleId)
+        {
+            var schedule = await _context.CourtSchedules.FindAsync(scheduleId);
+            if (schedule != null)
+            {
+                schedule.IsAvailable = false;
+                _context.CourtSchedules.Update(schedule);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task<List<CourtSchedule>> GetSchedulesByCourtIdAsync(int courtId, DateOnly date)
+        {
+            return await _context.CourtSchedules
+                .Where(schedule => schedule.CourtId == courtId && schedule.Date == date)
+                .ToListAsync();
+        }
+
+        public async Task<List<CourtSchedule>> GetAvailableSchedulesAsync(int courtId, DateOnly date)
+        {
+            return await _context.CourtSchedules
+                .Where(schedule => schedule.CourtId == courtId &&
+                                   schedule.Date == date &&
+                                   schedule.IsAvailable == true)
+                .ToListAsync();
+        }
+
     }
 }

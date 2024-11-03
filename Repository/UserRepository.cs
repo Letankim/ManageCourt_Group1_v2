@@ -60,5 +60,15 @@ namespace Repositories
         {
             await _userDAO.UpdatePasswordAsync(userId, newPassword);
         }
+
+        public async Task<User?> AuthenticateUserLoginAsync(string username, string password)
+        {
+            return await _userDAO.AuthenticateUserLoginAsync(username, password);
+        }
+
+        public async Task<List<User>> GetAllCourtOwnerAsync()
+        {
+            return await _userDAO.GetAllCourtOwnerAsync();
+        }
     }
 }

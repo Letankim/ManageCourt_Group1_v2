@@ -1,0 +1,38 @@
+﻿@model List<Model.User>
+<table id="tableData" class="table table-bordered table-hover text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>Tên đăng nhập</th>
+            <th>Họ và tên</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Vai trò</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                <td>@Html.DisplayFor(modelItem => item.Role)</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" @(item.IsEnabled == true ? "checked" : "") onclick="toggleStatus(@item.UserId)">
+                        <span class="slider round"></span>
+                    </label>
+                </td>
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.UserId" class="btn btn-outline-primary btn-sm"><i class="fas fa-edit"></i> Sửa</a>
+                    <a asp-page="./Details" asp-route-id="@item.UserId" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle"></i> Chi tiết</a>
+                    <a asp-page="./Delete" asp-route-id="@item.UserId" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i> Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

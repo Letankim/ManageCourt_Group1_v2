@@ -1,0 +1,28 @@
+﻿@page
+@model WEB_ManageCourt.Pages.BookingCourt.ErrorBookingModel
+@{
+    ViewData["Title"] = "Đặt sân thất bại";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container my-5">
+    <div class="modal-dialog">
+        <div class="modal-content p-4">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center text-danger">Đặt sân thất bại!</h4>
+                <button type="button" class="btn-close" aria-label="Close" onclick="window.location='/Courts'"></button>
+            </div>
+            <div class="modal-body text-center">
+                <i class="fas fa-times-circle text-danger mb-3" style="font-size: 4rem;"></i>
+                <p class="fw-bold">Đơn hàng chưa được đặt thành công</p>
+                <p>Nguyên nhân: @TempData["ErrorMessage"] ?? "(Chưa có thông tin chi tiết)"</p>
+                <p>Hãy thử lại sau đó.</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <a href="/Courts" class="btn btn-primary">
+                    Đặt sân lại
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

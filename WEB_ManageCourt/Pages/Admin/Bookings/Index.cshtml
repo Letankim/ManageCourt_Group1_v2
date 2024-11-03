@@ -1,0 +1,154 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Bookings.IndexModel
+
+@{
+    ViewData["Title"] = "Danh sách đặt sân";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid my-5">
+    <h2 class="text-center mb-4">Danh sách đặt sân</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0"><i class="fas fa-calendar-check"></i> Đặt sân</h4>
+                <a asp-page="./ExportExcel" class="btn btn-success" target="_blank"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+            </div>
+
+            <table id="tableData" class="table table-hover table-bordered table-responsive-sm">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>Ngày Đặt</th>
+                        <th>Thời gian</th>
+                        <th>Tổng Giá</th>
+                        <th>Tên người đặt</th>
+                        <th>Phương thức Thanh toán</th>
+                        <th>Trạng thái đặt chỗ</th>
+                        <th>Tên Sân</th>
+                        <th>Người dùng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Booking)
+                    {
+                        <tr>
+                            <td><strong>@item.BookingDate.ToString("dd/MM/yyyy")</strong></td>
+                            <td><strong>@item.TimeSlot</strong></td>
+                            <td class="text-success font-weight-bold">@item.TotalPrice.ToString("C")</td>
+                            <td>@item.ContactName</td>
+
+                            <td>
+                                @switch (item.PaymentMethod)
+                                {
+                                    case "Online":
+                                        <span class="badge bg-info text-white"><i class="fas fa-globe"></i> Online</span>
+                                        break;
+                                    case "AfterPlay":
+                                        <span class="badge bg-primary text-white"><i class="fas fa-wallet"></i> AfterPay</span>
+                                        break;
+                                }
+                            </td>
+                            <td>
+                                @if (item.BookingStatus == "Confirmed")
+                                {
+                                    <span class="badge bg-success text-uppercase">@item.BookingStatus</span>
+                                }
+                                else if (item.BookingStatus == "NoShow")
+                                {
+                                    <span class="badge bg-warning text-dark text-uppercase">@item.BookingStatus</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger text-uppercase">@item.BookingStatus</span>
+                                }
+                            </td>
+
+                            <td>@item.Court.CourtName</td>
+
+                            <td>
+                                <a asp-page="/Admin/Users/Details" asp-route-id="@item.User.UserId" class="text-decoration-none">
+                                    <span class="text-primary font-weight-bold">@item.User.Username</span>
+                                </a>
+                            </td>
+
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a asp-page="./Details" asp-route-id="@item.BookingId" class="btn btn-sm btn-outline-info"><i class="fas fa-info-circle"></i> Chi tiết</a>
+                                </div>
+                                <button class="btn btn-sm btn-secon" onclick="openChangeStatusModal(@item.BookingId, '@item.BookingStatus')">
+                                    <i class="fas fa-sync"></i> Thay đổi trạng thái
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="changeStatusModal" tabindex="-1" aria-labelledby="changeStatusModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changeStatusModalLabel">Thay đổi trạng thái</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="statusChangeForm">
+                        <input type="hidden" id="bookingId" />
+                        <div class="mb-3">
+                            <label for="bookingStatus" class="form-label">Chọn trạng thái mới</label>
+                            <select class="form-control" id="bookingStatus">
+                                <option value="Confirmed">Xác nhận</option>
+                                <option value="Cancelled">Hủy bỏ</option>
+                                <option value="NoShow">Không đến</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="confirmChangeStatus">Cập nhật</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+    <script>
+        let currentBookingId; 
+
+        function openChangeStatusModal(bookingId, currentStatus) {
+            currentBookingId = bookingId; 
+            document.getElementById('bookingStatus').value = currentStatus; 
+            const modal = new bootstrap.Modal(document.getElementById('changeStatusModal'));
+            modal.show(); 
+        }
+
+        document.getElementById('confirmChangeStatus').addEventListener('click', function () {
+            const newStatus = document.getElementById('bookingStatus').value; 
+            $.ajax({
+                url: '?handler=ToggleStatus',
+                type: 'GET',
+                data: { id: currentBookingId, status: newStatus },
+                success: function (response) {
+                    Swal.fire('Thành công!', 'Trạng thái đã được cập nhật.', 'success')
+                        .then(() => location.reload()); 
+                },
+                error: function (error) {
+                    Swal.fire('Lỗi!', 'Có lỗi xảy ra khi cập nhật trạng thái.', 'error');
+                }
+            });
+        });
+    </script>
+
+}
