@@ -33,7 +33,6 @@ namespace WPF_ManageCourt
             services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
             services.AddTransient<ICourtImageService, CourtImageService>();
             services.AddTransient<ICourtScheduleService, CourtScheduleService>();
-            services.AddTransient<IAccessoryService, AccessoryService>();
             services.AddTransient<IUserOtpService, UserOtpService>();
             services.AddTransient<EmailService, EmailService>();
             services.AddTransient<IAccessoryService, AccessoryService>();
@@ -44,7 +43,11 @@ namespace WPF_ManageCourt
             services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
             services.AddTransient<CourtScheduleDAO, CourtScheduleDAO>();
             services.AddTransient<AccessoryDAO, AccessoryDAO>();
+            services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
 
+            services.AddTransient<UserDAO, UserDAO>();
+            services.AddTransient<UserOtpDAO, UserOtpDAO>();
+            services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
             // Register UserRepository and UserService
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserOtpRepository, UserOtpRepository>();
@@ -58,7 +61,7 @@ namespace WPF_ManageCourt
             services.AddTransient<ICourtScheduleRepository, CourtScheduleRepository>();
             services.AddTransient<IAccessoryRepository, AccessoryRepository>();
             services.AddTransient<IAccessoryService, AccessoryService>();
-
+            services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
             // Register ViewModels
             services.AddTransient<UserViewModel>();
             services.AddTransient<SidebarViewModel>();
@@ -68,6 +71,7 @@ namespace WPF_ManageCourt
             services.AddTransient<BookingManagerViewModel>();
             services.AddTransient<ScheduleCourtModel>();
             services.AddTransient<AccessoryViewModel>();
+            services.AddTransient<CourtViewModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();
