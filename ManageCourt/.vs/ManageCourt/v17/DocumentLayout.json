@@ -3,6 +3,15 @@
   "WorkspaceRootPath": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\managecourtcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\bookingdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -10,9 +19,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\bookingmanagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\managecourtcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -126,10 +132,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -153,21 +155,50 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\App.xaml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\App.xaml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T19:32:59.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\App.xaml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-03T19:32:55.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "BookingDAO.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
               "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BookingDAO.cs",
               "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
               "RelativeToolTip": "..\\DataAccess\\DAO\\BookingDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T18:23:08.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BookingManagerViewModel.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
@@ -175,37 +206,35 @@
               "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
               "ViewState": "AgIAABsBAAAAAAAAAADgvygBAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:10:22.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T18:10:22.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ManageCourtContext.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\ManageCourtContext.cs",
               "RelativeDocumentMoniker": "..\\DataAccess\\ManageCourtContext.cs",
               "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\ManageCourtContext.cs",
               "RelativeToolTip": "..\\DataAccess\\ManageCourtContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwCYAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwCUAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T18:09:01.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BookingManageWindow.xaml",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\BookingManageWindow.xaml",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\BookingManageWindow.xaml",
               "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\BookingManageWindow.xaml",
               "RelativeToolTip": "..\\WPF_ManageCourt\\BookingManageWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T18:08:47.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T18:08:47.371Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "BookingManagerViewModel.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
@@ -215,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "BookingManageWindow.xaml",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml",
@@ -224,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UserView.xaml",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml",
@@ -233,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "BookingManageWindow.xaml.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs",
@@ -243,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs",
@@ -253,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
@@ -262,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "UserViewModel.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
@@ -272,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\User.cs",
               "RelativeDocumentMoniker": "User.cs",
@@ -284,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs",
@@ -294,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "UserView.xaml.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs",
@@ -304,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "BookingDAO.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs",
@@ -314,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
@@ -324,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "BookingService.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs",
@@ -334,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "BookingAccessory.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\BookingAccessory.cs",
               "RelativeDocumentMoniker": "BookingAccessory.cs",
@@ -346,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Booking.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\Booking.cs",
               "RelativeDocumentMoniker": "Booking.cs",
@@ -358,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "BookingAccessoryDAO.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
@@ -368,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "IBookingRepository.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs",
@@ -378,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "BookingRepository.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs",
@@ -388,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IBookingService.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs",
@@ -398,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "ForgotPasswordViewModel.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
@@ -408,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "UserDAO.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs",
@@ -418,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "WPF_ManageCourt.csproj",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj",
@@ -428,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ManageCourtContext.cs",
               "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs",
               "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs",
