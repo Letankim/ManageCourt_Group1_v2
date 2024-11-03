@@ -7,6 +7,7 @@ namespace BusinessLogic.Interface
     public interface ICourtScheduleService
     {
         Task<IEnumerable<CourtSchedule>> GetListAllSchedulesAsync();
+        Task<IEnumerable<CourtSchedule>> GetAllSchedulesAllCourtNameAsync();
         Task<CourtSchedule> GetScheduleByIdAsync(int id);
         Task<List<CourtSchedule>> GetScheduleByCourtIdAsync(int courtId);
         Task AddScheduleAsync(CourtSchedule item);

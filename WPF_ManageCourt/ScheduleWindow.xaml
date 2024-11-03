@@ -14,6 +14,7 @@
         <helper:IndexConverter x:Key="IndexNoConverter" />
         <helper:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
         <helper:DateOnlyToDateTimeConverter x:Key="DateOnlyToDateTimeConverter" />
+        <helper:BoolToIsCheckedConverter x:Key="BoolToIsCheckedConverter" />
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -101,9 +102,15 @@
           Visibility="{Binding IsSchedulesEmpty, Converter={StaticResource InverseBoolToVisibilityConverter}}"
           Style="{StaticResource MaterialDesignDataGrid}">
                             <DataGrid.Columns>
-
-                                <DataGridTextColumn Header="ID" Binding="{Binding ScheduleId}" Width="80"/>
-                                <DataGridTextColumn Header="Court Name" Binding="{Binding Court.CourtName}" Width="100"/>
+                                <DataGridTemplateColumn Header=".No" Width="60">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}, 
+Converter={StaticResource IndexNoConverter}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="Court Name" Binding="{Binding CourtName}" Width="100"/>
                                 <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="100"/>
                                 <DataGridTextColumn Header="TimeSlot" Binding="{Binding TimeSlot}" Width="160"/>
                                 <DataGridTextColumn Header="Available" Binding="{Binding IsAvailable}" Width="85"/>
@@ -120,11 +127,14 @@
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="20" Width="300">
                         <TextBlock Text="Add New Schedule" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
-                        <TextBox 
-Margin="0,10" 
-materialDesign:HintAssist.Hint="Court Id" 
-Text="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}"/>
 
+                        <ComboBox 
+Margin="0,10" 
+materialDesign:HintAssist.Hint="Court Name" 
+ItemsSource="{Binding SchedulesAllCourtName}" 
+DisplayMemberPath="CourtName" 
+SelectedValuePath="CourtId" 
+SelectedValue="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}" />
                         <DatePicker 
                     Margin="0,10" 
                     materialDesign:HintAssist.Hint="Date" 
@@ -140,11 +150,11 @@ Text="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}"/>
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <RadioButton 
             Content="Có" 
-            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToStatusConverter}, ConverterParameter=true}" 
+            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToIsCheckedConverter}, ConverterParameter=true}" 
             Margin="0,0,10,0"/>
                             <RadioButton 
             Content="Không" 
-            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToStatusConverter}, ConverterParameter=false}" />
+            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToIsCheckedConverter}, ConverterParameter=false}" />
                         </StackPanel>
 
 
@@ -195,11 +205,12 @@ SelectedItem="{Binding SelectedSchedule.TimeSlot, UpdateSourceTrigger=PropertyCh
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                             <RadioButton 
             Content="Có" 
-            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToStatusConverter}, ConverterParameter=true}" 
+            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToIsCheckedConverter}, ConverterParameter=true}"
             Margin="0,0,10,0"/>
                             <RadioButton 
             Content="Không" 
-            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToStatusConverter}, ConverterParameter=false}" />
+            IsChecked="{Binding SelectedSchedule.IsAvailable, Mode=TwoWay, Converter={StaticResource BoolToIsCheckedConverter}, ConverterParameter=false}"
+            />
                         </StackPanel>
 
 

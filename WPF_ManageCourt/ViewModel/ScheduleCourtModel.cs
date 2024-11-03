@@ -20,7 +20,7 @@ namespace WPF_ManageCourt.ViewModel
         private readonly ICourtScheduleService _scheduleService;
         private readonly IBadmintonCourtService _courtService;
         private ObservableCollection<CourtSchedule> _schedules;
-        public ObservableCollection<string> AllTimers;
+        private ObservableCollection<CourtSchedule> _schedulesAllCourtName;
         private CourtSchedule _selectedSchedule;
         private bool _isHideId;
         private bool _isAddScheduleDialogOpen;
@@ -40,40 +40,13 @@ namespace WPF_ManageCourt.ViewModel
             }
         }
 
-        public ScheduleCourtModel(IBadmintonCourtService courtService, ICourtScheduleService scheduleService)
+
+    public ScheduleCourtModel(IBadmintonCourtService courtService, ICourtScheduleService scheduleService)
         {
             _courtService = courtService;
             _scheduleService = scheduleService;
             Load();
             InitializeCommands();
-        }
-
-        public ObservableCollection<string> GetTimeSlots()
-        {
-            return new ObservableCollection<string>
-            {
-                "0:00 - 1:00",
-                "4:00 - 5:00",
-                "5:00 - 6:00",
-                "6:00 - 7:00",
-                "7:00 - 8:00",
-                "8:00 - 9:00",
-                "9:00 - 10:00",
-                "10:00 - 11:00",
-                "11:00 - 12:00",
-                "12:00 - 13:00",
-                "13:00 - 14:00",
-                "14:00 - 15:00",
-                "15:00 - 16:00",
-                "16:00 - 17:00",
-                "17:00 - 18:00",
-                "18:00 - 19:00",
-                "19:00 - 20:00",
-                "20:00 - 21:00",
-                "21:00 - 22:00",
-                "22:00 - 23:00",
-                "23:00 - 24:00"
-            };
         }
 
         #region Properties
@@ -88,6 +61,18 @@ namespace WPF_ManageCourt.ViewModel
                 IsSchedulesEmpty = _schedules == null || _schedules.Count == 0;
             }
         }
+        
+        public ObservableCollection<CourtSchedule> SchedulesAllCourtName
+        {
+            get => _schedulesAllCourtName;
+            set
+            {
+                _schedulesAllCourtName = value;
+                OnPropertyChanged(nameof(SchedulesAllCourtName));
+            }
+        }
+
+        
 
         public CourtSchedule SelectedSchedule
         {
@@ -209,8 +194,9 @@ namespace WPF_ManageCourt.ViewModel
                 return;
             }
 
-            var filteredSchedules = _schedules.Where(user =>
-                user.Date.ToString().Contains(SearchQuery, StringComparison.OrdinalIgnoreCase)
+            var filteredSchedules = _schedules.Where(schedule =>
+                schedule.Date.ToString().Contains(SearchQuery, StringComparison.OrdinalIgnoreCase) ||
+                schedule.Court.CourtName.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase)
             ).ToList();
 
             Schedules = new ObservableCollection<CourtSchedule>(filteredSchedules);
@@ -225,29 +211,27 @@ namespace WPF_ManageCourt.ViewModel
         {
             IsAddScheduleDialogOpen = true;
             SelectedSchedule = new CourtSchedule();
-            AllTimers = GetTimeSlots();
         }
 
         private bool CanExecuteAddSchedule()
         {
-            return !string.IsNullOrWhiteSpace(SelectedSchedule?.CourtId.ToString()) && !string.IsNullOrWhiteSpace(SelectedSchedule?.TimeSlot) && !string.IsNullOrWhiteSpace(SelectedSchedule?.Date.Day.ToString());
+            return !string.IsNullOrWhiteSpace(SelectedSchedule?.CourtId.ToString()) && !string.IsNullOrWhiteSpace(SelectedSchedule?.TimeSlot) && SelectedSchedule?.Date != DateOnly.MinValue && SelectedSchedule?.IsAvailable != null;
         }
 
         private async void Load()
         {
             IsHideId = false;
-
             try
             {
-                var courts = await _courtService.GetCourtByIdAsync(3);
-                var courtSchedules = await _scheduleService.GetScheduleByCourtIdAsync(courts.CourtId);
-                courtSchedules.ForEach(schedule => schedule.Court = courts);
+                var courtSchedules = await _scheduleService.GetListAllSchedulesAsync();
+                var schedulesAllGroupName = await _scheduleService.GetAllSchedulesAllCourtNameAsync();
                 Schedules = new ObservableCollection<CourtSchedule>(courtSchedules);
+                SchedulesAllCourtName = new ObservableCollection<CourtSchedule>(schedulesAllGroupName);
                 SelectedSchedule = new CourtSchedule();
             }
             catch (Exception ex)
             {
-                ShowErrorMessage($"Error loading users: {ex.Message}");
+                ShowErrorMessage($"Error loading Schedules: {ex.Message}");
             }
         }
 

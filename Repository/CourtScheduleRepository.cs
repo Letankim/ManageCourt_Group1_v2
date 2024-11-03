@@ -19,6 +19,11 @@ namespace Repositories
         {
             return await _courtScheduleDAO.GetAllSchedulesAsync();
         }
+        
+        public async Task<List<CourtSchedule>> GetAllSchedulesAllCourtNameAsync()
+        {
+            return await _courtScheduleDAO.GetAllSchedulesAllCourtNameAsync();
+        }
 
         public async Task<CourtSchedule> GetScheduleByIdAsync(int scheduleId)
         {

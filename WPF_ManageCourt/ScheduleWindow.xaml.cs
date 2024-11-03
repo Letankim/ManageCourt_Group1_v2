@@ -89,6 +89,11 @@ namespace WPF_ManageCourt
             TimeSlotUpdate.ItemsSource = GetTimeSlots();
         }
 
+        private void RadioButton_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+
+        }
+
 
 
         //private async void AddButton_Click(object sender, RoutedEventArgs e)

@@ -19,6 +19,11 @@ namespace BusinessLogic.Service
         {
             return await _courtScheduleRepository.GetAllSchedulesAsync();
         }
+        
+        public async Task<IEnumerable<CourtSchedule>> GetAllSchedulesAllCourtNameAsync()
+        {
+            return await _courtScheduleRepository.GetAllSchedulesAllCourtNameAsync();
+        }
 
         public async Task<CourtSchedule> GetScheduleByIdAsync(int scheduleId)
         {

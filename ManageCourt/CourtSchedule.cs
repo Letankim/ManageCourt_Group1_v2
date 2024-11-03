@@ -9,6 +9,11 @@ public partial class CourtSchedule
 
     public int? CourtId { get; set; }
 
+    public string? CourtName
+    {
+        get => Court?.CourtName.ToString();
+    }
+
     public DateOnly Date { get; set; }
 
     public string TimeSlot { get; set; } = null!;

@@ -23,7 +23,7 @@ namespace WPF_ManageCourt
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
 
-            var mainWindow = ServiceProvider.GetRequiredService<LoginWindow>();
+            var mainWindow = ServiceProvider.GetRequiredService<ScheduleWindow>();
             mainWindow.Show();
         }
 

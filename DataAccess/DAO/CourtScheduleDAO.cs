@@ -9,7 +9,13 @@ namespace DataAccess.DAO
     {
         public async Task<List<CourtSchedule>> GetAllSchedulesAsync()
         {
-            return await _context.CourtSchedules.ToListAsync();
+            return await _context.CourtSchedules.Include(s => s.Court).ToListAsync();
+        }
+        
+        public async Task<List<CourtSchedule>> GetAllSchedulesAllCourtNameAsync()
+        {
+            var allCourtName = await _context.CourtSchedules.Include(s => s.Court).GroupBy(s => s.CourtId).Select(s => s.First()).ToListAsync();
+            return allCourtName.OrderBy(s => s.CourtId).ToList();
         }
 
         public async Task<CourtSchedule> GetScheduleByIdAsync(int scheduleId)

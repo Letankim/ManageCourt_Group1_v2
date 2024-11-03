@@ -7,6 +7,7 @@ namespace Repositories.Interface
     public interface ICourtScheduleRepository
     {
         Task<List<CourtSchedule>> GetAllSchedulesAsync();
+        Task<List<CourtSchedule>> GetAllSchedulesAllCourtNameAsync();
         Task<CourtSchedule> GetScheduleByIdAsync(int scheduleId);
         Task<List<CourtSchedule>> GetScheduleByCourtIdAsync(int courtId);
         Task AddScheduleAsync(CourtSchedule schedule);
