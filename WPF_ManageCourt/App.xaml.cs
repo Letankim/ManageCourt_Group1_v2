@@ -36,12 +36,14 @@ namespace WPF_ManageCourt
             services.AddTransient<IAccessoryService, AccessoryService>();
             services.AddTransient<IUserOtpService, UserOtpService>();
             services.AddTransient<EmailService, EmailService>();
+            services.AddTransient<IAccessoryService, AccessoryService>();
 
             services.AddTransient<UserDAO, UserDAO>();
             services.AddTransient<UserOtpDAO, UserOtpDAO>();
             services.AddTransient<BookingDAO, BookingDAO>();
             services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
             services.AddTransient<CourtScheduleDAO, CourtScheduleDAO>();
+            services.AddTransient<AccessoryDAO, AccessoryDAO>();
 
             // Register UserRepository and UserService
             services.AddTransient<IUserRepository, UserRepository>();
@@ -49,10 +51,13 @@ namespace WPF_ManageCourt
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IBookingRepository, BookingRepository>();
             services.AddTransient<IBookingService, BookingService>();
+
             services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
             services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
             services.AddTransient<ICourtScheduleService, CourtScheduleService>();
             services.AddTransient<ICourtScheduleRepository, CourtScheduleRepository>();
+            services.AddTransient<IAccessoryRepository, AccessoryRepository>();
+            services.AddTransient<IAccessoryService, AccessoryService>();
 
             // Register ViewModels
             services.AddTransient<UserViewModel>();
@@ -62,6 +67,7 @@ namespace WPF_ManageCourt
             services.AddTransient<ProfileViewModel>();
             services.AddTransient<BookingManagerViewModel>();
             services.AddTransient<ScheduleCourtModel>();
+            services.AddTransient<AccessoryViewModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();
@@ -74,6 +80,7 @@ namespace WPF_ManageCourt
             services.AddTransient<ScheduleWindow>();
             services.AddTransient<AccessoryWindow>();
             services.AddTransient<ProfileWindow>();
+            services.AddTransient<AccessoryWindow>();
         }
 
     }
