@@ -40,6 +40,16 @@ namespace WPF_ManageCourt
             }
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox comboBox && comboBox.SelectedItem != null)
+            {
+                var viewModel = DataContext as CourtViewModel;
+                var selectedValue = comboBox.SelectedItem.ToString();
+                viewModel.SelectedCourt.IsEnabled = selectedValue.Equals("Active", StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

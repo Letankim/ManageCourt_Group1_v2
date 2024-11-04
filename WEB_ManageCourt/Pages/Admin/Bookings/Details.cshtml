@@ -1,0 +1,159 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Bookings.DetailsModel
+
+@{
+    ViewData["Title"] = "Chi tiết Đặt chỗ";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Chi tiết Đặt chỗ</h2>
+
+    <!-- Thông tin Đặt chỗ -->
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="fas fa-calendar-alt"></i> Thông tin Đặt chỗ</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Ngày Đặt</th>
+                    <td>@Model.Booking.BookingDate.ToShortDateString()</td>
+                </tr>
+                <tr>
+                    <th>Thời gian</th>
+                    <td>@Model.Booking.TimeSlot</td>
+                </tr>
+                <tr>
+                    <th>Tổng Giá</th>
+                    <td>@Model.Booking.TotalPrice.ToString("C")</td>
+                </tr>
+                <tr>
+                    <th>Ghi chú</th>
+                    <td>@Model.Booking.Note</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Thông tin Liên hệ -->
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-secondary text-white">
+            <h5 class="mb-0"><i class="fas fa-user"></i> Thông tin Liên hệ</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Người Liên hệ</th>
+                    <td>@Model.Booking.ContactName</td>
+                </tr>
+                <tr>
+                    <th>Email Liên hệ</th>
+                    <td>@Model.Booking.ContactEmail</td>
+                </tr>
+                <tr>
+                    <th>Điện thoại Liên hệ</th>
+                    <td>@Model.Booking.ContactPhone</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Thông tin Thanh toán -->
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0"><i class="fas fa-credit-card"></i> Thông tin Thanh toán</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Phương thức Thanh toán</th>
+                    <td>@Model.Booking.PaymentMethod</td>
+                </tr>
+                <tr>
+                    <th>Trạng thái Thanh toán</th>
+                    <td>@Model.Booking.PaymentStatus</td>
+                </tr>
+                <tr>
+                    <th>Trạng thái Đặt chỗ</th>
+                    <td>@Model.Booking.BookingStatus</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Thông tin Sân -->
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-info text-white">
+            <h5 class="mb-0"><i class="fas fa-basketball-ball"></i> Thông tin Sân</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Tên Sân</th>
+                    <td>@Model.Booking.Court?.CourtName</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Thông tin Người dùng -->
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-warning text-white">
+            <h5 class="mb-0"><i class="fas fa-user-circle"></i> Thông tin Người dùng</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Người dùng</th>
+                    <td>
+                        <a asp-page="/Admin/Users/Details" asp-route-id="@Model.Booking.User?.UserId" class="text-primary">
+                            @Model.Booking.User?.Username
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Phụ kiện đã đặt -->
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0"><i class="fas fa-box-open"></i> Phụ kiện đã đặt</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered mt-2">
+                <thead>
+                    <tr>
+                        <th>Tên Phụ kiện</th>
+                        <th>Giá</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Booking.BookingAccessories != null && Model.Booking.BookingAccessories.Any())
+                    {
+                        @foreach (var accessory in Model.Booking.BookingAccessories)
+                        {
+                            <tr>
+                                <td>@accessory.Accessory?.Name</td>
+                                <td>@accessory.Accessory?.Price.ToString("C")</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="2" class="text-center text-muted">Không có phụ kiện nào được đặt kèm.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Nút điều hướng -->
+    <div class="text-center mt-4">
+        <a asp-page="./Edit" asp-route-id="@Model.Booking.BookingId" class="btn btn-warning"><i class="fas fa-edit"></i> Chỉnh sửa</a>
+        <a asp-page="./Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Quay lại danh sách</a>
+    </div>
+</div>

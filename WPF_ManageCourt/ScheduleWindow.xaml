@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:WPF_ManageCourt.Controls"
         xmlns:helper="clr-namespace:WPF_ManageCourt.Utils"
         mc:Ignorable="d"
-        Title="ScheduleWindow" Height="600" Width="800" Background="{StaticResource BackgroundMainContent}">
+        Title="OneDoCourt" Height="600" Width="800" Background="{StaticResource BackgroundMainContent}">
     <Window.Resources>
         <helper:BoolToStatusConverter x:Key="BoolToStatusConverter" />
         <helper:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
@@ -55,9 +55,9 @@
              Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
              x:Name="txtSearch" 
              Height="35"  
-             materialDesign:HintAssist.Hint="Search schedules..."/>
+             materialDesign:HintAssist.Hint="Tìm kiếm..."/>
                     <Button Grid.Column="1" 
-            Content="Search" 
+            Content="Tìm kiếm" 
             Style="{StaticResource MaterialDesignFlatButton}"  
             Background="{StaticResource ButtonInfo}"
             Height="35" Margin="0,0,10,0"
@@ -76,7 +76,7 @@
 
                     </Grid.ColumnDefinitions>
                     <Button Grid.Row="1" 
-        Content="Add New" 
+        Content="Thêm mới" 
         Style="{StaticResource MaterialDesignFlatButton}" 
         Background="{StaticResource ButtonWarning}" 
         Height="35" Margin="0,10,10,0"
@@ -88,7 +88,7 @@
             <Border Grid.Row="1" Grid.Column="0" Margin="5">
                 <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
                     <TextBlock Text="Danh sách lịch đặt sân" FontSize="16" Foreground="White" Margin="0,0,0,10"/>
-                    <TextBlock Text="No schedules found." FontSize="16" Foreground="Red" Visibility="{Binding IsSchedulesEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    <TextBlock Text="Không có lịch nào." FontSize="16" Foreground="Red" Visibility="{Binding IsSchedulesEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                         <DataGrid Background="{StaticResource BackgroundMainTable}"
           ItemsSource="{Binding Schedules}" 
@@ -110,10 +110,10 @@ Converter={StaticResource IndexNoConverter}}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTextColumn Header="Court Name" Binding="{Binding CourtName}" Width="100"/>
-                                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="100"/>
-                                <DataGridTextColumn Header="TimeSlot" Binding="{Binding TimeSlot}" Width="160"/>
-                                <DataGridTextColumn Header="Available" Binding="{Binding IsAvailable}" Width="85"/>
+                                <DataGridTextColumn Header="Tên sân" Binding="{Binding CourtName}" Width="100"/>
+                                <DataGridTextColumn Header="Ngày" Binding="{Binding Date}" Width="100"/>
+                                <DataGridTextColumn Header="Lịch" Binding="{Binding TimeSlot}" Width="160"/>
+                                <DataGridTextColumn Header="Còn trống" Binding="{Binding IsAvailable}" Width="85"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </ScrollViewer>
@@ -122,16 +122,16 @@ Converter={StaticResource IndexNoConverter}}"/>
         </Grid>
         <local:Footer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
 
-        <materialDesign:DialogHost IsOpen="{Binding IsAddScheduleDialogOpen}" CloseOnClickAway="True" x:Name="AddScheduleDialog">
+        <materialDesign:DialogHost IsOpen="{Binding IsAddScheduleDialogOpen}" CloseOnClickAway="True" x:Name="AddNew">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="20" Width="300">
-                        <TextBlock Text="Add New Schedule" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+                        <TextBlock Text="Thêm mới" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
 
                         <ComboBox 
 Margin="0,10" 
-materialDesign:HintAssist.Hint="Court Name" 
-ItemsSource="{Binding SchedulesAllCourtName}" 
+materialDesign:HintAssist.Hint="Tên sân" 
+ItemsSource="{Binding Courts}" 
 DisplayMemberPath="CourtName" 
 SelectedValuePath="CourtId" 
 SelectedValue="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyChanged}" />
@@ -142,7 +142,7 @@ SelectedValue="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyCh
 
                         <ComboBox Name="TimeSlotAdd"
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="TimeSlot" 
+                    materialDesign:HintAssist.Hint="Lịch" 
                     SelectedItem="{Binding SelectedSchedule.TimeSlot, UpdateSourceTrigger=PropertyChanged}" >
                         </ComboBox>
 
@@ -161,14 +161,14 @@ SelectedValue="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyCh
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                             <Button 
-                        Content="Cancel" 
+                        Content="Hủy bỏ" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Margin="0,0,10,0" 
                         Command="materialDesign:DialogHost.CloseDialogCommand" 
                         Background="{StaticResource ButtonDanger}" />
 
                             <Button 
-                        Content="Add" 
+                        Content="Lưu lại" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Command="{Binding AddScheduleCommand}" 
                         Background="{StaticResource ButtonSuccess}" 
@@ -179,25 +179,25 @@ SelectedValue="{Binding SelectedSchedule.CourtId, UpdateSourceTrigger=PropertyCh
             </materialDesign:DialogHost.DialogContent>
         </materialDesign:DialogHost>
 
-        <materialDesign:DialogHost IsOpen="{Binding IsUpdateScheduleDialogOpen}" CloseOnClickAway="True" x:Name="UpdateScheduleDialog">
+        <materialDesign:DialogHost IsOpen="{Binding IsUpdateScheduleDialogOpen}" CloseOnClickAway="True" x:Name="Information">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="20" Width="300">
-                        <TextBlock Text="Update Schedule" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+                        <TextBlock Text="Thông tin" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
 
                         <TextBox 
 Margin="0,10" 
-materialDesign:HintAssist.Hint="Court Name" 
+materialDesign:HintAssist.Hint="Tên sân" 
 Text="{Binding SelectedSchedule.Court.CourtName, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
 
                         <DatePicker 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Date" 
+                    materialDesign:HintAssist.Hint="Ngày" 
                     SelectedDate="{Binding SelectedSchedule.Date, Converter={StaticResource DateOnlyToDateTimeConverter}, UpdateSourceTrigger=PropertyChanged}"/>
 
                         <ComboBox Name="TimeSlotUpdate"
 Margin="0,10" 
-materialDesign:HintAssist.Hint="TimeSlot" 
+materialDesign:HintAssist.Hint="Lịch" 
 SelectedItem="{Binding SelectedSchedule.TimeSlot, UpdateSourceTrigger=PropertyChanged}" >
                         </ComboBox>
 
@@ -216,20 +216,20 @@ SelectedItem="{Binding SelectedSchedule.TimeSlot, UpdateSourceTrigger=PropertyCh
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                             <Button 
-                        Content="Cancel" 
+                        Content="Hủy bỏ" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Margin="0,0,10,0" 
                         Command="materialDesign:DialogHost.CloseDialogCommand" 
                         Background="{StaticResource ButtonDanger}" />
 
                             <Button 
-                        Content="Update" 
+                        Content="Lưu lại" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Command="{Binding EditCommand}" 
                         Background="{StaticResource ButtonSuccess}" />
 
                             <Button 
-                        Content="Delete" 
+                        Content="Xóa" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Command="{Binding DeleteCommand}" 
                         Background="{StaticResource ButtonDanger}" />

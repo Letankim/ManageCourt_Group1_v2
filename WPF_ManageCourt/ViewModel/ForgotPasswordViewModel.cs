@@ -107,7 +107,8 @@ namespace WPF_ManageCourt.ViewModel
             Application.Current.Properties["ForgetUser"] = user;
             var otpCode = new Random().Next(100000, 999999).ToString();
             await _otpService.SaveOtpAsync(user.UserId, otpCode);
-            await _emailService.SendEmailAsync(user.Email, "Your OTP Code", $"Your OTP code is: {otpCode}");
+            EmailTemplateGenerator emailServiceTemplate = new EmailTemplateGenerator();
+            await _emailService.SendEmailAsync(user.Email, "Xác nhận OTP", emailServiceTemplate.GenerateOtpConfirmationEmail(user.FullName, otpCode));
             MessageBox.Show("OTP has been sent to your email.");
 
             IsOtpScreenVisible = true;

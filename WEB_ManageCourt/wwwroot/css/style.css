@@ -181,3 +181,73 @@ hr {
 iframe {
     border: none;
 }
+.form-inline .form-control,
+.form-inline .btn {
+    flex-shrink: 0;
+    width: auto;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+    input:checked + .slider:before {
+        transform: translateX(14px);
+    }
+
+.message.sent {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.message.received {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #e5e5ea;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-top: 10px;
+}

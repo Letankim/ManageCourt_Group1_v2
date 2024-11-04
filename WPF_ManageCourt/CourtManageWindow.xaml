@@ -7,12 +7,13 @@
         xmlns:helper="clr-namespace:WPF_ManageCourt.Utils"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="CourtManageWindow" Height="500" Width="850">
+        Title="OneDoCourt" Height="500" Width="850">
 
     <Window.Resources>
         <helper:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
         <helper:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
         <helper:IndexConverter x:Key="IndexNoConverter" />
+         <helper:BoolToStatusConverter x:Key="BoolToStatusConverter" />
     </Window.Resources>
 
     <Grid>
@@ -32,7 +33,7 @@
 
         <local:SidebarControl Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Height="auto" VerticalAlignment="Stretch"/>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,10,0">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,10,10,0">
             <TextBox Width="200" 
                      Margin="0,0,10,0" 
                      Padding="5,2"
@@ -57,8 +58,26 @@
         </StackPanel>
 
         <Border Grid.Row="2" Grid.Column="1" Margin="5">
-            <StackPanel Margin="5">
-                <TextBlock Text="Danh sách sân cầu lông" FontSize="16" Foreground="White" Margin="0,0,0,10"/>
+            <StackPanel Margin="5" Grid.Row="0">
+                <TextBlock Text="Danh sách sân cầu lông" FontSize="16" Foreground="#333" Margin="0,0,0,10"/>
+                <TextBlock Text="Hình ảnh sân" FontSize="14" Foreground="#333" Margin="0,0,0,5"/>
+                <ScrollViewer Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding SelectedCourtImages}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="Gray" BorderThickness="1" Margin="5">
+                                    <Image Source="{Binding ImageUrl}" Width="150" Height="150" Stretch="UniformToFill" />
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+
                 <TextBlock Text="No courts found." FontSize="16" Foreground="Red" Visibility="{Binding IsCourtsEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                     <DataGrid Background="{StaticResource BackgroundMainTable}"
@@ -92,8 +111,26 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="10,10,10,0">
+                    <ComboBox Width="200" 
+  Margin="0,0,10,0" 
+  ItemsSource="{Binding Courts}" 
+  DisplayMemberPath="CourtName" 
+  SelectedItem="{Binding SelectedCourt}" 
+  materialDesign:HintAssist.Hint="Select Court"/>
+
+                    <Button Content="Choose Image" 
+Command="{Binding ChooseImageCommand}" 
+Height="35" Width="120" Margin="0,0,10,0"/>
+
+                    <Button Content="Upload Image" 
+Command="{Binding UploadImageCommand}" 
+Height="35" Width="120"/>
+                </StackPanel>
             </StackPanel>
         </Border>
+
+        
 
         <local:Footer Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
 
@@ -108,7 +145,13 @@
                         <TextBox Margin="0,10" materialDesign:HintAssist.Hint="Price Per Hour" Text="{Binding SelectedCourt.PricePerHour, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBox Margin="0,10" materialDesign:HintAssist.Hint="Start Time" Text="{Binding SelectedCourt.StartTime, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBox Margin="0,10" materialDesign:HintAssist.Hint="End Time" Text="{Binding SelectedCourt.EndTime, UpdateSourceTrigger=PropertyChanged}" />
-                        <ComboBox Margin="0,10" materialDesign:HintAssist.Hint="Select Status" ItemsSource="{Binding StatusOptions}" SelectedItem="{Binding SelectedCourt.IsEnabled}" />
+                        <ComboBox 
+Margin="0,10" 
+materialDesign:HintAssist.Hint="Select Status" 
+ItemsSource="{Binding StatusOptions}" 
+SelectedItem="{Binding SelectedCourt.IsEnabled, Converter={StaticResource BoolToStatusConverter}, UpdateSourceTrigger=PropertyChanged}"
+SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                             <Button Content="Cancel" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0" Command="materialDesign:DialogHost.CloseDialogCommand" Background="{StaticResource ButtonDanger}" />
                             <Button Content="Add" Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding AddCourtCommand}" Background="{StaticResource ButtonSuccess}" />
@@ -130,7 +173,15 @@
                         <TextBox Margin="0,10" materialDesign:HintAssist.Hint="Price Per Hour" Text="{Binding SelectedCourt.PricePerHour, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBox Margin="0,10" materialDesign:HintAssist.Hint="Start Time" Text="{Binding SelectedCourt.StartTime, UpdateSourceTrigger=PropertyChanged}" />
                         <TextBox Margin="0,10" materialDesign:HintAssist.Hint="End Time" Text="{Binding SelectedCourt.EndTime, UpdateSourceTrigger=PropertyChanged}" />
-                        <ComboBox Margin="0,10" materialDesign:HintAssist.Hint="Select Status" ItemsSource="{Binding StatusOptions}" SelectedItem="{Binding SelectedCourt.IsEnabled}" />
+                        <ComboBox 
+Margin="0,10" 
+materialDesign:HintAssist.Hint="Select Status" 
+ItemsSource="{Binding StatusOptions}" 
+SelectedItem="{Binding SelectedCourt.IsEnabled, Converter={StaticResource BoolToStatusConverter}, UpdateSourceTrigger=PropertyChanged}"
+SelectionChanged="ComboBox_SelectionChanged">
+
+                        </ComboBox>
+
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                             <Button Content="Cancel" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0" Command="materialDesign:DialogHost.CloseDialogCommand" Background="{StaticResource ButtonDanger}" />
                             <Button Content="Update" Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding EditCourtCommand}" Background="{StaticResource ButtonSuccess}" />

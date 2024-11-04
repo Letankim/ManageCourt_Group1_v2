@@ -1,0 +1,142 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Users.IndexModel
+
+@{
+    ViewData["Title"] = "Quản lí người dùng";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+    var statusFilter = Request.Query["statusFilter"].ToString();
+    var roleFilter = Request.Query["roleFilter"].ToString();
+}
+
+<div class="container-fluid my-5">
+    <h2 class="text-center mb-4">Danh sách người dùng</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <form method="get" class="form-inline mb-3">
+                <div class="form-group mr-2">
+                    <label for="roleFilter" class="mr-2">Lọc theo vai trò:</label>
+                    <select id="roleFilter" name="roleFilter" class="form-control">
+                        <option value="">Tất cả</option>
+                        <option value="Admin" selected="@Model.RoleFilter == " Admin"">Admin</option>
+                        <option value="User" selected="@Model.RoleFilter == " User\"">User</option>
+                        <option value="Moderator" selected="@Model.RoleFilter == " Moderator\"">Moderator</option>
+                    </select>
+                </div>
+                <div class="form-group mr-2">
+                    <label for="statusFilter" class="mr-2">Lọc theo trạng thái:</label>
+                    <select id="statusFilter" name="statusFilter" class="form-control">
+                        <option value="">Tất cả</option>
+                        <option value="Enabled" selected="@Model.StatusFilter == \" Enabled\"">Enabled</option>
+                        <option value="Disabled" selected="@Model.StatusFilter == \" Disabled\"">Disabled</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Lọc</button>
+            </form>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <p>
+                    <a asp-page="Create" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm mới</a>
+                    <a href="/template/UserTemplate.xlsx" target="_blank" class="btn btn-info"><i class="fas fa-download"></i> Tải Template</a>
+                </p>
+                <div>
+                    <form method="post" enctype="multipart/form-data" asp-page-handler="ImportExcel" class="d-inline">
+                        <input type="file" name="excelFile" accept=".xlsx" required />
+                        <button type="submit" class="btn btn-info"><i class="fas fa-file-import"></i> Nhập từ Excel</button>
+                    </form>
+                    <a asp-page-handler="ExportExcel" class="btn btn-success"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+                </div>
+            </div>
+            <div class="table-responsive" id="table-render">
+                <table id="tableData" class="table table-bordered table-hover text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tên đăng nhập</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>SĐT</th>
+                            <th>Vai trò</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.User)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Role)</td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" @(item.IsEnabled == true ? "checked" : "") onclick="toggleStatus(@item.UserId)">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </td>
+
+                                <td>
+                                    <a asp-page="./Edit" asp-route-id="@item.UserId" class="btn btn-outline-primary btn-sm"><i class="fas fa-edit"></i> Sửa</a>
+                                    <a asp-page="./Details" asp-route-id="@item.UserId" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle"></i> Chi tiết</a>
+                                    <a asp-page="./Delete" asp-route-id="@item.UserId" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i> Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const roleFilter = '@roleFilter';
+        const selectElement = document.getElementById('roleFilter');
+
+        if (selectElement) {
+            for (let option of selectElement.options) {
+                if (option.value === roleFilter) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+        const statusFilter = '@statusFilter';
+        const selectElementStatus = document.getElementById('statusFilter');
+
+        if (selectElementStatus) {
+            for (let option of selectElementStatus.options) {
+                if (option.value === statusFilter) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+    });
+</script>
+<script>
+    function toggleStatus(userId) {
+        fetch(`?handler=ToggleStatus&id=${userId}`)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('table-render').innerHTML = html;
+                Swal.fire({
+                    title: "Thành công",
+                    text: "Cập nhật trạng thái thành công.",
+                    icon: "success"
+                });
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500)
+            })
+            .catch(error => {
+                Swal.fire({
+                    title: "Thất bại",
+                    text: "Cập nhật trạng thái thất bại.",
+                    icon: "error"
+                });
+            });
+    }
+
+</script>

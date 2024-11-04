@@ -96,7 +96,7 @@ public partial class ManageCourtContext : DbContext
         modelBuilder.Entity<BookingAccessory>(entity =>
         {
             entity.HasKey(e => e.BookingAccessoryId).HasName("PK__BookingA__F48BC5817B04FC4E");
-
+            entity.Property(e => e.BookingAccessoryId).ValueGeneratedOnAdd();
             entity.HasOne(d => d.Accessory).WithMany(p => p.BookingAccessories)
                 .HasForeignKey(d => d.AccessoryId)
                 .HasConstraintName("FK__BookingAc__Acces__3E52440B");

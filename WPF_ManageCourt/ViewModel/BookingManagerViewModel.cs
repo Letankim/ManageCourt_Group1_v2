@@ -291,7 +291,6 @@ namespace WPF_ManageCourt.ViewModel
         private async void Load()
         {
             IsHideId = false;
-
             try
             {
                 var books = await _bookingService.GetAllBookingByOwnersAsync(_currentUser.UserId);
@@ -302,7 +301,6 @@ namespace WPF_ManageCourt.ViewModel
             {
                 ShowErrorMessage($"Error loading bookings: {ex.Message}");
             }
-            ShowErrorMessage($"Error loading bookings:");
         }
 
 

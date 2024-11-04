@@ -1,0 +1,78 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Bookings.DeleteModel
+
+@{
+    ViewData["Title"] = "Xóa Đặt Sân";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Xóa Đặt Sân</h2>
+
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <div class="alert alert-danger text-center" role="alert">
+                <strong>Cảnh báo:</strong> Bạn có chắc chắn muốn xóa đặt sân này? Thao tác này không thể hoàn tác!
+            </div>
+            <form method="post">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th class="bg-light" style="width: 25%;">Ngày Đặt</th>
+                            <td>@Model.Booking.BookingDate.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Thời gian</th>
+                            <td>@Model.Booking.TimeSlot</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Tổng Giá</th>
+                            <td>@Model.Booking.TotalPrice.ToString("C")</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Ghi chú</th>
+                            <td>@Model.Booking.Note</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Tên người liên hệ</th>
+                            <td>@Model.Booking.ContactName</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Email liên hệ</th>
+                            <td>@Model.Booking.ContactEmail</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">SĐT liên hệ</th>
+                            <td>@Model.Booking.ContactPhone</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Phương thức thanh toán</th>
+                            <td>@Model.Booking.PaymentMethod</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Trạng thái thanh toán</th>
+                            <td>@Model.Booking.PaymentStatus</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Trạng thái đặt chỗ</th>
+                            <td>@Model.Booking.BookingStatus</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Tên Sân</th>
+                            <td>@Model.Booking.Court.CourtName</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Người dùng</th>
+                            <td>@Model.Booking.User.Username</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="form-group text-center mt-4">
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                    <a asp-page="./Index" class="btn btn-secondary">Hủy bỏ</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

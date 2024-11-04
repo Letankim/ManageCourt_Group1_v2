@@ -1,0 +1,53 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Accessories.IndexModel
+
+@{
+    ViewData["Title"] = "Danh sách Phụ kiện";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid my-5">
+    <h2 class="text-center mb-4">Danh sách Phụ kiện</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <p>
+                    <a asp-page="Create" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm Phụ kiện mới</a>
+                    <a href="/template/AccessoryTemplate.xlsx" target="_blank" class="btn btn-info"><i class="fas fa-download"></i> Tải Template</a>
+                </p>
+                <div>
+                    <form method="post" enctype="multipart/form-data" asp-page-handler="ImportExcel" class="d-inline">
+                        <input type="file" name="excelFile" accept=".xlsx" required />
+                        <button type="submit" class="btn btn-info"><i class="fas fa-file-import"></i> Nhập từ Excel</button>
+                    </form>
+                    <a asp-page-handler="ExportExcel" class="btn btn-success"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+                </div>
+            </div>
+            <table id="tableData" class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Tên Phụ kiện</th>
+                        <th>Giá</th>
+                        <th style="width: 150px;">Hành động</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Accessory)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Price.ToString("C")</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Actions">
+                                    <a asp-page="./Edit" asp-route-id="@item.AccessoryId" class="btn btn-sm btn-warning" title="Sửa"><i class="fas fa-edit"></i></a>
+                                    <a asp-page="./Details" asp-route-id="@item.AccessoryId" class="btn btn-sm btn-info" title="Chi tiết"><i class="fas fa-info-circle"></i></a>
+                                    <a asp-page="./Delete" asp-route-id="@item.AccessoryId" class="btn btn-sm btn-danger" title="Xóa"><i class="fas fa-trash-alt"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

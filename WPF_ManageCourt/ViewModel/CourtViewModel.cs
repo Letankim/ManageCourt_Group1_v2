@@ -9,10 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using WPF_ManageCourt.ViewModel;
+using BusinessLogic.Service;
+using System.IO;
+using Microsoft.Win32;
+using WPF_ManageCourt;
 
 public class CourtViewModel : BaseViewModel
 {
-    private readonly IBadmintonCourtService _courtService; // Service cho BadmintonCourt
+    private readonly string  _webRootPath = "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\wwwroot\\images\\";
+    private readonly IBadmintonCourtService _courtService;
+    private readonly ICourtImageService _courtImageService; // Service cho BadmintonCourt
     private ObservableCollection<BadmintonCourt> _courts; // Collection cho danh sách sân
     private BadmintonCourt _selectedCourt; // Sân được chọn
     private bool _isAddCourtDialogOpen; // Kiểm soát hiển thị dialog thêm mới
@@ -20,13 +26,46 @@ public class CourtViewModel : BaseViewModel
     private string _message;
     private bool _isShowMessageDialog;
     private bool _isCourtsEmpty;
-
-    public CourtViewModel(IBadmintonCourtService courtService)
+    private List<CourtImage> _selectedCourtImages;
+    private User _user;
+    public List<CourtImage> SelectedCourtImages
     {
+        get => _selectedCourtImages;
+        set
+        {
+            _selectedCourtImages = value;
+            OnPropertyChanged(nameof(SelectedCourtImages));
+        }
+    }
+
+    public CourtViewModel(IBadmintonCourtService courtService, ICourtImageService  courtImageService)
+    {
+        _user = (User)Application.Current.Properties["LoggedInUser"];
+        if (_user == null) { 
+            LoginWindow login = new LoginWindow();
+            login.Show();
+            Application.Current.Windows[0].Close();
+            return;
+        }
+        _courtImageService  = courtImageService;
         _courtService = courtService; // Injected service
         SelectedCourt = new BadmintonCourt();
         InitializeCommands(); // Khởi tạo các command
         LoadCourts(); // Tải danh sách sân khi khởi động
+    }
+
+    private async Task UpdateSelectedCourtImagesAsync()
+    {
+        var courtImages = await _courtImageService.GetImagesByCourtIdAsync(SelectedCourt.CourtId) ?? new List<CourtImage>();
+        foreach (var image in courtImages)
+        {
+
+            if (!image.ImageUrl.StartsWith("http://"))
+            {
+                image.ImageUrl = $"http://localhost:5116/{image.ImageUrl}";
+            }
+        }
+        SelectedCourtImages = courtImages;
     }
 
     #region Properties
@@ -42,13 +81,14 @@ public class CourtViewModel : BaseViewModel
         }
     }
 
-    public BadmintonCourt SelectedCourt
+    public  BadmintonCourt SelectedCourt
     {
         get => _selectedCourt;
         set
         {
             _selectedCourt = value;
             OnPropertyChanged(nameof(SelectedCourt));
+            UpdateSelectedCourtImagesAsync();
         }
     }
 
@@ -112,11 +152,15 @@ public class CourtViewModel : BaseViewModel
     public ICommand EditCourtCommand { get; private set; }
     public ICommand DeleteCourtCommand { get; private set; }
 
+    public ICommand ChooseImageCommand { get; private set; }
+    public ICommand UploadImageCommand { get; private set; }
+
     #endregion
 
     #region Methods
 
     // Khởi tạo các command
+
     private void InitializeCommands()
     {
         LoadedWindowCommand = new RelayCommand<object>(_ => true, _ => LoadCourts());
@@ -124,15 +168,65 @@ public class CourtViewModel : BaseViewModel
         AddCourtCommand = new RelayCommand<object>(_ => CanExecuteAddCourt(), _ => AddCourt());
         EditCourtCommand = new RelayCommand<object>(_ => SelectedCourt != null, _ => EditCourt());
         DeleteCourtCommand = new RelayCommand<object>(_ => SelectedCourt != null, _ => DeleteCourt());
+        ChooseImageCommand = new RelayCommand<object>(_ => true, _ => ChooseImage());
+        UploadImageCommand = new RelayCommand<object>(_ => true, _ => UploadImageAsync());
     }
+
+    public List<string> SelectedImagePaths { get; set; } = new List<string>();
+
+    private void ChooseImage()
+    {
+        var openFileDialog = new OpenFileDialog
+        {
+            Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png",
+            Multiselect = true 
+        };
+
+        if (openFileDialog.ShowDialog() == true)
+        {
+            SelectedImagePaths = openFileDialog.FileNames.ToList();
+            OnPropertyChanged(nameof(SelectedImagePaths));
+        }
+    }
+
+    private async Task UploadImageAsync()
+    {
+        if (SelectedCourt == null || SelectedImagePaths == null || SelectedImagePaths.Count == 0)
+        {
+            MessageBox.Show("Please select a court and images before uploading.");
+            return;
+        }
+
+        Directory.CreateDirectory(_webRootPath);
+
+        await _courtImageService.DeleteImagesByCourtIdAsync(SelectedCourt.CourtId);
+
+        foreach (string imagePath in SelectedImagePaths)
+        {
+            string fileName = $"{SelectedCourt.CourtId}_{Path.GetFileName(imagePath)}";
+            string destinationPath = Path.Combine(_webRootPath, fileName);
+
+            File.Copy(imagePath, destinationPath, true);
+
+            CourtImage courtImage = new CourtImage()
+            {
+                ImageUrl = $"/images/{fileName}",
+                CourtId = SelectedCourt.CourtId
+            };
+            await _courtImageService.AddImageAsync(courtImage);
+        }
+        UpdateSelectedCourtImagesAsync();
+        MessageBox.Show("Images uploaded successfully.");
+    }
+
 
     private async void LoadCourts()
     {
         try
         {
-            var courts = await _courtService.GetListAllCourtsAsync();
+            var courts = await _courtService.GetCourtsByOwnerIdAsync(_user.UserId);
             Courts = new ObservableCollection<BadmintonCourt>(courts);
-            SelectedCourt = new BadmintonCourt(); // Đặt lại sân đã chọn
+            SelectedCourt = new BadmintonCourt(); 
         }
         catch (Exception ex)
         {
@@ -142,7 +236,7 @@ public class CourtViewModel : BaseViewModel
     public ObservableCollection<string> StatusOptions { get; set; } = new ObservableCollection<string> { "Active", "Inactive" };
     private void OpenAddCourtDialog()
     {
-        SelectedCourt = new BadmintonCourt(); // Khởi tạo sân mới
+        SelectedCourt = new BadmintonCourt(); 
         IsAddCourtDialogOpen = true;
     }
 
@@ -155,6 +249,7 @@ public class CourtViewModel : BaseViewModel
     {
         try
         {
+            SelectedCourt.OwnerId = _user.UserId;
             await _courtService.AddCourtAsync(SelectedCourt);
             LoadCourts();
             IsAddCourtDialogOpen = false;
@@ -216,7 +311,6 @@ public class CourtViewModel : BaseViewModel
     {
         Message = message;
         IsShowMessageDialog = true;
-        // Có thể thêm logic để phân biệt hiển thị thông báo lỗi hoặc thành công
     }
 
     #endregion

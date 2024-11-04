@@ -299,7 +299,7 @@ public class UserViewModel : BaseViewModel
         {
             var users = await _userService.GetListAllUsersAsync();
             Users = new ObservableCollection<User>(users);
-            UserRoles = new ObservableCollection<string> { "Admin", "User", "Guest" };
+            UserRoles = new ObservableCollection<string> { "Admin", "User", "CourtOwner" };
             SelectedUser = new User();
         }
         catch (Exception ex)

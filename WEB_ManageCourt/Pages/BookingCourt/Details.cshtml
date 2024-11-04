@@ -1,0 +1,81 @@
+﻿@page
+@model WEB_ManageCourt.Pages.BookingCourt.DetailsModel
+@{
+    ViewData["Title"] = "Chi tiết đặt sân";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+<div class="container my-5">
+    <h2 class="text-center mb-4">
+        <i class="fas fa-calendar-alt"></i> Chi tiết đặt sân cầu lông
+    </h2>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg border-0 rounded-lg hover-card">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fas fa-info-circle"></i> Thông tin đặt sân</h4>
+                    <hr />
+                    <p><strong><i class="fas fa-map-marker-alt"></i> Tên sân:</strong> @Model.Booking.Court?.CourtName</p>
+                    <p><strong><i class="fas fa-calendar-alt"></i> Ngày đặt:</strong> @Model.Booking.BookingDate.ToString("yyyy-MM-dd")</p>
+                    <p><strong><i class="fas fa-clock"></i> Khung giờ:</strong> @Model.Booking.TimeSlot</p>
+                    <p>
+                        <strong><i class="fas fa-flag"></i> Trạng thái:</strong>
+                        @{
+                            DateTime playDateTime = DateTime.Parse(Model.Booking.BookingDate.ToString("yyyy-MM-dd") + " " + Model.Booking.TimeSlot.Split('-')[0].Trim());
+                            bool isWithinFiveHours = (playDateTime - DateTime.Now).TotalHours > 5;
+                            bool hasPastPlayTime = DateTime.Now > playDateTime && Model.Booking.BookingStatus == "NoShow";
+                        }
+                        <span class="badge @(hasPastPlayTime ? "badge-danger" : (Model.Booking.BookingStatus == "Completed" ? "badge-success" : "badge-warning"))">
+                            @Model.Booking.BookingStatus @(hasPastPlayTime ? " - (Không đến sân)" : "")
+                        </span>
+                    </p>
+                    <p>
+                        <strong><i class="fas fa-credit-card"></i> Thanh toán:</strong>
+                        <span class="badge @(Model.Booking.PaymentStatus == "Completed" ? "badge-info" : "badge-warning")">
+                            @Model.Booking.PaymentStatus
+                        </span>
+                    </p>
+                    <p><strong><i class="fas fa-money-bill-wave"></i> Tổng chi phí:</strong> @Model.Booking.TotalPrice.ToString("N0") VNĐ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg border-0 rounded-lg hover-card">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fas fa-box-open"></i> Dịch vụ phụ kiện đã đặt</h4>
+                    <hr />
+                    <ul class="list-group list-group-flush">
+                        @foreach (var accessory in Model.Booking.BookingAccessories)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @accessory.Accessory.Name
+                                <span class="badge badge-primary badge-pill">@accessory.Quantity cái</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-lg border-0 rounded-lg mt-4 hover-card">
+                <div class="card-body">
+                    <h4 class="card-title"><i class="fas fa-user"></i> Thông tin thêm</h4>
+                    <hr />
+                    <p><strong><i class="fas fa-user-circle"></i> Người liên hệ:</strong> @Model.Booking.ContactName</p>
+                    <p><strong><i class="fas fa-envelope"></i> Email liên hệ:</strong> @Model.Booking.ContactEmail</p>
+                    <p><strong><i class="fas fa-phone"></i> Số điện thoại liên hệ:</strong> @Model.Booking.ContactPhone</p>
+                    <p><strong><i class="fas fa-sticky-note"></i> Ghi chú:</strong> @Model.Booking.Note</p>
+                    @if (isWithinFiveHours && !hasPastPlayTime)
+                    {
+                        <button class="btn btn-outline-danger mt-3">
+                            <i class="fas fa-times-circle"></i> Hủy đặt sân
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

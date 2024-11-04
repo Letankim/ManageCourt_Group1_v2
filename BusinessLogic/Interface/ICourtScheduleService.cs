@@ -13,5 +13,12 @@ namespace BusinessLogic.Interface
         Task AddScheduleAsync(CourtSchedule item);
         Task UpdateScheduleAsync(CourtSchedule item);
         Task DeleteScheduleAsync(int id);
+        Task<List<CourtSchedule>> GetSchedulesByCourtIdAsync(int courtId, DateOnly date);
+        Task<List<CourtSchedule>> GetAvailableSchedulesAsync(int courtId, DateOnly date);
+
+        Task MarkScheduleAsUnavailableAsync(int scheduleId);
+
+        Task<(int availableCount, int bookedCount)> GetAvailabilityStatisticsAsync(DateOnly startDate, DateOnly endDate);
+
     }
 }

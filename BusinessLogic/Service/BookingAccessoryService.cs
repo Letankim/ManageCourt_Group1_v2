@@ -3,6 +3,7 @@ using Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Repositories.Interface;
+using static DataAccess.DAO.BookingAccessoryDAO;
 
 namespace BusinessLogic.Service
 {
@@ -39,5 +40,11 @@ namespace BusinessLogic.Service
         {
             await bookingAccessoryRepository.UpdateBookingAccessoryAsync(item);
         }
+
+        public async Task<List<AccessorySalesReport>> GetAccessorySalesReport(DateOnly startDate, DateOnly endDate)
+        {
+            return await bookingAccessoryRepository.GetAccessorySalesReport(startDate, endDate);
+        }
+
     }
 }

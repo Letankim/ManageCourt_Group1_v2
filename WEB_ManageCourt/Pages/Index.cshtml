@@ -9,18 +9,14 @@
     <div class="container h-100 d-flex flex-column justify-content-center">
         <h2 class="font-weight-bold">Hệ Thống Hỗ Trợ Tìm Kiếm Sân Bãi Nhanh</h2>
         <p>Dữ liệu được Datsan247 cập nhật thường xuyên giúp cho người dùng tìm được sân một cách nhanh nhất</p>
-        <div class="input-group mt-3 justify-content-center">
-            <select class="custom-select" style="max-width: 150px">
-                <option selected>Bóng đá</option>
-                <option value="1">Tennis</option>
-                <option value="2">Cầu lông</option>
-            </select>
-            <input type="text" class="form-control" placeholder="Nhập tên sân hoặc địa chỉ..." />
-            <input type="text" class="form-control" placeholder="Nhập khu vực" />
-            <div class="input-group-append">
-                <button class="btn btn-warning" type="button">Tìm kiếm</button>
+        <form method="post" asp-page-handler="Search">
+            <div class="input-group mt-3 justify-content-center">
+                <input type="text" class="form-control" placeholder="Nhập tên sân hoặc địa chỉ..." name="Search" />
+                <div class="input-group-append">
+                    <button class="btn btn-warning" type="submit">Tìm kiếm</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 <main class="my-5">

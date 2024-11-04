@@ -1,0 +1,262 @@
+﻿@page
+@using Newtonsoft.Json
+@model WEB_ManageCourt.Pages.Admin.Dashboard.IndexModel
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+    var groupBy = Request.Query["groupBy"].ToString();
+    var isSelectedDay = groupBy == "Day" ? "true" : "false";
+    var isSelectedWeek = groupBy == "Week" ? "true" : "false";
+    var isSelectedMonth = groupBy == "Month" ? "true" : "false";
+    var isSelectedQuarter = groupBy == "Quarter" ? "true" : "false";
+    var isSelectedYear = groupBy == "Year" ? "true" : "false";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4"><i class="fas fa-tachometer-alt"></i> Thống kê Dashboard</h2>
+
+    <!-- Date Range and Group By Filter Form -->
+    <form method="get">
+        <div class="form-row align-items-center mb-4">
+            <div class="col-auto">
+                <label for="startDate">Từ ngày:</label>
+                <input type="date" id="startDate" name="startDate" class="form-control" value="@Request.Query["startDate"]" />
+            </div>
+            <div class="col-auto">
+                <label for="endDate">Đến ngày:</label>
+                <input type="date" id="endDate" name="endDate" class="form-control" value="@Request.Query["endDate"]" />
+            </div>
+            <div class="col-auto">
+                <label for="groupBy">Thống kê theo:</label>
+                <select id="groupBy" name="groupBy" class="form-control">
+                    <option value="Day" selected="@isSelectedDay">Ngày</option>
+                    <option value="Week" selected="@isSelectedWeek">Tuần</option>
+                    <option value="Month" selected="@isSelectedMonth">Tháng</option>
+                    <option value="Quarter" selected="@isSelectedQuarter">Quý</option>
+                    <option value="Year" selected="@isSelectedYear">Năm</option>
+                </select>
+            </div>
+            <div class="col-auto align-self-end">
+                <button type="submit" class="btn btn-primary">Lọc</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Dashboard Statistics Cards -->
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Số sân đang hoạt động</h4>
+                    <p class="display-4">@Model.ActiveCourts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Số sân ẩn</h4>
+                    <p class="display-4">@Model.InactiveCourts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Số phụ kiện</h4>
+                    <p class="display-4">@Model.TotalAccessories</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body">
+                    <h4 class="card-title">Biểu đồ số lượng người dùng theo vai trò</h4>
+                    <canvas id="roleChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body">
+                    <h4 class="card-title">Tổng số lượt booking</h4>
+                    <p class="display-4">@Model.TotalBookings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Chart Section -->
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body">
+                    <h4 class="card-title">Biểu đồ trạng thái thanh toán theo thời gian</h4>
+                    <canvas id="bookingChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Revenue and Top Users/Courts Section -->
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body">
+                    <h4 class="card-title">Doanh thu theo từng sân</h4>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body">
+                    <h4 class="card-title">Top 5 người đặt sân nhiều nhất</h4>
+                    <ol class="list-group list-group-numbered">
+                        @foreach (var user in Model.TopUsers)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @user.UserName
+                                <span class="badge badge-primary">@user.BookingCount lần</span>
+                            </li>
+                        }
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-body">
+                    <h4 class="card-title">Top 5 sân được đặt nhiều nhất</h4>
+                    <ol class="list-group list-group-numbered">
+                        @foreach (var court in Model.TopCourts)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @court.CourtName
+                                <span class="badge badge-warning">@court.BookingCount lần</span>
+                            </li>
+                        }
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctxRevenue = document.getElementById('revenueChart').getContext('2d');
+    var revenueChart = new Chart(ctxRevenue, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(JsonConvert.SerializeObject(Model.CourtRevenue.Keys)), // Labels for each court
+            datasets: [{
+                label: 'Doanh thu (VND)',
+                data: @Html.Raw(JsonConvert.SerializeObject(Model.CourtRevenue.Values)), // Revenue values for each court
+                backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b', '#858796'],
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Tên sân'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Doanh thu (VND)'
+                    },
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+<script>
+    var ctxRole = document.getElementById('roleChart').getContext('2d');
+    var roleChart = new Chart(ctxRole, {
+        type: 'pie',
+        data: {
+            labels: @Html.Raw(JsonConvert.SerializeObject(Model.RoleLabels)),
+            datasets: [{
+                data: @Html.Raw(JsonConvert.SerializeObject(Model.RoleCounts)),
+                backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545', '#6c757d'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                }
+            }
+        }
+    });
+
+    // Booking Status Chart
+    var ctxBooking = document.getElementById('bookingChart').getContext('2d');
+    var bookingChart = new Chart(ctxBooking, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(JsonConvert.SerializeObject(Model.PaymentStatuses)),
+            datasets: [{
+                label: 'Số lượng booking',
+                data: @Html.Raw(JsonConvert.SerializeObject(Model.PaymentStatusCounts)),
+                backgroundColor: ['#007bff', '#ffc107', '#dc3545', '#6c757d'],
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Trạng thái thanh toán'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Số lượng'
+                    },
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const groupBy = '@groupBy';
+        const selectElement = document.getElementById('groupBy');
+
+        if (selectElement) {
+            for (let option of selectElement.options) {
+                if (option.value === groupBy) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+    });
+</script>

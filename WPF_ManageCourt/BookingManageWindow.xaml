@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:WPF_ManageCourt.Controls"
         xmlns:helper="clr-namespace:WPF_ManageCourt.Utils"
-        Title="BookingManageWindow" Height="450" Width="800">
+        Title="OneDoCourt" Height="450" Width="800">
     <Window.Resources>
         <helper:BoolToStatusConverter x:Key="BoolToStatusConverter" />
         <helper:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
@@ -54,9 +54,9 @@
      Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
      x:Name="txtSearch" 
      Height="35"  
-     materialDesign:HintAssist.Hint="Search users..."/>
+     materialDesign:HintAssist.Hint="Tìm kiếm..."/>
                     <Button Grid.Column="1" 
-    Content="Search" 
+    Content="Tìm kiếm" 
     Style="{StaticResource MaterialDesignFlatButton}"  
     Background="{StaticResource ButtonInfo}"
     Height="35" Margin="0,0,10,0"
@@ -111,8 +111,8 @@ Click="ExportButton_Click">
 
             <Border Grid.Row="1" Grid.Column="0" Margin="5">
                 <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
-                    <TextBlock Text="Danh sách người dùng" FontSize="16" Foreground="White" Margin="0,0,0,10"/>
-                    <TextBlock Text="No users found." FontSize="16" Foreground="Red" Visibility="{Binding IsUsersEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    <TextBlock Text="Danh sách đặt sân" FontSize="16" Foreground="#000" Margin="0,0,0,10"/>
+                    <TextBlock Text="Không tìm thấy sân nào." FontSize="16" Foreground="Red" Visibility="{Binding IsUsersEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                         <DataGrid Background="{StaticResource BackgroundMainTable}"
           ItemsSource="{Binding Bookings}" 

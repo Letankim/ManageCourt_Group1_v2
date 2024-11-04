@@ -21,12 +21,14 @@ namespace WPF_ManageCourt.ViewModel
         private readonly IBadmintonCourtService _courtService;
         private ObservableCollection<CourtSchedule> _schedules;
         private ObservableCollection<CourtSchedule> _schedulesAllCourtName;
+        private ObservableCollection<BadmintonCourt> _courts;
         private CourtSchedule _selectedSchedule;
         private bool _isHideId;
         private bool _isAddScheduleDialogOpen;
         private bool _isUpdateScheduleDialogOpen;
         private string message;
         private bool _isShowMessageDialog;
+        private Model.User _user;
 
         private bool _isEnabled;
 
@@ -40,9 +42,27 @@ namespace WPF_ManageCourt.ViewModel
             }
         }
 
-
-    public ScheduleCourtModel(IBadmintonCourtService courtService, ICourtScheduleService scheduleService)
+        public ObservableCollection<BadmintonCourt> Courts
         {
+            get => _courts;
+            set
+            {
+                _courts = value;
+                OnPropertyChanged(nameof(Courts));
+            }
+        }
+
+
+        public ScheduleCourtModel(IBadmintonCourtService courtService, ICourtScheduleService scheduleService)
+        {
+            _user = (Model.User)Application.Current.Properties["LoggedInUser"];
+            if (_user == null)
+            {
+                LoginWindow login = new LoginWindow();
+                login.Show();
+                Application.Current.Windows[0].Close();
+                return;
+            }
             _courtService = courtService;
             _scheduleService = scheduleService;
             Load();
@@ -225,6 +245,8 @@ namespace WPF_ManageCourt.ViewModel
             {
                 var courtSchedules = await _scheduleService.GetListAllSchedulesAsync();
                 var schedulesAllGroupName = await _scheduleService.GetAllSchedulesAllCourtNameAsync();
+                var courts = await _courtService.GetCourtsByOwnerIdAsync(_user.UserId);
+                Courts = new ObservableCollection<BadmintonCourt>(courts);
                 Schedules = new ObservableCollection<CourtSchedule>(courtSchedules);
                 SchedulesAllCourtName = new ObservableCollection<CourtSchedule>(schedulesAllGroupName);
                 SelectedSchedule = new CourtSchedule();

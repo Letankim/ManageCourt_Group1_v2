@@ -1,4 +1,5 @@
 ﻿using Model;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 
@@ -44,7 +45,7 @@ namespace WPF_ManageCourt.ViewModel
             if (Application.Current.Properties["LoggedInUser"] is User loggedInUser)
             {
                 LoggedInUserName = loggedInUser.FullName;
-                UserProfileImage = "https://coffective.com/wp-content/uploads/2018/06/default-featured-image.png.jpg"; 
+                UserProfileImage = "https://coffective.com/wp-content/uploads/2018/06/default-featured-image.png.jpg";
             }
 
             OpenMainManagementCommand = new RelayCommand<object>((o) => true, _ => OpenWindow(new MainWindow()));

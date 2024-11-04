@@ -23,7 +23,7 @@ namespace WPF_ManageCourt
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
 
-            var mainWindow = ServiceProvider.GetRequiredService<ScheduleWindow>();
+            var mainWindow = ServiceProvider.GetRequiredService<LoginWindow>();
             mainWindow.Show();
         }
 
@@ -44,6 +44,8 @@ namespace WPF_ManageCourt
             services.AddTransient<CourtScheduleDAO, CourtScheduleDAO>();
             services.AddTransient<AccessoryDAO, AccessoryDAO>();
             services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
+            services.AddTransient<CourtImageDAO, CourtImageDAO>();
+                services.AddTransient<BookingAccessoryDAO, BookingAccessoryDAO>();
 
             services.AddTransient<UserDAO, UserDAO>();
             services.AddTransient<UserOtpDAO, UserOtpDAO>();
@@ -54,6 +56,7 @@ namespace WPF_ManageCourt
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IBookingRepository, BookingRepository>();
             services.AddTransient<IBookingService, BookingService>();
+            services.AddTransient<IBookingAccessoryService, BookingAccessoryService>();
 
             services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
             services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
@@ -62,6 +65,8 @@ namespace WPF_ManageCourt
             services.AddTransient<IAccessoryRepository, AccessoryRepository>();
             services.AddTransient<IAccessoryService, AccessoryService>();
             services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
+            services.AddTransient<ICourtImageRepository, CourtImageRepository>();
+                services.AddTransient<IBookingAccessoryRepository, BookingAccessoryRepository>();
             // Register ViewModels
             services.AddTransient<UserViewModel>();
             services.AddTransient<SidebarViewModel>();
@@ -72,6 +77,7 @@ namespace WPF_ManageCourt
             services.AddTransient<ScheduleCourtModel>();
             services.AddTransient<AccessoryViewModel>();
             services.AddTransient<CourtViewModel>();
+                services.AddTransient<StatisticsViewModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();

@@ -3,22 +3,13 @@
   "WorkspaceRootPath": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\userotpdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\courtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\bookingmanagerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\singletonbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\enablelogdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\courtscheduledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\courtimagedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\bookingdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -27,112 +18,184 @@
       "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\bookingaccessorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\statisticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\shared\\_layoutuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\courts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\courts\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\badmintoncourtdao .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\dao\\accessorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\chat\\adminchat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\schedulecourtmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\chat\\userchat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\chat\\userchat.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\bookingmanagerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\sidebarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\viewmodel\\accessoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\services\\emailtemplategenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\verifyotp.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\forgetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772FA4BB-E535-4CCF-AE02-6FA8F33F976F}|..\\DataAccess\\DataAccess.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\dataaccess\\managecourtcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51112959-FC39-4036-AD46-24C5CA4D691D}|..\\WPF_ManageCourt\\WPF_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\wpf_managecourt\\bookingmanagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\managecourt\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\chat\\adminchat.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\managecourt\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\managecourt\\bookingaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6A4ECC6-A4A6-4465-B918-DD3756675C2C}|Model.csproj|solutionrelative:bookingaccessory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\bookingcourt\\history.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\bookingcourt\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\accessories\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\bookings\\exportexcel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\exportexcel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\courts\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\dashboard\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\admin\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4CF6DE3-3777-4AFA-84E1-6F3EA209ECF6}|..\\WEB_ManageCourt\\WEB_ManageCourt.csproj|e:\\fpt\\fa24\\prn221\\assigment_v2\\managecourt_group1\\web_managecourt\\pages\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -203,84 +266,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserOtpDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserOtpDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\UserOtpDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserOtpDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\UserOtpDAO.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Title": "CourtViewModel.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\CourtViewModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\CourtViewModel.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\CourtViewModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\CourtViewModel.cs",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAkwNQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:38.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\UserDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\UserDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\UserDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:36.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SingletonBase.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\SingletonBase.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\SingletonBase.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\SingletonBase.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\SingletonBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:34.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnableLogDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\EnableLogDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\EnableLogDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\EnableLogDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\EnableLogDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:33.849Z",
+              "WhenOpened": "2024-11-04T05:45:24.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CourtScheduleDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\CourtScheduleDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\CourtScheduleDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\CourtScheduleDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\CourtScheduleDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:32.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CourtImageDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\CourtImageDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\CourtImageDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\CourtImageDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\CourtImageDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:30.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "BookingAccessoryDAO.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
               "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
@@ -288,405 +286,791 @@
               "RelativeToolTip": "..\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:28.079Z",
+              "WhenOpened": "2024-11-04T05:39:26.782Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BadmintonCourtDAO .cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "StatisticsViewModel.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\StatisticsViewModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\StatisticsViewModel.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\StatisticsViewModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\StatisticsViewModel.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAD4v3oAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:26.631Z",
+              "WhenOpened": "2024-11-04T05:38:41.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ScheduleCourtModel.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\ScheduleCourtModel.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\ScheduleCourtModel.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\ScheduleCourtModel.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\ScheduleCourtModel.cs",
-              "ViewState": "AgIAAHMBAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:19.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserViewModel.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:05.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SidebarViewModel.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\SidebarViewModel.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\SidebarViewModel.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\SidebarViewModel.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\SidebarViewModel.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:43:01.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:42:57.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AccessoryDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\AccessoryDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\AccessoryDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\AccessoryDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\AccessoryDAO.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:38:57.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BookingDAO.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BookingDAO.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
-              "RelativeToolTip": "..\\DataAccess\\DAO\\BookingDAO.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:23:08.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AccessoryViewModel.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\AccessoryViewModel.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:42:53.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml.cs",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\App.xaml.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml.cs",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\App.xaml.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwCQAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T19:32:59.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\App.xaml",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\App.xaml",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-03T19:32:55.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "BookingManagerViewModel.cs",
               "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
               "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
               "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
               "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAAACgBAABMAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:10:22.749Z",
+              "WhenOpened": "2024-11-04T05:38:38.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwEIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:37:51.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingDAO.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BookingDAO.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BookingDAO.cs",
+              "RelativeToolTip": "..\\DataAccess\\DAO\\BookingDAO.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAiwI4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:22:34.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:27:19.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Index.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T05:22:02.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwF0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T05:21:40.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Courts\\Index.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:21:32.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_LayoutUser.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Shared\\_LayoutUser.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Shared\\_LayoutUser.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Shared\\_LayoutUser.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Shared\\_LayoutUser.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAIwGkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T02:05:53.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAAGwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:41:33.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BadmintonCourtDAO .cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
+              "RelativeDocumentMoniker": "..\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
+              "RelativeToolTip": "..\\DataAccess\\DAO\\BadmintonCourtDAO .cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:22:36.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T05:14:51.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "ManageCourtContext.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\ManageCourtContext.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess\\ManageCourtContext.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\DataAccess\\ManageCourtContext.cs",
-              "RelativeToolTip": "..\\DataAccess\\ManageCourtContext.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAmwCUAAABbAAAAAAAAAA==",
+              "Title": "ForgotPasswordViewModel.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAACWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:09:01.386Z"
+              "WhenOpened": "2024-11-04T05:09:30.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Details.cshtml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAiwDgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:43:41.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserChat.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T02:18:34.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserChat.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Chat\\UserChat.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T02:18:04.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminChat.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAIwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T02:19:44.967Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "BookingManageWindow.xaml",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "RelativeToolTip": "..\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T18:08:47.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "BookingManagerViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\BookingManagerViewModel.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCwAAAAmAAAAAAAAAA==",
+              "Title": "EmailTemplateGenerator.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\Services\\EmailTemplateGenerator.cs",
+              "RelativeDocumentMoniker": "..\\WPF_ManageCourt\\Services\\EmailTemplateGenerator.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WPF_ManageCourt\\Services\\EmailTemplateGenerator.cs",
+              "RelativeToolTip": "..\\WPF_ManageCourt\\Services\\EmailTemplateGenerator.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:32:49.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "BookingManageWindow.xaml",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T15:34:32.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UserView.xaml",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-30T15:35:38.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "BookingManageWindow.xaml.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\BookingManageWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBwAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:36:49.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ProfileViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ProfileViewModel.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAA/wGwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:52:32.562Z"
+              "WhenOpened": "2024-11-04T05:09:11.232Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\App.xaml.cs",
+              "Title": "VerifyOtp.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\VerifyOtp.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\VerifyOtp.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\VerifyOtp.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\VerifyOtp.cshtml.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAIwI4AAACWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:37:23.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "UserViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\UserViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:52:11.092Z"
+              "WhenOpened": "2024-11-04T05:07:38.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\User.cs",
-              "RelativeDocumentMoniker": "User.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\User.cs",
-              "RelativeToolTip": "User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Title": "ForgetPassword.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\ForgetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\ForgetPassword.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\ForgetPassword.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\ForgetPassword.cshtml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:53:38.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\UserService.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAwwMIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:53:45.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserView.xaml.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\UserView.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:52:02.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "BookingDAO.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingDAO.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwFUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:38:55.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAwD4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:28:58.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Service\\BookingService.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAADwv9gAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:40:46.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "BookingAccessory.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\BookingAccessory.cs",
-              "RelativeDocumentMoniker": "BookingAccessory.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\BookingAccessory.cs",
-              "RelativeToolTip": "BookingAccessory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:42:45.036Z"
+              "WhenOpened": "2024-11-04T05:05:20.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\Booking.cs",
-              "RelativeDocumentMoniker": "Booking.cs",
-              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\ManageCourt\\Booking.cs",
-              "RelativeToolTip": "Booking.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwCYAAAABAAAAAAAAAA==",
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\Register.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Register.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\Register.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T05:05:12.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T05:00:18.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T05:00:04.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdminChat.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Chat\\AdminChat.cshtml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:42:47.945Z"
+              "WhenOpened": "2024-11-04T02:22:23.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Index.cshtml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA6wCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T02:01:43.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "History.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\BookingCourt\\History.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\BookingCourt\\History.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\BookingCourt\\History.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\BookingCourt\\History.cshtml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T04:48:44.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EditProfile.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\EditProfile.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\EditProfile.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\EditProfile.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\EditProfile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T02:18:29.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Program.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Program.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Program.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAADwv00AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T02:20:47.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "style.css",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\wwwroot\\css\\style.css",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAuwPAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-04T03:59:54.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\BookingCourt\\Details.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\BookingCourt\\Details.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\BookingCourt\\Details.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\BookingCourt\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T02:26:45.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Hubs\\ChatHub.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T02:12:27.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Create.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Create.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Create.cshtml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwDYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T02:03:36.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Delete.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Delete.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Delete.cshtml.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T02:03:10.788Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "BookingAccessoryDAO.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\BookingAccessoryDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Details.cshtml.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:38:57.608Z"
+              "WhenOpened": "2024-11-04T02:02:51.242Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "IBookingRepository.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\Interface\\IBookingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Accessories\\Edit.cshtml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwEQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:39:53.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BookingRepository.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\Repository\\BookingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:40:10.616Z"
+              "WhenOpened": "2024-11-04T02:02:21.95Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 38,
-              "Title": "IBookingService.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\BusinessLogic\\Interface\\IBookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:56:01.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Create.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Create.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Create.cshtml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:40:34.978Z"
+              "WhenOpened": "2024-11-04T01:55:44.79Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 39,
-              "Title": "ForgotPasswordViewModel.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\ViewModel\\ForgotPasswordViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Delete.cshtml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwEAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:32:51.784Z"
+              "WhenOpened": "2024-11-04T01:55:46.72Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 40,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\DAO\\UserDAO.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwEcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:30:26.958Z"
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:56:10.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 41,
-              "Title": "WPF_ManageCourt.csproj",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\WPF_ManageCourt\\WPF_ManageCourt.csproj",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-30T15:28:00.267Z"
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Details.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Details.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Details.cshtml.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwCMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:55:16.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:54:05.771Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 42,
-              "Title": "ManageCourtContext.cs",
-              "DocumentMoniker": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs",
-              "ToolTip": "D:\\fpt\\FA24_Ki7\\PRN221\\ProjectGroup\\ManageCourt_Group1_v2\\DataAccess\\ManageCourtContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCYAAAAzAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:52:18.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:27:39.39Z"
+              "WhenOpened": "2024-11-04T01:51:44.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ExportExcel.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\ExportExcel.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\ExportExcel.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\ExportExcel.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\ExportExcel.cshtml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:51:09.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Bookings\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:50:12.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Create.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Create.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Create.cshtml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwEkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:49:53.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Delete.cshtml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:49:20.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Details.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Details.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Details.cshtml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:48:33.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Edit.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Edit.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Edit.cshtml.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAQwEMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:48:10.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ExportExcel.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\ExportExcel.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\ExportExcel.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\ExportExcel.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\ExportExcel.cshtml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:46:58.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Courts\\Index.cshtml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:45:55.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAqwDsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:45:38.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:45:34.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Create.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Create.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Create.cshtml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:44:09.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Delete.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Delete.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Delete.cshtml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:43:57.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:41:29.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Edit.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Edit.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Edit.cshtml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwEIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:38:14.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAIEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:36:13.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Admin\\Users\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:36:10.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Profile.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:34:05.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:33:48.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml.cs",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml.cs",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:33:02.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "..\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml",
+              "ToolTip": "E:\\FPT\\FA24\\PRN221\\Assigment_v2\\ManageCourt_Group1\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml",
+              "RelativeToolTip": "..\\WEB_ManageCourt\\Pages\\Auth\\Login.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T01:32:59.368Z"
             }
           ]
         }

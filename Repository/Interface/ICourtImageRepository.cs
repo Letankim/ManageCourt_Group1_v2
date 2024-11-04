@@ -11,5 +11,7 @@ namespace Repositories.Interface
         Task AddImageAsync(CourtImage image);
         Task UpdateImageAsync(CourtImage image);
         Task DeleteImageAsync(int imageId);
+        Task<List<CourtImage>> GetImagesByCourtIdAsync(int courtId);
+        Task DeleteImagesByCourtIdAsync(int courtId);
     }
 }

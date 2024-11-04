@@ -1,0 +1,68 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Courts.DeleteModel
+
+@{
+    ViewData["Title"] = "Xóa Sân Cầu Lông";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Xóa Sân Cầu Lông</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <div class="alert alert-danger text-center" role="alert">
+                <strong>Cảnh báo:</strong> Bạn có chắc chắn muốn xóa sân cầu lông này? Thao tác này không thể hoàn tác!
+            </div>
+            <form method="post">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th class="bg-light" style="width: 25%;">Tên sân</th>
+                            <td>@Model.BadmintonCourt.CourtName</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Địa điểm</th>
+                            <td>@Model.BadmintonCourt.Location</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Mô tả</th>
+                            <td>@Model.BadmintonCourt.Description</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Giá mỗi giờ</th>
+                            <td>@Model.BadmintonCourt.PricePerHour.ToString("C")</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Giờ mở cửa</th>
+                            <td>@Model.BadmintonCourt.StartTime</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Giờ đóng cửa</th>
+                            <td>@Model.BadmintonCourt.EndTime</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Trạng thái</th>
+                            <td>
+                                @(Model.BadmintonCourt.IsEnabled == true ? "Enabled" : "Disabled")
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                @if (!string.IsNullOrEmpty(Model.BadmintonCourt.MapsLink) && Model.BadmintonCourt.MapsLink.StartsWith("https://"))
+                {
+                    <div class="mt-4">
+                        <h5>Bản Đồ</h5>
+                        <iframe src="@Model.BadmintonCourt.MapsLink" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                }
+
+                <div class="form-group text-center mt-4">
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                    <a asp-page="./Index" class="btn btn-secondary">Hủy bỏ</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

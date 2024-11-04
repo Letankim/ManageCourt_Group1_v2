@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MaterialDesignThemes.Wpf;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,9 @@ namespace WPF_ManageCourt
             var serviceProvider = App.ServiceProvider;
             DataContext = serviceProvider.GetService<AccessoryViewModel>();
         }
+
+        public DialogHost AddAccessoryDialog { get; private set; }
+        public DialogHost UpdateAccessoryDialog { get; private set; }
 
         private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
