@@ -60,10 +60,17 @@ namespace WPF_ManageCourt.ViewModel
 
             if (user != null)
             {
-                var login = (User) user;
-                Application.Current.Properties["LoggedInUser"] = user;
-                var userViewDashboard = new UserView();
-                userViewDashboard.Show();
+                if(user.Role == "CourtOwner")
+                {
+                    var login = (User)user;
+                    Application.Current.Properties["LoggedInUser"] = user;
+                    var userViewDashboard = new DashboardWindow();
+                    userViewDashboard.Show();
+                } else
+                {
+                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
             }
             else
             {

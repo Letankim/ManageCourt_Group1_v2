@@ -16,5 +16,13 @@ namespace WEB_ManageCourt.Pages
         {
 
         }
+
+        [BindProperty]
+        public string Search { get; set; }
+
+        public IActionResult OnPostSearch()
+        {
+            return RedirectToPage("/Courts/Index", new { Search });
+        }
     }
 }

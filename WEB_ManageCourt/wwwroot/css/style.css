@@ -1,0 +1,253 @@
+﻿/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+h2, h3, h4 {
+    color: #004080;
+}
+
+.bg-primary {
+    background-color: #004080 !important;
+}
+
+.btn-warning {
+    background-color: #FFC107 !important;
+    border-color: #FFC107 !important;
+}
+
+.btn-primary {
+    background-color: #004080;
+    border-color: #004080;
+}
+
+    .btn-primary:hover {
+        background-color: #003366;
+        border-color: #003366;
+    }
+
+.btn-outline-primary:hover {
+    background-color: #004080;
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.card, .tab-content {
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .card:hover, .tab-content:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.card-title {
+    color: #004080;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 15px;
+    flex: 1 1 auto;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.courtsList .card {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accessory-card {
+    border: 1px solid #f0f2f5;
+    cursor: pointer;
+}
+
+    .accessory-card:hover {
+        border-color: #004080;
+    }
+
+    .accessory-card .quantity-input {
+        width: 70%;
+        margin-top: 10px;
+    }
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.img-thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+    .img-thumbnail:hover {
+        transform: scale(1.1);
+    }
+
+.badge-success {
+    background-color: #28a745;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+}
+
+.badge-info {
+    background-color: #17a2b8;
+}
+
+.badge-primary {
+    background-color: #004080;
+}
+
+.nav-tabs .nav-link {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #004080;
+}
+
+    .nav-tabs .nav-link.active {
+        background-color: #004080;
+        color: white;
+    }
+
+.custom-pagination .page-link {
+    color: #004080;
+    background-color: white;
+    border: 1px solid #004080;
+    border-radius: 30px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+    .custom-pagination .page-link:hover {
+        background-color: #004080;
+        color: white;
+        border-color: #004080;
+    }
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #004080;
+    color: white;
+    border-color: #004080;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    color: #cccccc;
+    background-color: #f9f9f9;
+    border-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.custom-pagination .page-item {
+    margin: 0 3px;
+}
+
+.preview-thumbnail.active {
+    border: 2px solid #004080;
+}
+
+.footer, .footer h5 {
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f0f2f5;
+}
+
+hr {
+    border-top: 2px solid #eee;
+}
+
+iframe {
+    border: none;
+}
+.form-inline .form-control,
+.form-inline .btn {
+    flex-shrink: 0;
+    width: auto;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+    input:checked + .slider:before {
+        transform: translateX(14px);
+    }
+
+.message.sent {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.message.received {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #e5e5ea;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-top: 10px;
+}

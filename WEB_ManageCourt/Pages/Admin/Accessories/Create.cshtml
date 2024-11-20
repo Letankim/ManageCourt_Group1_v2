@@ -1,0 +1,38 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Accessories.CreateModel
+
+@{
+    ViewData["Title"] = "Thêm Phụ Kiện";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Thêm Phụ Kiện</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Accessory.Name" class="control-label"></label>
+                    <input asp-for="Accessory.Name" class="form-control" />
+                    <span asp-validation-for="Accessory.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Accessory.Price" class="control-label"></label>
+                    <input asp-for="Accessory.Price" class="form-control" />
+                    <span asp-validation-for="Accessory.Price" class="text-danger"></span>
+                </div>
+                <div class="form-group text-center mt-4">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu Phụ Kiện</button>
+                    <a asp-page="Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Quay Lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

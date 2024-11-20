@@ -1,5 +1,7 @@
 ﻿using BusinessLogic.Interface;
+using DataAccess.DAO;
 using Model;
+using Repositories;
 using Repositories.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -38,6 +40,16 @@ namespace BusinessLogic.Service
         public async Task DeleteImageAsync(int id)
         {
             await _courtImageRepository.DeleteImageAsync(id);
+        }
+
+        public async Task<List<CourtImage>> GetImagesByCourtIdAsync(int courtId)
+        {
+            return await _courtImageRepository.GetImagesByCourtIdAsync(courtId);
+        }
+
+        public async Task DeleteImagesByCourtIdAsync(int courtId)
+        {
+            await _courtImageRepository.DeleteImagesByCourtIdAsync(courtId);
         }
     }
 }

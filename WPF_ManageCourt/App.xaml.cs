@@ -33,21 +33,40 @@ namespace WPF_ManageCourt
             services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
             services.AddTransient<ICourtImageService, CourtImageService>();
             services.AddTransient<ICourtScheduleService, CourtScheduleService>();
-            services.AddTransient<IAccessoryService, AccessoryService>();
             services.AddTransient<IUserOtpService, UserOtpService>();
             services.AddTransient<EmailService, EmailService>();
+            services.AddTransient<IAccessoryService, AccessoryService>();
 
             services.AddTransient<UserDAO, UserDAO>();
             services.AddTransient<UserOtpDAO, UserOtpDAO>();
             services.AddTransient<BookingDAO, BookingDAO>();
+            services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
+            services.AddTransient<CourtScheduleDAO, CourtScheduleDAO>();
+            services.AddTransient<AccessoryDAO, AccessoryDAO>();
+            services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
+            services.AddTransient<CourtImageDAO, CourtImageDAO>();
+                services.AddTransient<BookingAccessoryDAO, BookingAccessoryDAO>();
 
+            services.AddTransient<UserDAO, UserDAO>();
+            services.AddTransient<UserOtpDAO, UserOtpDAO>();
+            services.AddTransient<BadmintonCourtDAO, BadmintonCourtDAO>();
             // Register UserRepository and UserService
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserOtpRepository, UserOtpRepository>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IBookingRepository, BookingRepository>();
             services.AddTransient<IBookingService, BookingService>();
+            services.AddTransient<IBookingAccessoryService, BookingAccessoryService>();
 
+            services.AddTransient<IBadmintonCourtService, BadmintonCourtService>();
+            services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
+            services.AddTransient<ICourtScheduleService, CourtScheduleService>();
+            services.AddTransient<ICourtScheduleRepository, CourtScheduleRepository>();
+            services.AddTransient<IAccessoryRepository, AccessoryRepository>();
+            services.AddTransient<IAccessoryService, AccessoryService>();
+            services.AddTransient<IBadmintonCourtRepository, BadmintonCourtRepository>();
+            services.AddTransient<ICourtImageRepository, CourtImageRepository>();
+                services.AddTransient<IBookingAccessoryRepository, BookingAccessoryRepository>();
             // Register ViewModels
             services.AddTransient<UserViewModel>();
             services.AddTransient<SidebarViewModel>();
@@ -55,6 +74,10 @@ namespace WPF_ManageCourt
             services.AddTransient<ForgotPasswordViewModel>();
             services.AddTransient<ProfileViewModel>();
             services.AddTransient<BookingManagerViewModel>();
+            services.AddTransient<ScheduleCourtModel>();
+            services.AddTransient<AccessoryViewModel>();
+            services.AddTransient<CourtViewModel>();
+                services.AddTransient<StatisticsViewModel>();
 
             // Register MainWindow
             services.AddTransient<MainWindow>();
@@ -67,6 +90,7 @@ namespace WPF_ManageCourt
             services.AddTransient<ScheduleWindow>();
             services.AddTransient<AccessoryWindow>();
             services.AddTransient<ProfileWindow>();
+            services.AddTransient<AccessoryWindow>();
         }
 
     }

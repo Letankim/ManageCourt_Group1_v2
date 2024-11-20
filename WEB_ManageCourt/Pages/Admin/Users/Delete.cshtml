@@ -1,0 +1,49 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Users.DeleteModel
+@{
+    ViewData["Title"] = "Xóa Người Dùng";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h3 class="text-center">Bạn có chắc chắn muốn xóa người dùng này không?</h3>
+    <div class="card border-danger shadow-lg mt-4">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Tên tài khoản</dt>
+                <dd class="col-sm-9">@Model.User.Username</dd>
+
+                <dt class="col-sm-3">Vai trò</dt>
+                <dd class="col-sm-9">@Model.User.Role</dd>
+
+                <dt class="col-sm-3">Họ và tên</dt>
+                <dd class="col-sm-9">@Model.User.FullName</dd>
+
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9">@Model.User.Email</dd>
+
+                <dt class="col-sm-3">Số điện thoại</dt>
+                <dd class="col-sm-9">@Model.User.Phone</dd>
+
+                <dt class="col-sm-3">Trạng thái</dt>
+                <dd class="col-sm-9">
+                    @if (Model.User.IsEnabled == true)
+                    {
+                        <span class="badge badge-success">Enabled</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-secondary">Disabled</span>
+                    }
+                </dd>
+            </dl>
+            <form method="post">
+                <input type="hidden" asp-for="User.UserId" />
+                <div class="text-center">
+                    <input type="submit" value="Xóa" class="btn btn-danger" />
+                    <a asp-page="./Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

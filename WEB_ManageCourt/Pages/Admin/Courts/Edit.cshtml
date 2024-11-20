@@ -1,0 +1,156 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Courts.EditModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Sân Cầu Lông";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Chỉnh sửa thông tin Sân Cầu Lông</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="BadmintonCourt.CourtId" />
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.CourtName" class="control-label"></label>
+                    <input asp-for="BadmintonCourt.CourtName" class="form-control" />
+                    <span asp-validation-for="BadmintonCourt.CourtName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.Location" class="control-label"></label>
+                    <input asp-for="BadmintonCourt.Location" class="form-control" />
+                    <span asp-validation-for="BadmintonCourt.Location" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.Description" class="control-label"></label>
+                    <textarea asp-for="BadmintonCourt.Description" class="form-control"></textarea>
+                    <span asp-validation-for="BadmintonCourt.Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.MapsLink" class="control-label"></label>
+                    <input asp-for="BadmintonCourt.MapsLink" class="form-control" id="mapsLinkInput" />
+                    <span asp-validation-for="BadmintonCourt.MapsLink" class="text-danger"></span>
+
+                    <div id="mapPreview" class="mt-3" style="display: none;">
+                        <iframe id="mapFrame" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.PricePerHour" class="control-label"></label>
+                    <input asp-for="BadmintonCourt.PricePerHour" class="form-control" asp-format="{0:0}" />
+                    <span asp-validation-for="BadmintonCourt.PricePerHour" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.StartTime" class="control-label"></label>
+                    <input asp-for="BadmintonCourt.StartTime" class="form-control" type="time" />
+                    <span asp-validation-for="BadmintonCourt.StartTime" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BadmintonCourt.EndTime" class="control-label"></label>
+                    <input asp-for="BadmintonCourt.EndTime" class="form-control" type="time" />
+                    <span asp-validation-for="BadmintonCourt.EndTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="images">Chọn ảnh sân (có thể chọn nhiều ảnh):</label>
+                    <input type="file" id="images" name="images" multiple class="form-control" accept="image/*" />
+                    <div id="imagePreview" class="mt-3"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Hình ảnh hiện tại:</label>
+                    <div class="mt-3">
+                        @foreach (var image in Model.BadmintonCourt.CourtImages)
+                        {
+                            <img src="@image.ImageUrl" class="img-thumbnail" style="max-width: 100px; margin: 5px;" alt="Court Image" />
+                        }
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="hidden" id="IsEnabledHidden" name="BadmintonCourt.IsEnabled" value="@Model.BadmintonCourt.IsEnabled.ToString().ToLower()" />
+                    <input class="form-check-input" type="checkbox" id="IsEnabledCheckbox"
+                    @(Model.BadmintonCourt.IsEnabled == true ? "checked" : "") />
+                    <label for="IsEnabledCheckbox" class="form-check-label">Enabled</label>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu thay đổi</button>
+                    <a asp-page="./Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function updateMapPreview(link) {
+            const mapPreview = document.getElementById('mapPreview');
+            const mapFrame = document.getElementById('mapFrame');
+            if (link && link.startsWith('https://')) {
+                mapFrame.src = link;
+                mapPreview.style.display = 'block';
+            } else {
+                mapFrame.src = '';
+                mapPreview.style.display = 'none';
+            }
+        }
+
+        document.getElementById('mapsLinkInput').addEventListener('input', function () {
+            const link = this.value;
+            updateMapPreview(link);
+            if (!link.startsWith('https://')) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid Link',
+                    text: 'Please enter a valid Maps link starting with https://'
+                });
+            }
+        });
+
+        window.addEventListener("load", function () {
+            const initialLink = document.getElementById('mapsLinkInput').value;
+            updateMapPreview(initialLink);
+        });
+    </script>
+    <script>
+        function updateHiddenInput() {
+            const isChecked = document.getElementById("IsEnabledCheckbox").checked;
+            document.getElementById("IsEnabledHidden").value = isChecked ? "true" : "false";
+        }
+
+        window.addEventListener("load", updateHiddenInput);
+        document.getElementById("IsEnabledCheckbox").addEventListener("change", updateHiddenInput);
+
+        document.getElementById('images').addEventListener('change', function (event) {
+            const imagePreview = document.getElementById('imagePreview');
+            imagePreview.innerHTML = ''; 
+            const files = event.target.files;
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'img-thumbnail';
+                    img.style = 'max-width: 100px; max-height: 100px; margin: 5px;';
+                    imagePreview.appendChild(img);
+                }
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+}

@@ -21,16 +21,16 @@
 
             <Separator Margin="0,0,0,20" Background="Gray" Height="1"/>
             <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🏠  Dashboard" Command="{Binding OpenDashboardManagementCommand}"/>
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="👤  Quản lí user" Command="{Binding OpenUserManagementCommand}"/>
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="📅  Quản lý booking" Command="{Binding OpenBookingManagementCommand}"/>
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🏟️  Quản lý court" Command="{Binding OpenCourtManagementCommand}"/>
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🧳  Quản lý accessory" Command="{Binding OpenAccessoryManagementCommand}"/>
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="📆  Quản lí schedule" Command="{Binding OpenScheduleManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="👤  Quản lí người dùng" Command="{Binding OpenUserManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="📅  Quản lý đặt sân" Command="{Binding OpenBookingManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🏟️  Quản lý sân" Command="{Binding OpenCourtManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🧳  Quản lý phụ kiện" Command="{Binding OpenAccessoryManagementCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="📆  Quản lí lịch" Command="{Binding OpenScheduleManagementCommand}"/>
 
             <Separator Margin="0,20,0,20" Background="Gray" Height="1"/>
 
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="⚙️  Profile" Command="{Binding OpenProfileCommand}"/>
-            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🚪  Logout" Command="{Binding LogoutCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="⚙️  Cá nhân" Command="{Binding OpenProfileCommand}"/>
+            <Button Style="{StaticResource ModernSidebarButtonStyle}" Content="🚪  Đăng xuất" Command="{Binding LogoutCommand}"/>
         </StackPanel>
     </Border>
 </UserControl>

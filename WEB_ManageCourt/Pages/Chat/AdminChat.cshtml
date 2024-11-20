@@ -1,0 +1,122 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Chat.AdminChatModel
+@{
+    ViewData["Title"] = "Admin Chat";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card-header bg-dark text-white text-center">
+        <h4 class="mb-0" style="color: #fff"><i class="fas fa-info-circle"></i>Chăm sóc khách hàng</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-3 bg-light border-right" id="userList">
+            <h5 class="text-center mt-3">Người dùng</h5>
+            <ul class="list-group" id="users"></ul>
+        </div>
+        <div class="col-md-9">
+            <div class="chat-window border rounded p-3">
+                <div id="chatMessages" class="overflow-auto" style="height: 400px;">
+                    <h5 class="mb-0" style="color: #000"><i class="fas fa-info-circle"></i>Chọn đoạn chat để bắt đầu</h5>
+                </div>
+                <form id="chatForm" class="d-flex mt-3">
+                    <input type="text" id="messageInput" class="form-control" placeholder="Nhập tin nhắn..." />
+                    <button type="submit" class="btn btn-primary ml-2">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.9/signalr.min.js"></script>
+<script>
+    const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+    let currentUser = null;
+
+    connection.start().then(() => {
+        console.log("Admin Connected to SignalR");
+        connection.invoke("JoinGroup", "Admin");
+        loadUserList(); 
+    }).catch(err => console.error(err.toString()));
+
+
+    connection.on("ReceiveMessage", (fromUserId, message, isSentByAdmin) => {
+        if (!isSentByAdmin) {
+            if ($(`#users li[data-id="${fromUserId}"]`).length === 0) {
+                addUserToList(fromUserId);
+                saveUserToLocalStorage(fromUserId);
+            }
+            if (currentUser === fromUserId) {
+                displayMessage(message, "received");
+            }
+            saveMessageToLocalStorage(fromUserId, message, false);
+        }
+    });
+
+    function addUserToList(userId) {
+        const userItem = $('<li>')
+            .addClass('list-group-item')
+            .text(`User ${userId}`)
+            .attr('data-id', userId)
+            .on('click', function () {
+                $('#users li').removeClass('active');
+                $(this).addClass('active');
+                currentUser = userId;
+                $('#chatMessages').empty();
+                loadChatHistory(userId); 
+            });
+        $('#users').append(userItem);
+    }
+
+    $('#chatForm').submit(function (event) {
+        event.preventDefault();
+        const message = $('#messageInput').val();
+        if (message && currentUser) {
+            connection.invoke("SendMessageToUser", currentUser, message).catch(err => console.error(err.toString()));
+            displayMessage(message, "sent");
+            $('#messageInput').val('');
+            saveMessageToLocalStorage(currentUser, message, true); 
+        }
+    });
+
+    function displayMessage(message, type) {
+        const msgDiv = $('<div>').addClass(`message ${type}`).text(message);
+        $('#chatMessages').append(msgDiv);
+        $('#chatMessages').scrollTop($('#chatMessages')[0].scrollHeight);
+    }
+
+    function loadUserList() {
+        const userList = JSON.parse(localStorage.getItem("UserList")) || [];
+        userList.forEach(userId => {
+            addUserToList(userId);
+        });
+    }
+
+    // Lưu người dùng vào Local Storage nếu họ chưa có trong danh sách
+    function saveUserToLocalStorage(userId) {
+        let userList = JSON.parse(localStorage.getItem("UserList")) || [];
+        if (!userList.includes(userId)) {
+            userList.push(userId);
+            localStorage.setItem("UserList", JSON.stringify(userList));
+        }
+    }
+
+    // Tải lịch sử tin nhắn từ Local Storage
+    function loadChatHistory(userId) {
+        const chatHistory = JSON.parse(localStorage.getItem(`ChatHistory_${userId}`)) || [];
+        chatHistory.forEach(chat => {
+            displayMessage(chat.Content, chat.IsSentByAdmin ? "sent" : "received");
+        });
+    }
+
+    // Lưu tin nhắn vào Local Storage
+    function saveMessageToLocalStorage(userId, message, isSentByAdmin) {
+        let chatHistory = JSON.parse(localStorage.getItem(`ChatHistory_${userId}`)) || [];
+        chatHistory.push({ Content: message, IsSentByAdmin: isSentByAdmin });
+        localStorage.setItem(`ChatHistory_${userId}`, JSON.stringify(chatHistory));
+
+        // Kiểm tra xem tin nhắn đã được lưu thành công
+        console.log(`Saved to Local Storage for ${userId}:`, chatHistory);
+    }
+</script>

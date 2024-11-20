@@ -1,0 +1,82 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Chat.UserChatModel
+@{
+    ViewData["Title"] = "Chăm sóc khách hàng";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card-header bg-dark text-white text-center">
+        <h4 class="mb-0" style="color: #fff"><i class="fas fa-info-circle"></i> Chăm sóc khách hàng</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chat-window border rounded p-3" id="chatWindow">
+                <div id="chatMessages" class="overflow-auto" style="height: 400px;"></div>
+                <form id="chatForm" class="d-flex mt-3">
+                    <input type="text" id="messageInput" class="form-control" placeholder="Nhập tin nhắn..." />
+                    <button type="submit" class="btn btn-primary ml-2">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.9/signalr.min.js"></script>
+<script>
+
+    function generateUserId() {
+        return 'user_' + Math.random().toString(36).substr(2, 9);
+    }
+
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+        userId = generateUserId();
+        localStorage.setItem('userId', userId);
+    }
+    const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+    connection.start().then(() => {
+        console.log("User Connected to SignalR");
+        connection.invoke("JoinGroup", userId);
+        loadChatHistory(userId);
+    }).catch(err => console.error(err.toString()));
+
+    connection.on("ReceiveMessage", (fromUserId, message, isSentByAdmin) => {
+        if (isSentByAdmin) {
+            displayMessage(message, "received");
+            saveMessageToLocalStorage(userId, message, false); 
+        }
+    });
+
+    $('#chatForm').submit(function (event) {
+        event.preventDefault();
+        const message = $('#messageInput').val();
+        if (message) {
+            connection.invoke("SendMessageToAdmin", userId, message).catch(err => console.error(err.toString()));
+            displayMessage(message, "sent");
+            $('#messageInput').val('');
+            saveMessageToLocalStorage(userId, message, true); 
+        }
+    });
+
+    function displayMessage(message, type) {
+        const msgDiv = $('<div>').addClass(`message ${type}`).text(message);
+        $('#chatMessages').append(msgDiv);
+        $('#chatMessages').scrollTop($('#chatMessages')[0].scrollHeight);
+    }
+
+    function loadChatHistory(userId) {
+        const chatHistory = JSON.parse(localStorage.getItem(`ChatHistory_${userId}`)) || [];
+        chatHistory.forEach(chat => {
+            displayMessage(chat.Content, chat.IsSentByUser ? "sent" : "received");
+        });
+    }
+
+    function saveMessageToLocalStorage(userId, message, isSentByUser) {
+        let chatHistory = JSON.parse(localStorage.getItem(`ChatHistory_${userId}`)) || [];
+        chatHistory.push({ Content: message, IsSentByUser: isSentByUser });
+        localStorage.setItem(`ChatHistory_${userId}`, JSON.stringify(chatHistory));
+    }
+</script>

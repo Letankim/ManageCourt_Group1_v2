@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_ManageCourt.ViewModel;
 
 namespace WPF_ManageCourt
 {
@@ -22,6 +24,8 @@ namespace WPF_ManageCourt
         public DashboardWindow()
         {
             InitializeComponent();
+            var serviceProvider = App.ServiceProvider;
+            DataContext = serviceProvider.GetService<StatisticsViewModel>();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static DataAccess.DAO.BookingAccessoryDAO;
 
 namespace BusinessLogic.Interface
 {
@@ -11,5 +12,7 @@ namespace BusinessLogic.Interface
         Task AddBookingAccessoryAsync(BookingAccessory item);
         Task UpdateBookingAccessoryAsync(BookingAccessory item);
         Task DeleteBookingAccessoryAsync(int id);
+        Task<List<AccessorySalesReport>> GetAccessorySalesReport(DateOnly startDate, DateOnly endDate);
+
     }
 }

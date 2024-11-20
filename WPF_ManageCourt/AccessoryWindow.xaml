@@ -1,12 +1,210 @@
 ﻿<Window x:Class="WPF_ManageCourt.AccessoryWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_ManageCourt"
-        mc:Ignorable="d"
-        Title="AccessoryWindow" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:WPF_ManageCourt.Controls"
+        xmlns:helper="clr-namespace:WPF_ManageCourt.Utils"
+        Title="OneDoCourt" Height="600" Width="800" Background="{StaticResource BackgroundMainContent}">
+    <Window.Resources>
+        <helper:BoolToStatusConverter x:Key="BoolToStatusConverter" />
+        <helper:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <helper:IndexConverter x:Key="IndexNoConverter" />
+        <helper:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="30"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <local:Header Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
+
+        <local:SidebarControl Grid.Row="1" Grid.Column="0" Height="auto" VerticalAlignment="Stretch"/>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Grid.Column="0" 
+             Margin="-486,0,10,0" 
+             Padding="5,2"
+             Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
+             x:Name="txtSearch" 
+             Height="35"  
+             materialDesign:HintAssist.Hint="Tìm kiếm..."/>
+                    <Button Grid.Column="1" 
+            Content="Tìm kiếm" 
+            Style="{StaticResource MaterialDesignFlatButton}"  
+            Background="{StaticResource ButtonInfo}"
+            Height="35" Margin="0,0,10,0"
+            Command="{Binding SearchCommand}"
+                            
+        />
+
+                </Grid>
+                <Grid Grid.Row="1" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
+                <Grid Grid.Row="1" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" 
+      Content="Thêm mới" 
+        Style="{StaticResource MaterialDesignFlatButton}" 
+        Background="{StaticResource ButtonPrimary}" 
+        Height="35" 
+        Command="{Binding OpenAddAccessoryDialogCommand}" 
+        Margin="0,10,1,-45" Grid.Row="1">
+                    </Button>
+                </Grid>
+            </Grid>
+            <Border Grid.Row="1" Grid.Column="0" Margin="5">
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                    <TextBlock Text="Danh sách phụ kiện" FontSize="16" Foreground="White" Margin="0,0,0,10"/>
+                    <TextBlock Text="No accessory found." FontSize="16" Foreground="Red" Visibility="{Binding IsAccessoryEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <DataGrid Background="{StaticResource BackgroundMainTable}"
+          ItemsSource="{Binding Accessories}" 
+          SelectedItem="{Binding SelectedAccessory}" 
+          AutoGenerateColumns="False" 
+          IsReadOnly="True"
+          Margin="0,10,0,0"
+          BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+          BorderThickness="1"
+          MouseDoubleClick="DataGrid_MouseDoubleClick"
+          Visibility="{Binding IsAccessoryEmpty, Converter={StaticResource InverseBoolToVisibilityConverter}}"
+          Style="{StaticResource MaterialDesignDataGrid}">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header=".STT" Width="50">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource IndexNoConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="Tên" Binding="{Binding Name}" Width="200"/>
+                                <DataGridTextColumn Header="Giá" Binding="{Binding Price}" Width="100"/>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <local:Footer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
+        <materialDesign:DialogHost IsOpen="{Binding IsAddAccessoryDialogOpen}" CloseOnClickAway="True" x:Name="Add">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Margin="20" Width="300">
+                        <TextBlock Text="Thêm mới phụ kiện" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+
+                        <TextBox 
+Margin="0,10" 
+materialDesign:HintAssist.Hint="Tên" 
+Text="{Binding SelectedAccessory.Name, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Giá" 
+                    Text="{Binding SelectedAccessory.Price, UpdateSourceTrigger=PropertyChanged}" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                            <Button 
+                        Content="Hủy" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Margin="0,0,10,0" 
+                        Command="materialDesign:DialogHost.CloseDialogCommand" 
+                        Background="{StaticResource ButtonDanger}" />
+                            <Button 
+                        Content="Lưu lại" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Command="{Binding AddAccessoryCommand}" 
+                        Background="{StaticResource ButtonSuccess}" 
+                        />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <materialDesign:DialogHost IsOpen="{Binding IsUpdateAccessoryDialogOpen}" CloseOnClickAway="True" x:Name="Information">
+            <materialDesign:DialogHost.DialogContent>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Margin="20" Width="300">
+                        <TextBlock Text="Thông tin" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+
+
+
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Tên" 
+                    Text="{Binding SelectedAccessory.Name, UpdateSourceTrigger=PropertyChanged}" />
+
+
+                        <TextBox 
+                    Margin="0,10" 
+                    materialDesign:HintAssist.Hint="Giá" 
+                    Text="{Binding SelectedAccessory.Price, UpdateSourceTrigger=PropertyChanged}" />
+
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                            <Button 
+                        Content="Hủy bỏ" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Margin="0,0,10,0" 
+                        Command="materialDesign:DialogHost.CloseDialogCommand" 
+                        Background="{StaticResource ButtonDanger}" />
+
+                            <Button 
+                        Content="Lưu lại" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Command="{Binding EditCommand}" 
+                        Background="{StaticResource ButtonSuccess}" />
+
+                            <Button 
+                        Content="Xóa" 
+                        Style="{StaticResource MaterialDesignFlatButton}" 
+                        Command="{Binding DeleteCommand}" 
+                        Background="{StaticResource ButtonDanger}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
+        <materialDesign:DialogHost x:Name="AlertDialogHost" IsOpen="{Binding IsShowMessageDialog}">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel>
+                    <TextBlock Text="{Binding Message}" FontSize="16" FontWeight="Bold" Margin="0,10,0,10"/>
+                    <Button Content="OK"  Command="materialDesign:DialogHost.CloseDialogCommand" />
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
     </Grid>
 </Window>

@@ -1,0 +1,63 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Auth.VerifyOtpModel
+@{
+    ViewData["Title"] = "Xác thực OTP";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+
+    var remainingTime = HttpContext.Session.GetInt32("RemainingTime") ?? 60;
+
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h4 class="text-center mb-4">
+                        <i class="fas fa-key"></i> Xác thực OTP
+                    </h4>
+
+                    @if (TempData["OtpMessage"] != null)
+                    {
+                        <div class="alert alert-info">@TempData["OtpMessage"]</div>
+                    }
+
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="otp">Nhập mã OTP @Model.DebugInfo</label>
+                            <input asp-for="EnteredOtp" class="form-control" id="otp" required />
+                            <span asp-validation-for="EnteredOtp" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Xác thực OTP</button>
+                    </form>
+
+                    <form method="post" asp-page-handler="ResendOtp" id="resendOtpForm">
+                        <button type="submit" class="btn btn-link" id="resendOtpButton" disabled>Gửi lại OTP (trong <span id="countdown">@remainingTime</span>s)</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let countdown = @remainingTime;
+        const countdownElement = document.getElementById('countdown');
+        const resendOtpButton = document.getElementById('resendOtpButton');
+        if(countdown == 0) {
+            resendOtpButton.disabled = false;
+            resendOtpButton.textContent = "Gửi lại OTP";
+        }
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                resendOtpButton.disabled = false;
+                resendOtpButton.textContent = "Gửi lại OTP";
+            }
+        }, 1000);
+    </script>
+}

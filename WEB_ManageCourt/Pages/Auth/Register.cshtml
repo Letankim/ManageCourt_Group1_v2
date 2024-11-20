@@ -1,0 +1,70 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Auth.RegisterModel
+@{
+    ViewData["Title"] = "Đăng ký";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h4 class="text-center mb-4">
+                        <i class="fas fa-user-plus"></i> Đăng ký
+                    </h4>
+
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <div asp-validation-summary="All"></div>
+                        </div>
+                    }
+
+                    <form method="post" asp-page-handler="Register">
+                        <div class="form-group">
+                            <label for="fullname"><i class="fas fa-user-circle"></i> Họ và tên</label>
+                            <input asp-for="RegisterViewModel.FullName" class="form-control" id="fullname" required />
+                            <span asp-validation-for="RegisterViewModel.FullName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input asp-for="RegisterViewModel.Email" class="form-control" id="email" type="email" required />
+                            <span asp-validation-for="RegisterViewModel.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Số điện thoại</label>
+                            <input asp-for="RegisterViewModel.Phone" class="form-control" id="phone" type="tel" required />
+                            <span asp-validation-for="RegisterViewModel.Phone" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerUsername"><i class="fas fa-user"></i> Tên đăng nhập</label>
+                            <input asp-for="RegisterViewModel.Username" class="form-control" id="registerUsername" required />
+                            <span asp-validation-for="RegisterViewModel.Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword"><i class="fas fa-lock"></i> Mật khẩu</label>
+                            <input asp-for="RegisterViewModel.Password" class="form-control" id="registerPassword" type="password" required />
+                            <span asp-validation-for="RegisterViewModel.Password" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-block">
+                            <i class="fas fa-user-plus"></i> Đăng ký
+                        </button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p>Bạn đã có tài khoản?</p>
+                        <a href="~/Auth/Login" class="btn btn-primary">
+                            <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

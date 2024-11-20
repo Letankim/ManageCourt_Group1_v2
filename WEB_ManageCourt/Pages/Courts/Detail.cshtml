@@ -1,0 +1,80 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Courts.DetailModel
+@{
+    ViewData["Title"] = "Chi tiết sân cầu lông - " + @Model.CourtName;
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+<div class="container my-5">
+    <div class="row">
+        <!-- Hình ảnh sân -->
+        <div class="col-md-6">
+            <div id="courtImagesCarousel" class="carousel slide mb-3" data-ride="carousel">
+                <div class="carousel-inner">
+                    @for (int i = 0; i < Model.CourtImages.Count; i++)
+                    {
+                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                            <img src="@Model.CourtImages[i].ImageUrl" class="d-block w-100" alt="Sân cầu lông" />
+                        </div>
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#courtImagesCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#courtImagesCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!-- Hình ảnh nhỏ -->
+            <div class="d-flex justify-content-center">
+                @for (int i = 0; i < Model.CourtImages.Count; i++)
+                {
+                    <img src="@Model.CourtImages[i].ImageUrl" class="img-thumbnail mx-1 preview-thumbnail @(i == 0 ? "active" : "")" data-target="#courtImagesCarousel" data-slide-to="@i" style="width: 80px; height: 80px" alt="Sân nhỏ @(i + 1)" />
+                }
+            </div>
+        </div>
+
+        <!-- Thông tin chi tiết -->
+        <div class="col-md-6">
+            <h3>@Model.CourtName</h3>
+            <p class="text-muted">
+                <i class="fas fa-map-marker-alt"></i> @Model.Location
+            </p>
+            <p><strong>Giá thuê:</strong> @string.Format("{0:N0} VNĐ / giờ", Model.PricePerHour)</p>
+            <p><strong>Giờ mở cửa:</strong> @Model.StartTime.ToString("hh\\:mm") - @Model.EndTime.ToString("hh\\:mm")</p>
+            <p>
+                <strong>Trạng thái:</strong>
+                <span class="badge @(Model.IsClosed ? "badge-danger" : "badge-success")">
+                    @(Model.IsClosed ? "Đang đóng cửa" : "Đang mở cửa")
+                </span>
+            </p>
+            <p><strong>Mô tả:</strong> @Model.Description</p>
+            <a href="@Model.StandardMapsLink" class="btn btn-primary" target="_blank"><i class="fas fa-map"></i> Xem trên bản đồ</a>
+            <a href="/BookingCourt?courtId=@Model.CourtId" class="btn btn-success"><i class="fas fa-calendar-check"></i> Đặt lịch ngay</a>
+        </div>
+    </div>
+
+    <!-- Bản đồ -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h5>Vị trí trên bản đồ</h5>
+            <iframe src="@Model.EmbedMapsLink" width="100%" height="400" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".preview-thumbnail").on("click", function () {
+            var slideTo = $(this).data("slide-to");
+            $("#courtImagesCarousel").carousel(slideTo);
+            $(".preview-thumbnail").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>

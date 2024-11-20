@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,35 @@ namespace WPF_ManageCourt
         public CourtManageWindow()
         {
             InitializeComponent();
+            var serviceProvider = App.ServiceProvider;
+            DataContext = serviceProvider.GetService<CourtViewModel>();
+        }
+
+        private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var dataGrid = sender as DataGrid;
+            if (dataGrid.SelectedItem != null)
+            {
+                var court = dataGrid.SelectedItem as BadmintonCourt;
+                var viewModel = DataContext as CourtViewModel;
+                viewModel.SelectedCourt = court;
+                viewModel.IsUpdateCourtDialogOpen = true;
+            }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox comboBox && comboBox.SelectedItem != null)
+            {
+                var viewModel = DataContext as CourtViewModel;
+                var selectedValue = comboBox.SelectedItem.ToString();
+                viewModel.SelectedCourt.IsEnabled = selectedValue.Equals("Active", StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

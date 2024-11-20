@@ -1,0 +1,103 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Bookings.EditModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Đặt Sân";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-center">Chỉnh sửa Đặt Sân</h1>
+
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Booking.BookingId" />
+
+                <div class="form-group">
+                    <label asp-for="Booking.UserId" class="control-label"></label>
+                    <select asp-for="Booking.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                    <span asp-validation-for="Booking.UserId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.CourtId" class="control-label"></label>
+                    <select asp-for="Booking.CourtId" class="form-control" asp-items="ViewBag.CourtId"></select>
+                    <span asp-validation-for="Booking.CourtId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.BookingDate" class="control-label"></label>
+                    <input asp-for="Booking.BookingDate" class="form-control" type="date" />
+                    <span asp-validation-for="Booking.BookingDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.TimeSlot" class="control-label"></label>
+                    <input asp-for="Booking.TimeSlot" class="form-control" />
+                    <span asp-validation-for="Booking.TimeSlot" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.TotalPrice" class="control-label"></label>
+                    <input asp-for="Booking.TotalPrice" class="form-control" />
+                    <span asp-validation-for="Booking.TotalPrice" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.Note" class="control-label"></label>
+                    <input asp-for="Booking.Note" class="form-control" />
+                    <span asp-validation-for="Booking.Note" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.ContactName" class="control-label"></label>
+                    <input asp-for="Booking.ContactName" class="form-control" />
+                    <span asp-validation-for="Booking.ContactName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.ContactEmail" class="control-label"></label>
+                    <input asp-for="Booking.ContactEmail" class="form-control" />
+                    <span asp-validation-for="Booking.ContactEmail" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.ContactPhone" class="control-label"></label>
+                    <input asp-for="Booking.ContactPhone" class="form-control" />
+                    <span asp-validation-for="Booking.ContactPhone" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.PaymentMethod" class="control-label"></label>
+                    <input asp-for="Booking.PaymentMethod" class="form-control" />
+                    <span asp-validation-for="Booking.PaymentMethod" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.PaymentStatus" class="control-label"></label>
+                    <input asp-for="Booking.PaymentStatus" class="form-control" />
+                    <span asp-validation-for="Booking.PaymentStatus" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Booking.BookingStatus" class="control-label"></label>
+                    <input asp-for="Booking.BookingStatus" class="form-control" />
+                    <span asp-validation-for="Booking.BookingStatus" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <a asp-page="./Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,4 +1,5 @@
 ﻿using DataAccess.DAO;
+using Microsoft.EntityFrameworkCore;
 using Model;
 using Repositories.Interface;
 using System.Collections.Generic;
@@ -43,5 +44,17 @@ namespace Repositories
                 await _courtImageDAO.DeleteImageAsync(imageId);
             }
         }
+
+        public async Task<List<CourtImage>> GetImagesByCourtIdAsync(int courtId)
+        {
+            return await _courtImageDAO.GetImagesByCourtIdAsync(courtId);
+        }
+
+        public async Task DeleteImagesByCourtIdAsync(int courtId)
+        {
+            await _courtImageDAO.DeleteImagesByCourtIdAsync(courtId);
+        }
+
+
     }
 }

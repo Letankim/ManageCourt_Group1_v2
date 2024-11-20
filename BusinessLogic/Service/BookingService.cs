@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Repositories.Interface;
 using Newtonsoft.Json;
 using OfficeOpenXml;
+using DataAccess.DAO;
 
 namespace BusinessLogic.Service
 {
@@ -215,5 +216,52 @@ namespace BusinessLogic.Service
         {
             await bookingRepository.UpdateBookingPartialAsync(selectedBooking);
         }
+
+        public async Task AddBookingOrderAsync(Booking booking)
+        {
+            try
+            {
+                await bookingRepository.AddBookingOrderAsync(booking);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
+        }
+
+        public async Task<List<Booking>> GetBookingsByUserIdAsync(int userId)
+        {
+            return await bookingRepository.GetBookingsByUserIdAsync(userId);
+        }
+
+        public async Task<Booking> GetBookingDetailByUserIdAndBookingIdAsync(int userId, int bookingId)
+        {
+            return await bookingRepository.GetBookingDetailByUserIdAndBookingIdAsync(userId, bookingId);
+        }
+
+        public async Task ChangeBookingStatusAsync(int bookingId, string status)
+        {
+            await bookingRepository.ChangeBookingStatusAsync(bookingId, status);
+        }
+
+        public async Task<Dictionary<DateOnly, (int Confirmed, int NoShow, int Cancelled)>> StatisticStatus(DateOnly startDay, DateOnly endDay, int userID)
+        {
+            return await bookingRepository.StatisticStatus(startDay, endDay, userID);
+        }
+        public async Task<Dictionary<DateOnly, (int AfterPlay, int Online)>> StatisticPayment(DateOnly startDay, DateOnly endDay, int userID)
+        {
+            return await bookingRepository.StatisticPayment(startDay, endDay, userID);
+
+        }
+        public async Task<Dictionary<DateOnly, decimal>> StatisticsAsync(DateOnly startDay, DateOnly endDay, int? userID = null)
+        {
+            return await bookingRepository.StatisticsAsync(startDay, endDay, userID);
+        }
+        public Task<Dictionary<DateOnly, (int Confirmed, int NoShow, int Cancelled)>> StatisticStatus(DateOnly startDay, DateOnly endDay)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

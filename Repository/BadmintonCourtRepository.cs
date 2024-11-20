@@ -43,5 +43,30 @@ namespace Repositories
                 await _badmintonCourtDAO.DeleteCourtAsync(courtId);
             }
         }
+
+        public async Task<List<BadmintonCourt>> GetAllEnabledCourtsAsync(int page, int pageSize)
+        {
+            return await _badmintonCourtDAO.GetAllEnabledCourtsAsync(page, pageSize);
+        }
+
+        public async Task<int> GetCourtsCountAsync()
+        {
+            return await _badmintonCourtDAO.GetCourtsCountAsync();
+        }
+
+        public async Task<(List<BadmintonCourt>, int)> GetFilteredCourtsAsync(
+            int page, int pageSize, decimal? minPrice, decimal? maxPrice, TimeOnly? openTime, TimeOnly? closeTime, string search)
+        {
+            return await _badmintonCourtDAO.GetFilteredCourtsAsync(page, pageSize, minPrice, maxPrice, openTime, closeTime, search);
+        }
+        public async Task<BadmintonCourt> GetCourtByIdActiveAsync(int courtId)
+        {
+            return await _badmintonCourtDAO.GetCourtByIdAsync(courtId);
+        }
+
+        public async Task<List<BadmintonCourt>> GetCourtsByOwnerIdAsync(int ownerId)
+        {
+            return await _badmintonCourtDAO.GetCourtsByOwnerIdAsync((int)ownerId);
+        }
     }
 }

@@ -1,0 +1,67 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Users.CreateModel
+
+@{
+    ViewData["Title"] = "Thêm người dùng mới";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Thêm người dùng mới</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="User.Username" class="control-label"></label>
+                    <input asp-for="User.Username" class="form-control" />
+                    <span asp-validation-for="User.Username" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User.Password" class="control-label"></label>
+                    <input asp-for="User.Password" type="password" class="form-control" />
+                    <span asp-validation-for="User.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User.FullName" class="control-label"></label>
+                    <input asp-for="User.FullName" class="form-control" />
+                    <span asp-validation-for="User.FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User.Email" class="control-label"></label>
+                    <input asp-for="User.Email" type="email" class="form-control" />
+                    <span asp-validation-for="User.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User.Phone" class="control-label"></label>
+                    <input asp-for="User.Phone" class="form-control" />
+                    <span asp-validation-for="User.Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group mr-2">
+                    <label for="statusFilter" class="mr-2">Trạng thái:</label>
+                    <select id="statusFilter" name="statusFilter" class="form-control">
+                        <option value="">Trạng thái</option>
+                        <option value="Enabled">Kích hoạt</option>
+                        <option value="Disabled">Không kích hoạt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User.Role" class="control-label"></label>
+                    <select asp-for="User.Role" class="form-control">
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                        <option value="Moderator">Moderator</option>
+                    </select>
+                    <span asp-validation-for="User.Role" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

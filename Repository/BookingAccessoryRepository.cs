@@ -3,6 +3,7 @@ using Model;
 using Repositories.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static DataAccess.DAO.BookingAccessoryDAO;
 
 namespace Repositories
 {
@@ -43,5 +44,11 @@ namespace Repositories
                 await _bookingAccessoryDAO.DeleteBookingAccessoryAsync(bookingAccessoryId);
             }
         }
+        public async Task<List<AccessorySalesReport>> GetAccessorySalesReport(DateOnly startDate, DateOnly endDate)
+
+        {
+            return await _bookingAccessoryDAO.GetAccessorySalesReport(startDate, endDate);
+        }
+
     }
 }

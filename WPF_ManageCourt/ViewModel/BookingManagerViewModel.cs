@@ -291,7 +291,6 @@ namespace WPF_ManageCourt.ViewModel
         private async void Load()
         {
             IsHideId = false;
-
             try
             {
                 var books = await _bookingService.GetAllBookingByOwnersAsync(_currentUser.UserId);

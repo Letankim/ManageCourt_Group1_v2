@@ -1,0 +1,31 @@
+﻿@page
+@model WEB_ManageCourt.Pages.BookingCourt.ConfirmationModel
+@{
+    ViewData["Title"] = "Xác nhận Đặt Lịch";
+    Layout = "~/Pages/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center">
+        <i class="fas fa-check-circle text-success"></i> Xác nhận Đặt Lịch
+    </h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-success">
+            @TempData["ConfirmationMessage"]
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Tên liên hệ:</strong> @TempData["ContactName"]</li>
+            <li class="list-group-item"><strong>Ngày đặt lịch:</strong> @TempData["BookingDate"]</li>
+            <li class="list-group-item"><strong>Khung giờ:</strong> @TempData["TimeSlot"]</li>
+            <li class="list-group-item"><strong>Tổng giá tiền:</strong> @TempData["TotalPrice"] VNĐ</li>
+        </ul>
+    }
+</div>

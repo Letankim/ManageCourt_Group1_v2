@@ -21,5 +21,8 @@ namespace BusinessLogic.Interface
         Task<User> AuthenticateUserAsync(string username, string password);
 
         Task UpdatePasswordAsync(int userId, string newPassword);
+        Task<User?> AuthenticateUserLoginAsync(string username, string password);
+
+        Task<List<User>> GetAllCourtOwnerAsync();
     }
 }

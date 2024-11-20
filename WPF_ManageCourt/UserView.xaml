@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         xmlns:local="clr-namespace:WPF_ManageCourt.Controls"
         xmlns:helper="clr-namespace:WPF_ManageCourt.Utils"
-        Title="OmniLogin App" Height="600" Width="800" Background="{StaticResource BackgroundMainContent}">
+        Title="OneDoCourt" Height="600" Width="800" Background="{StaticResource BackgroundMainContent}">
     <Window.Resources>
         <helper:BoolToStatusConverter x:Key="BoolToStatusConverter" />
         <helper:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
@@ -52,9 +52,9 @@
              Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
              x:Name="txtSearch" 
              Height="35"  
-             materialDesign:HintAssist.Hint="Search users..."/>
+             materialDesign:HintAssist.Hint="Tìm  kiếm..."/>
                     <Button Grid.Column="1" 
-            Content="Search" 
+            Content="Tìm kiếm" 
             Style="{StaticResource MaterialDesignFlatButton}"  
             Background="{StaticResource ButtonInfo}"
             Height="35" Margin="0,0,10,0"
@@ -73,7 +73,7 @@
 
                     </Grid.ColumnDefinitions>
                     <Button Grid.Row="1" 
-        Content="Add New" 
+        Content="Thêm mới" 
         Style="{StaticResource MaterialDesignFlatButton}" 
         Background="{StaticResource ButtonWarning}" 
         Height="35" 
@@ -123,7 +123,7 @@
             <Border Grid.Row="1" Grid.Column="0" Margin="5">
                 <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
                     <TextBlock Text="Danh sách người dùng" FontSize="16" Foreground="White" Margin="0,0,0,10"/>
-                    <TextBlock Text="No users found." FontSize="16" Foreground="Red" Visibility="{Binding IsUsersEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    <TextBlock Text="Không tìm thấy người dùng nào." FontSize="16" Foreground="Red" Visibility="{Binding IsUsersEmpty, Converter={StaticResource BoolToVisibilityConverter}}" />
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                         <DataGrid Background="{StaticResource BackgroundMainTable}"
           ItemsSource="{Binding Users}" 
@@ -137,7 +137,7 @@
           Visibility="{Binding IsUsersEmpty, Converter={StaticResource InverseBoolToVisibilityConverter}}"
           Style="{StaticResource MaterialDesignDataGrid}">
                             <DataGrid.Columns>
-                                <DataGridTemplateColumn Header=".No" Width="50">
+                                <DataGridTemplateColumn Header=".STT" Width="50">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}, 
@@ -147,12 +147,12 @@
                                 </DataGridTemplateColumn>
 
 
-                                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="200"/>
-                                <DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="200"/>
+                                <DataGridTextColumn Header="Họ và tên" Binding="{Binding FullName}" Width="200"/>
+                                <DataGridTextColumn Header="Tên đăng nhập" Binding="{Binding Username}" Width="200"/>
                                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
-                                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="150"/>
-                                <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="150"/>
-                                <DataGridTextColumn Header="Active" Binding="{Binding IsEnabled}" Width="150"/>
+                                <DataGridTextColumn Header="SĐT" Binding="{Binding Phone}" Width="150"/>
+                                <DataGridTextColumn Header="Vai trò" Binding="{Binding Role}" Width="150"/>
+                                <DataGridTextColumn Header="Trạng thái" Binding="{Binding IsEnabled}" Width="150"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </ScrollViewer>
@@ -161,38 +161,38 @@
         </Grid>
 
         <local:Footer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="auto" VerticalAlignment="Top"/>
-        <materialDesign:DialogHost IsOpen="{Binding IsAddUserDialogOpen}" CloseOnClickAway="True" x:Name="AddUserDialog">
+        <materialDesign:DialogHost IsOpen="{Binding IsAddUserDialogOpen}" CloseOnClickAway="True" x:Name="AddNew">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="20" Width="300">
-                        <TextBlock Text="Add New User" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+                        <TextBlock Text="Thêm mới" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
 
                         <TextBox 
 Margin="0,10" 
-materialDesign:HintAssist.Hint="Fullname" 
+materialDesign:HintAssist.Hint="Họ và tên" 
 Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
                         <!-- Username Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Username" 
+                    materialDesign:HintAssist.Hint="Tên đăng nhập" 
                     Text="{Binding SelectedUser.Username, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Email Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Email Address" 
+                    materialDesign:HintAssist.Hint="Email" 
                     Text="{Binding SelectedUser.Email, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Phone Number Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Phone Number" 
+                    materialDesign:HintAssist.Hint="SĐT" 
                     Text="{Binding SelectedUser.Phone, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Role Selection ComboBox -->
                         <ComboBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Select Role" 
+                    materialDesign:HintAssist.Hint="Vai trò" 
                     ItemsSource="{Binding UserRoles}" 
                     SelectedItem="{Binding SelectedUser.Role, UpdateSourceTrigger=PropertyChanged}" />
 
@@ -200,14 +200,14 @@ Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
                         <PasswordBox 
             x:Name="PasswordBoxControl" 
             Margin="0,10" 
-            materialDesign:HintAssist.Hint="Password" 
+            materialDesign:HintAssist.Hint="Mật khẩu" 
             PasswordChanged="PasswordBoxControl_PasswordChanged" />
 
 
                         <!-- Status Selection ComboBox -->
                         <ComboBox 
     Margin="0,10" 
-    materialDesign:HintAssist.Hint="Select Status" 
+    materialDesign:HintAssist.Hint="Trạng thái" 
     ItemsSource="{Binding StatusOptions}" 
     SelectedItem="{Binding SelectedUser.IsEnabled, Converter={StaticResource BoolToStatusConverter}, UpdateSourceTrigger=PropertyChanged}">
                         </ComboBox>
@@ -216,14 +216,14 @@ Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                             <Button 
-                        Content="Cancel" 
+                        Content="Hủy bỏ" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Margin="0,0,10,0" 
                         Command="materialDesign:DialogHost.CloseDialogCommand" 
                         Background="{StaticResource ButtonDanger}" />
 
                             <Button 
-                        Content="Add" 
+                        Content="Lưu lại" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Command="{Binding AddUserCommand}" 
                         Background="{StaticResource ButtonSuccess}" 
@@ -233,11 +233,11 @@ Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
                 </Grid>
             </materialDesign:DialogHost.DialogContent>
         </materialDesign:DialogHost>
-        <materialDesign:DialogHost IsOpen="{Binding IsUpdateUserDialogOpen}" CloseOnClickAway="True" x:Name="UpdateUserDialog">
+        <materialDesign:DialogHost IsOpen="{Binding IsUpdateUserDialogOpen}" CloseOnClickAway="True" x:Name="Information">
             <materialDesign:DialogHost.DialogContent>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Margin="20" Width="300">
-                        <TextBlock Text="Update User" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+                        <TextBlock Text="Thông tin" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
 
                         <TextBox 
 Margin="0,10" 
@@ -247,37 +247,37 @@ Text="{Binding SelectedUser.UserId, UpdateSourceTrigger=PropertyChanged}" />
                         <!-- Full Name Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Fullname" 
+                    materialDesign:HintAssist.Hint="Họ và tên" 
                     Text="{Binding SelectedUser.FullName, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Username Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Username" 
+                    materialDesign:HintAssist.Hint="Tên đăng nhập" 
                     Text="{Binding SelectedUser.Username, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Email Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Email Address" 
+                    materialDesign:HintAssist.Hint="Email" 
                     Text="{Binding SelectedUser.Email, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Phone Number Field -->
                         <TextBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Phone Number" 
+                    materialDesign:HintAssist.Hint="SĐT" 
                     Text="{Binding SelectedUser.Phone, UpdateSourceTrigger=PropertyChanged}" />
 
                         <!-- Role Selection ComboBox -->
                         <ComboBox 
                     Margin="0,10" 
-                    materialDesign:HintAssist.Hint="Select Role" 
+                    materialDesign:HintAssist.Hint="Vai trò" 
                     ItemsSource="{Binding UserRoles}" 
                     SelectedItem="{Binding SelectedUser.Role, UpdateSourceTrigger=PropertyChanged}" />
 
                         <ComboBox 
     Margin="0,10" 
-    materialDesign:HintAssist.Hint="Select Status" 
+    materialDesign:HintAssist.Hint="Trạng thái" 
     ItemsSource="{Binding StatusOptions}" 
     SelectedItem="{Binding SelectedUser.IsEnabled, Converter={StaticResource BoolToStatusConverter}, UpdateSourceTrigger=PropertyChanged}"
     SelectionChanged="ComboBox_SelectionChanged">
@@ -287,20 +287,20 @@ Text="{Binding SelectedUser.UserId, UpdateSourceTrigger=PropertyChanged}" />
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                             <Button 
-                        Content="Cancel" 
+                        Content="Hủy bỏ" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Margin="0,0,10,0" 
                         Command="materialDesign:DialogHost.CloseDialogCommand" 
                         Background="{StaticResource ButtonDanger}" />
 
                             <Button 
-                        Content="Update" 
+                        Content="Lưu lại" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Command="{Binding EditCommand}" 
                         Background="{StaticResource ButtonSuccess}" />
 
                             <Button 
-                        Content="Delete" 
+                        Content="Xóa" 
                         Style="{StaticResource MaterialDesignFlatButton}" 
                         Command="{Binding DeleteCommand}" 
                         Background="{StaticResource ButtonDanger}" />

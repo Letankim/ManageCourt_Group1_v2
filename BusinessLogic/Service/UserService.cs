@@ -190,5 +190,15 @@ namespace BusinessLogic.Service
         {
             await userRepository.UpdatePasswordAsync(userId, newPassword);
         }
+
+        public async Task<User?> AuthenticateUserLoginAsync(string username, string password)
+        {
+            return await userRepository.AuthenticateUserLoginAsync(username, password);
+        }
+
+        public async Task<List<User>> GetAllCourtOwnerAsync()
+        {
+            return await userRepository.GetAllCourtOwnerAsync();
+        }
     }
 }

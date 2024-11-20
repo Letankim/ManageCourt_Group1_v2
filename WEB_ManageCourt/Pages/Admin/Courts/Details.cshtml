@@ -1,0 +1,251 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Courts.DetailsModel
+
+@{
+    ViewData["Title"] = "Chi tiết Sân";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0" style="color: #fff"><i class="fas fa-info-circle"></i> Chi tiết Sân</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <th class="bg-light" style="width: 25%;">Tên sân</th>
+                        <td>@Model.BadmintonCourt.CourtName</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Địa điểm</th>
+                        <td>@Model.BadmintonCourt.Location</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Mô tả</th>
+                        <td>@Model.BadmintonCourt.Description</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Giá mỗi giờ</th>
+                        <td>@Model.BadmintonCourt.PricePerHour.ToString("C")</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Giờ mở cửa</th>
+                        <td>@Model.BadmintonCourt.StartTime</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Giờ đóng cửa</th>
+                        <td>@Model.BadmintonCourt.EndTime</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Trạng thái</th>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox" @(Model.BadmintonCourt.IsEnabled == true ? "checked" : "") onclick="toggleCourtStatus(@Model.BadmintonCourt.CourtId)">
+                                <span class="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0" style="color: #fff"><i class="fas fa-images"></i> Hình ảnh sân cầu lông</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @foreach (var image in Model.BadmintonCourt.CourtImages)
+                {
+                    <div class="col-md-4 mb-3">
+                        <a href="@image.ImageUrl" class="glightbox" data-gallery="court-gallery" data-title="Hình ảnh sân cầu lông">
+                            <img src="@image.ImageUrl" class="img-fluid rounded" alt="Hình ảnh sân cầu lông">
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @if (!string.IsNullOrEmpty(Model.BadmintonCourt.MapsLink))
+    {
+        <div class="card shadow-lg border-0 rounded-lg mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h3 class="mb-0" style="color: #fff"><i class="fas fa-map-marker-alt"></i> Bản đồ</h3>
+            </div>
+            <div class="card-body">
+                <iframe src="@Model.BadmintonCourt.MapsLink" width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    }
+
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-info text-white">
+            <h3 class="mb-0" style="color: #fff"><i class="fas fa-user"></i> Thông tin Chủ Sân</h3>
+        </div>
+        <div class="card-body">
+            @if (Model.BadmintonCourt.Owner != null)
+            {
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th class="bg-light" style="width: 25%;">Tên</th>
+                            <td>@Model.BadmintonCourt.Owner.FullName</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Email</th>
+                            <td>@Model.BadmintonCourt.Owner.Email</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Số điện thoại</th>
+                            <td>@Model.BadmintonCourt.Owner.Phone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="text-muted">Chưa có thông tin chủ sở hữu</p>
+            }
+        </div>
+    </div>
+
+    <div class="card shadow-lg border-0 rounded-lg mb-4">
+        <div class="card-header bg-success text-white">
+            <h3 class="mb-0" style="color: #fff"><i class="fas fa-calendar-alt"></i> Thông tin Lịch Sân</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="datePicker" class="form-label">Chọn ngày:</label>
+                <input type="date" id="datePicker" class="form-control" onchange="filterScheduleByDate()" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+            </div>
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Thời gian</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleTable">
+                    @foreach (var slot in Model.BadmintonCourt.CourtSchedules)
+                    {
+                        <tr class="schedule-row" data-date="@slot.Date.ToString("yyyy-MM-dd")">
+                            <td>@slot.Date.ToShortDateString()</td>
+                            <td>@slot.TimeSlot</td>
+                            <td>@(slot.IsAvailable == false ? "Đã đặt" : "Trống")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p id="noSlotsMessage" class="text-muted d-none">Không có slot nào cho sân hôm đó.</p>
+
+            <div id="chartContainer" class="mt-4">
+                <canvas id="scheduleChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-page="./Edit" asp-route-id="@Model.BadmintonCourt.CourtId" class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</a>
+        <a asp-page="./Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Quay lại danh sách</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const lightbox = GLightbox({
+            selector: '.glightbox'
+        });
+    });
+</script>
+
+<script>
+    let chartInstance;
+    filterScheduleByDate();
+    function filterScheduleByDate() {
+        const selectedDate = document.getElementById('datePicker').value;
+        const rows = document.querySelectorAll('.schedule-row');
+        let hasSlots = false;
+        let bookedCount = 0;
+        let availableCount = 0;
+
+        rows.forEach(row => {
+            if (row.dataset.date === selectedDate) {
+                row.style.display = '';
+                hasSlots = true;
+                if (row.cells[2].innerText === 'Đã đặt') {
+                    bookedCount++;
+                } else {
+                    availableCount++;
+                }
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        const noSlotsMessage = document.getElementById('noSlotsMessage');
+        if (hasSlots) {
+            noSlotsMessage.classList.add('d-none');
+        } else {
+            noSlotsMessage.classList.remove('d-none');
+        }
+
+        renderChart(bookedCount, availableCount);
+    }
+
+    function renderChart(bookedCount, availableCount) {
+        if (chartInstance) {
+            chartInstance.destroy();
+        }
+        const ctx = document.getElementById('scheduleChart').getContext('2d');
+        chartInstance = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Đã đặt', 'Trống'],
+                datasets: [{
+                    data: [bookedCount, availableCount],
+                    backgroundColor: ['#dc3545', '#28a745']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    }
+
+    function toggleCourtStatus(courtId) {
+        fetch(`?handler=ToggleStatus&id=${courtId}`)
+            .then(response => response.text())
+            .then(html => {
+                Swal.fire({
+                    title: "Thành công",
+                    text: "Cập nhật trạng thái thành công.",
+                    icon: "success"
+                });
+                setTimeout(()=> {
+                    window.location.reload();
+                }, 500)
+            })
+            .catch(error => {
+                Swal.fire({
+                    title: "Thất bại",
+                    text: "Cập nhật trạng thái thất bại.",
+                    icon: "error"
+                });
+            });
+    }
+</script>

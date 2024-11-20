@@ -1,0 +1,79 @@
+﻿@page
+@model WEB_ManageCourt.Pages.Admin.Users.EditModel
+
+@{
+    ViewData["Title"] = "Chỉnh sửa người dùng";
+    Layout = "~/Pages/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Chỉnh sửa thông tin người dùng</h2>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="User.UserId" />
+                <input type="hidden" asp-for="User.Password" value="hidden"/>
+                <div class="form-group">
+                    <label asp-for="User.Username" class="control-label"></label>
+                    <input asp-for="User.Username" class="form-control"/>
+                    <span asp-validation-for="User.Username" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="User.Role" class="control-label"></label>
+                    <select asp-for="User.Role" class="form-control">
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                        <option value="Moderator">Moderator</option>
+                    </select>
+                    <span asp-validation-for="User.Role" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="User.FullName" class="control-label"></label>
+                    <input asp-for="User.FullName" class="form-control" />
+                    <span asp-validation-for="User.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="User.Email" class="control-label"></label>
+                    <input asp-for="User.Email" class="form-control" type="email" />
+                    <span asp-validation-for="User.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="User.Phone" class="control-label"></label>
+                    <input asp-for="User.Phone" class="form-control" type="tel" />
+                    <span asp-validation-for="User.Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <input type="hidden" id="IsEnabledHidden" name="User.IsEnabled" value="@Model.User.IsEnabled.ToString().ToLower()" />
+                    <input class="form-check-input" type="checkbox" id="IsEnabledCheckbox"
+                    @(Model.User.IsEnabled == true ? "checked" : "") />
+                    <label for="IsEnabledCheckbox" class="form-check-label">Enabled</label>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>Lưu thay đổi</button>
+                    <a asp-page="./Index" class="btn btn-secondary">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function updateHiddenInput() {
+            const isChecked = document.getElementById("IsEnabledCheckbox").checked;
+            document.getElementById("IsEnabledHidden").value = isChecked ? "true" : "false";
+        }
+
+        window.addEventListener("load", updateHiddenInput);
+        document.getElementById("IsEnabledCheckbox").addEventListener("change", updateHiddenInput);
+    </script>
+}

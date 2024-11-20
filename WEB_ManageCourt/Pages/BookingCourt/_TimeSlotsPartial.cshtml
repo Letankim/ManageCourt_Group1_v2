@@ -1,0 +1,20 @@
+﻿@model List<WEB_ManageCourt.ViewModel.TimeSlotModel>
+
+@if (Model.Any())
+{
+    @foreach (var slot in Model)
+    {
+        <button type="button"
+                class="btn @(slot.IsAvailable ? "btn-outline-primary" : "btn-secondary") m-2 time-slot"
+                data-id="@slot.TimeSlotId"
+                data-slot="@slot.Time"
+        @(slot.IsAvailable ? "" : "disabled")
+                onclick="toggleTimeSlot('@slot.TimeSlotId', '@slot.Time')">
+            <i class="far fa-clock"></i> @slot.Time
+        </button>
+    }
+}
+else
+{
+    <img src="/images/no-slots-available.png" alt="No slots available" class="img-fluid d-block mx-auto" style="max-width: 300px;" />
+}

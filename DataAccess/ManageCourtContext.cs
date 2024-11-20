@@ -36,7 +36,7 @@ public partial class ManageCourtContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=ANDP;Database=ManageCourt;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=localhost;Database=ManageCourt;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -96,7 +96,7 @@ public partial class ManageCourtContext : DbContext
         modelBuilder.Entity<BookingAccessory>(entity =>
         {
             entity.HasKey(e => e.BookingAccessoryId).HasName("PK__BookingA__F48BC5817B04FC4E");
-
+            entity.Property(e => e.BookingAccessoryId).ValueGeneratedOnAdd();
             entity.HasOne(d => d.Accessory).WithMany(p => p.BookingAccessories)
                 .HasForeignKey(d => d.AccessoryId)
                 .HasConstraintName("FK__BookingAc__Acces__3E52440B");
